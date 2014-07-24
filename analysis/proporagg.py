@@ -10,7 +10,7 @@
 # python
 from __future__ import division
 from operator import attrgetter
-#from math import ceil
+from math import ceil
 
 
 # my plotting + test classes
@@ -23,8 +23,8 @@ from nltk.corpus import PlaintextCorpusReader
 
 
 # my classes
-from wacky.proporclasses import MyClass2, Tagger, MyPatts2, MyClassStats2
-from wacky.savestats import SaveStats 
+from analysis.proporclasses import MyClass2, Tagger, MyPatts2, MyClassStats2
+from analysis.savestats import SaveStats 
 
 
 ####################################################################
@@ -244,6 +244,51 @@ few = [s51b,s52b,s53b,s54b,s53bb,s54bb]
 ####################################################################
 ####################################################################
 
+# 11. total number of/sum of
+
+s100 = " total/jj number/nn of/in "
+s101 = " sum/nn of/in "
+
+sumof = [s100,s101]
+
+####################################################################
+
+# 12. -er (compar), -est (super)
+
+s200 = " .*/jjr "
+s201 = " .*/jjt "
+
+maxmin = [s200,s201]
+
+####################################################################
+
+# 13. number of
+
+s300 = " number/nn of/in "
+
+numof = [s300]
+
+####################################################################
+
+# 14. average (number) of
+
+s400 = " average/nn of/in "
+s401 = " average/jj number/nn of/in "
+
+avgof = [s400,s401]
+
+####################################################################
+
+# 15. product (number) of
+
+s500 = " product/nn of/in "
+
+prodof = [s500]
+
+
+####################################################################
+####################################################################
+
 
 # Class encoding the plot(s) + test(s)
 
@@ -327,9 +372,16 @@ class ProporStats:
         C11 =   MyClassStats2(">k/100",[],0,tit)
         C12 =   MyClassStats2("<k/100",[],0,tit)
         C14 =   MyClassStats2("k/100",[],0,tit)
+
+        C15 =   MyClassStats2("sum",[],0,tit)
+        C16 =   MyClassStats2("-est",[],0,tit)
+        C17 =   MyClassStats2("cnt",[],0,tit)
+        C18 =   MyClassStats2("avg",[],0,tit)
+        C19 =   MyClassStats2("prod",[],0,tit)        
         
         self.classstats = [C1,C2,C3,C4,C5,C6,C7,C8,C9,
-                           C10,C13,C11,C12,C14]        
+                           C10,C13,C11,C12,C14,C15,C16,
+                           C17,C18,C19]  
         
         print "###################################################"
         print "GQ STATS"
@@ -550,12 +602,79 @@ class ProporStats:
             
             ####################################################################
             ####################################################################
+
+            # class 15
+            P15 = MyPatts2(sumof).P
+            N15 = MyPatts2(rest).P
+            #-------------------------------------------------------------------
+            c15 = MyClass2(P15,N15,idf,0,0,"sum",my_tagger)
+            print "---------------------------------------------------"
+            print " Computing sum"
+            print "---------------------------------------------------"
+            c15.openFile(path+"/"+idf,c15.pats,c15.patts)
+            print "==> sum : " + `c15.count` + " matches"
+            
+            ####################################################################
+
+            # class 16
+            P16 = MyPatts2(maxmin).P
+            N16 = MyPatts2(rest).P
+            #-------------------------------------------------------------------
+            c16 = MyClass2(P16,N16,idf,0,0,"-est",my_tagger)
+            print "---------------------------------------------------"
+            print " Computing -est"
+            print "---------------------------------------------------"
+            c16.openFile(path+"/"+idf,c16.pats,c16.patts)
+            print "==> -est : " + `c16.count` + " matches"
+    
+            ####################################################################
+    
+            # class 17
+            P17 = MyPatts2(numof).P
+            N17 = MyPatts2(rest).P
+            #-------------------------------------------------------------------
+            c17 = MyClass2(P17,N17,idf,0,0,"cnt",my_tagger)
+            print "---------------------------------------------------"
+            print " Computing cnt"
+            print "---------------------------------------------------"
+            c17.openFile(path+"/"+idf,c17.pats,c17.patts)
+            print "==> cnt : " + `c17.count` + " matches"
+
+            ####################################################################
+        
+            # class 18
+            P18 = MyPatts2(avgof).P
+            N18 = MyPatts2(rest).P
+            #-------------------------------------------------------------------
+            c18 = MyClass2(P18,N18,idf,0,0,"avg",my_tagger)
+            print "---------------------------------------------------"
+            print " Computing avg"
+            print "---------------------------------------------------"
+            c18.openFile(path+"/"+idf,c18.pats,c18.patts)
+            print "==> avg : " + `c18.count` + " matches"
+            
+            ####################################################################
+                
+            # class 19
+            P19 = MyPatts2(prodof).P
+            N19 = MyPatts2(rest).P
+            #-------------------------------------------------------------------
+            c19 = MyClass2(P19,N19,idf,0,0,"prod",my_tagger)
+            print "---------------------------------------------------"
+            print " Computing prod"
+            print "---------------------------------------------------"
+            c19.openFile(path+"/"+idf,c19.pats,c19.patts)
+            print "==> prod : " + `c19.count` + " matches"
+            
+            ####################################################################
+            ####################################################################
             
             # total cum count
-            tot = (c1.count + c2.count + c3.count + c4.count + c5.count +
+            tot = (c1.count + c2.count + c3.count + c4.count + c5.count
                     + c6.count + c7.count + c8.count + c9.count
                     + c10.count + c11.count + c12.count + c13.count 
-                    + c14.count) + 1
+                    + c14.count + c15.count + c16.count + c17.count
+                    + c18.count + c19.count) + 1
             
             print "==================================================="
             print tot, "total matches"
@@ -575,10 +694,17 @@ class ProporStats:
             c12.freq = round(c12.count/tot,2)
             c13.freq = round(c13.count/tot,2)
             c14.freq = round(c14.count/tot,2)
-            
+            c15.freq = round(c15.count/tot,2)
+            c16.freq = round(c16.count/tot,2)
+            c17.freq = round(c17.count/tot,2)
+            c18.freq = round(c18.count/tot,2)
+            c19.freq = round(c19.count/tot,2)
+                
             ####################################################################            
             
-            filestats = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c13,c11,c12,c14]
+            filestats = [c1,c2,c3,c4,c5,c6,c7,c8,
+                         c9,c10,c13,c11,c12,c14,
+                         c15,c16,c17,c18,c19]
             
             ####################################################################  
             

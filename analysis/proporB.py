@@ -23,8 +23,8 @@ from nltk.corpus import PlaintextCorpusReader
 
 
 # my classes
-from wacky.proporclasses import MyClass2, Tagger, MyPatts2, MyClassStats2
-from wacky.savestats import SaveStats
+from analysis.proporclasses import MyClass2, Tagger, MyPatts2, MyClassStats2
+from analysis.savestats import SaveStats
 
 
 ####################################################################

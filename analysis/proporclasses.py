@@ -134,7 +134,7 @@ class MyClass2:
             res = res + tup[0].lower()+"/"+tup[1].lower()+" "
         return res
 
-    # open file method-wacky (all patterns)
+    # open file method-analysis (all patterns)
     def openFileAll(self,fileid,pats,patts):
 
         lcount = 0
