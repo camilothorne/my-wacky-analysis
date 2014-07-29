@@ -1,8 +1,8 @@
 #===================#
 #===================#
-#                   #
-# Class likelihoods #
-#                   #
+#                                            #
+# Class likelihoods              #
+#                                             #
 #===================#
 #===================#
 
@@ -23,7 +23,7 @@ from nltk.corpus import PlaintextCorpusReader
 
 
 # my classes
-from analysis.proporclasses import MyClass2, Tagger, MyPatts2, MyClassStats2
+from analysis.proporclasses import MyClass2, MyPatts2, MyClassStats2
 from analysis.savestats import SaveStats 
 
 ####################################################################
@@ -259,14 +259,14 @@ class ProporStats:
 
     
     # object constructor
-    def __init__(self,path,format,list,plotting):
+    def __init__(self,path,myformat,mylist,plotting):
         self.stats = {} # stats
         self.classstats = [] # classes
         self.path = path # path of corpus
-        self.format = format # format of file(s)
-        self.occStats(path,format,list,plotting) # collects stats + plots them
+        self.format = myformat # format of file(s)
+        self.occStats(path,myformat,list,plotting) # collects stats + plots them
         self.statTestB(self.classstats) # runs the stat tests
-        self.list = list
+        self.list = mylist
         self.plotting = plotting    
 
     
@@ -303,7 +303,7 @@ class ProporStats:
     def fileStats(self,path,fileids):
         
         # starting the tagger
-        my_tagger = Tagger().t3
+        #my_tagger = Tagger().t3
         
         # starting the title
         tit = "Base GQs"
