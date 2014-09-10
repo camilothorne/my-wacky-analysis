@@ -23,7 +23,7 @@ from nltk.corpus import PlaintextCorpusReader
 
 
 # my classes
-from analysis.proporclasses import MyClass2, Tagger, MyPatts2, MyClassStats2
+from analysis.proporclasses import MyClass2, MyPatts2, MyClassStats2
 from analysis.savestats import SaveStats 
 
 

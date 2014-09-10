@@ -358,18 +358,84 @@ class ProporStats:
             # corpus
             corpus = MyClass2([".*"],[],idf,0,0,"corpus")
             
+            ####################################################################  
+            
             # some
             P1 = MyPatts2(some).P
             N1 = MyPatts2(rest).P
             c1 = MyClass2(P1,N1,idf,0,0,"some")
             
-            # ...
+            # all
+            P2 = MyPatts2(all).P
+            N2 = MyPatts2(rest).P           
+            c2 = MyClass2(P2,N2,idf,0,0,"all")           
+            
+            ####################################################################  
+    
+            # the
+            P3 = MyPatts2(the).P
+            N3 = MyPatts2(rest).P
+            c3 = MyClass2(P3,N3,idf,0,0,"the")                      
+            
+            # >k
+            P4 = MyPatts2(morek).P
+            N4 = MyPatts2(rest).P
+            c4 = MyClass2(P4,N4,idf,0,0,">k")                      
+            
+            # <k
+            P5 = MyPatts2(lessk).P
+            N5 = MyPatts2(rest).P
+            c5 = MyClass2(P5,N5,idf,0,0,"<k")
+
+            # k
+            P6 = MyPatts2(exactlyk).P
+            N6 = MyPatts2(rest).P
+            c6 = MyClass2(P6,N6,idf,0,0,"k")
+            
+            ####################################################################
+            
+            # most
+            P7 = MyPatts2(most).P
+            N7 = MyPatts2(rest).P
+            c7 = MyClass2(P7,N7,idf,0,0,"most")
+                 
+            # few
+            P8 = MyPatts2(few).P
+            N8 = MyPatts2(rest).P
+            #few
+            c8 = MyClass2(P8,N8,idf,0,0,"few")
+                
+            # >k/100
+            P9 = MyPatts2(morekper).P
+            N9 = MyPatts2(rest).P
+            c9 = MyClass2(P9,N9,idf,0,0,">k/100")
+    
+            # <k/100
+            P10 = MyPatts2(lesskper).P
+            N10 = MyPatts2(rest).P
+            c10 = MyClass2(P10,N10,idf,0,0,"<k/100")
+                
+            # k/100
+            P13 = MyPatts2(kper).P
+            N13 = MyPatts2(rest).P
+            c13 = MyClass2(P13,N13,idf,0,0,"k/100")
+                
+            # >p/k
+            P11 = MyPatts2(morethanpro).P
+            N11 = MyPatts2(rest).P
+            c11 = MyClass2(P11,N11,idf,0,0,">p/k")                    
+            
+            # <p/k
+            P12 = MyPatts2(lessthanpro).P
+            N12 = MyPatts2(rest).P
+            c12 = MyClass2(P12,N12,idf,0,0,"<p/k")
             
             # p/k
             P14 = MyPatts2(pro).P
             N14 = MyPatts2(rest).P
             c14 = MyClass2(P14,N14,idf,0,0,"p/k")                      
             
+            ####################################################################  
             ####################################################################            
             
             for line in mydata.lines:
@@ -387,124 +453,74 @@ class ProporStats:
                 ####################################################################
                 
                 # some
-                c1.openFile(path+"/"+idf,c1.pats,c1.patts)
+                c1.openSen(path+"/"+idf,c1.pats,c1.patts)
                 
                 ####################################################################
                 
-                # class 2
-                P2 = MyPatts2(all).P
-                N2 = MyPatts2(rest).P
                 # all      
-                c2 = MyClass2(P2,N2,idf,0,0,"all")
-                c2.openFile(path+"/"+idf,c2.pats,c2.patts)
-                
+                c2.openSen(path+"/"+idf,c2.pats,c2.patts)
                 
                 ####################################################################
                 ####################################################################
      
-                # class 3
-                P3 = MyPatts2(the).P
-                N3 = MyPatts2(rest).P
                 # the   
-                c3 = MyClass2(P3,N3,idf,0,0,"the")
-                c3.openFile(path+"/"+idf,c3.pats,c3.patts)    
+                c3.openSen(path+"/"+idf,c3.pats,c3.patts)    
                             
                 ####################################################################
                 
-                # class 4
-                P4 = MyPatts2(morek).P
-                N4 = MyPatts2(rest).P
                 # >k
-                c4 = MyClass2(P4,N4,idf,0,0,">k")
-                c4.openFile(path+"/"+idf,c4.pats,c4.patts)
+                c4.openSen(path+"/"+idf,c4.pats,c4.patts)
                 
                 ####################################################################
                 
-                # class 5
-                P5 = MyPatts2(lessk).P
-                N5 = MyPatts2(rest).P
                 # <k
-                c5 = MyClass2(P5,N5,idf,0,0,"<k")
-                c5.openFile(path+"/"+idf,c5.pats,c5.patts)
+                c5.openSen(path+"/"+idf,c5.pats,c5.patts)
                 
                 ####################################################################
                 
-                # class 6
-                P6 = MyPatts2(exactlyk).P
-                N6 = MyPatts2(rest).P
                 # k
-                c6 = MyClass2(P6,N6,idf,0,0,"k")
-                c6.openFile(path+"/"+idf,c6.pats,c6.patts)
+                c6.openSen(path+"/"+idf,c6.pats,c6.patts)
                 
                 ####################################################################
                 ####################################################################
       
-                # class 7
-                P7 = MyPatts2(most).P
-                N7 = MyPatts2(rest).P
                 # most
-                c7 = MyClass2(P7,N7,idf,0,0,"most")
-                c7.openFile(path+"/"+idf,c7.pats,c7.patts)
+                c7.openSen(path+"/"+idf,c7.pats,c7.patts)
                 
                 ####################################################################
                 
-                # class 8
-                P8 = MyPatts2(few).P
-                N8 = MyPatts2(rest).P
                 #few
-                c8 = MyClass2(P8,N8,idf,0,0,"few")
-                c8.openFile(path+"/"+idf,c8.pats,c8.patts)
+                c8.openSen(path+"/"+idf,c8.pats,c8.patts)
                 
                 ####################################################################            
                           
-                # class 9
-                P9 = MyPatts2(morekper).P
-                N9 = MyPatts2(rest).P
                 #>k/100
-                c9 = MyClass2(P9,N9,idf,0,0,">k/100")
-                c9.openFile(path+"/"+idf,c9.pats,c9.patts)
+                c9.openSen(path+"/"+idf,c9.pats,c9.patts)
                 
                 ####################################################################
     
-                # class 10
-                P10 = MyPatts2(lesskper).P
-                N10 = MyPatts2(rest).P
                 #<k100
-                c10 = MyClass2(P10,N10,idf,0,0,"<k/100")
-                c10.openFile(path+"/"+idf,c10.pats,c10.patts)
+                c10.openSen(path+"/"+idf,c10.pats,c10.patts)
                 
                 ####################################################################
                 
-                # class 13
-                P13 = MyPatts2(kper).P
-                N13 = MyPatts2(rest).P
                 # k/100
-                c13 = MyClass2(P13,N13,idf,0,0,"k/100")
-                c13.openFile(path+"/"+idf,c13.pats,c13.patts)
+                c13.openSen(path+"/"+idf,c13.pats,c13.patts)
       
                 ####################################################################
                 
-                # class 11
-                P11 = MyPatts2(morethanpro).P
-                N11 = MyPatts2(rest).P
                 # >p/k
-                c11 = MyClass2(P11,N11,idf,0,0,">p/k")
-                c11.openFile(path+"/"+idf,c11.pats,c11.patts)
+                c11.openSen(path+"/"+idf,c11.pats,c11.patts)
                 
                 ####################################################################
-
-                # <p/k
-                P12 = MyPatts2(lessthanpro).P
-                N12 = MyPatts2(rest).P
-                c12 = MyClass2(P12,N12,idf,0,0,"<p/k")
                 
                 # <p/k
-                c12.openFile(path+"/"+idf,c12.pats,c12.patts)
+                c12.openSen(path+"/"+idf,c12.pats,c12.patts)
     
                 ####################################################################
                 
                 # p/k
-                c14.openFile(path+"/"+idf,c14.pats,c14.patts)
+                c14.openSen(path+"/"+idf,c14.pats,c14.patts)
             
             
             ####################################################################
