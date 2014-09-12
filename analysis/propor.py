@@ -33,6 +33,7 @@ from analysis.proporclasses import MyClass2, MyPatts2, MyClassStats2
 from analysis.savestats import SaveStats
 from analysis.buildsen import OpenFile
 
+
 ####################################################################
 #################################################################### 
 
@@ -308,10 +309,7 @@ class ProporStats:
             
     # creating the classes
     def fileStats(self,path,fileids):
-        
-        # starting the tagger
-        #my_tagger = Tagger().t3
-        
+                
         # starting the title
         tit = "Base GQs"
         
