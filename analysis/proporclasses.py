@@ -1,3 +1,9 @@
+'''
+Created on Jul 29, 2014
+@author: camilothorne
+'''
+
+
 import re
 
 
@@ -72,43 +78,9 @@ class MyClass2:
                             if mm:
                                 pos = pos + 1
                 self.count = self.count + pos
-
-
-####################################################################
-
-
-# # Class training POS taggers
-# class Tagger:
-# 
-# 
-#         #train     : traininig corpus
-#         #t0        : uniform tagger
-#         #t1        : unigram (MLE) tagger
-#         #t3        : bigram  (MLE) tagger
-# 
-# 
-#         # constructor
-#         def __init__(self):
-#             self.train = brown.tagged_sents(categories='news')
-#             #self.train = brown.tagged_sents()
-#             self.t0 = DefaultTagger('None')
-#             self.t1 = UnigramTagger(self.train,backoff=self.t0)
-#             self.t2 = BigramTagger(self.train,backoff=self.t1)
-#             self.t3 = NgramTagger(3,train=self.train,backoff=self.t2)
-# 
-# 
-#         # evaluate tagger accuracy
-#         def my_eval(self):
-#             self.gold = brown.tagged_sents(categories=['editorial','fiction'])
-#             acc0 = self.t2.evaluate(self.gold)
-#             acc1 = self.t2.evaluate(self.gold)
-#             acc2 = self.t3.evaluate(self.gold)
-#             print '1-gram (acc) = ' + `acc0`
-#             print '2-gram (acc) = ' + `acc1`
-#             print '3-gram (acc) = ' + `acc2`
-
-
-####################################################################
+                
+                
+####################################################################   
 
 
 # Class encapsulating lists of patterns
