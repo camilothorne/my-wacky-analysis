@@ -70,27 +70,44 @@ class MySen:
             self.sen      = ""
             self.begin  = False
             self.end     = False
+            self.len      = 0
             
             
         # build a sentence
-        def buildSen(self,line):
+        def buildSen(self,i,lines):
+            
                 #print line
-                tokens = line.split()
+                tokens = lines[i].split()
                 #print tokens
+            
                 if tokens[0] == '<s>':
-                    #print tokens
+                    print tokens
                     self.begin = True
-                if (self.begin) & (not self.end):
-                    print tokens               
+                
+                while (self.begin==True) & (self.end==False):
+                    print lines[i]
+                    self.len = self.len + 1
+                #   print tokens               
+                
                 if tokens[0] == '</s>':
-                    #print tokens
+                    print tokens
                     self.end = True
+                    
+                    print self.len
+                    
                     self.reset()
+                
                 #if (self.begin == True) & (len(tokens)>1):
                     #print tokens
                     #self.sen = self.sen + tokens[0]+ '\\' + tokens[2]
                     #print self.sen
-        
+                    
+                if tokens[0] == '<s>':
+                    while not(tokens[0] == '</s'):
+                         i = i + 1
+                         tokens = lines[i].split()
+                
+                    
         
         # reset object
         def reset(self):

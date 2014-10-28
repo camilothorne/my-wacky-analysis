@@ -444,12 +444,22 @@ class ProporStats:
             
             # examine only k chunks of the big file at a time
             while mydata.lines:
+                
+                i = 1
+            
+                while i  <  len(mydata.lines):
             
                 # parse the chunk
-                for line in mydata.lines:
+
+                    lines = mydata.lines
+                    line = mydata.lines[i]
             
                     sen = MySen()
-                    sen.buildSen(line)                
+                    sen.buildSen(i,lines)
+                    
+                    i = i + sen.len
+                
+                    #print line             
                     
                     if sen.end == True:
                 
@@ -536,8 +546,12 @@ class ProporStats:
                         c14.openSen(myline,c14.pats,c14.patts)
                 
                         ####################################################################
+                        
+                    #i = i + 10
+                    print i
             
-                # move to new chunk    
+                # move to new chunk
+                 
                 mydata.lines = mydata.myread()
             
             ####################################################################
