@@ -12,7 +12,7 @@ class OpenFile:
 
         self.file = filename
         self.lines = None
-        self.bigfile = open(self.filename, 'r')
+        self.bigfile = open(filename, 'r')
 
 
 #     # load file in huge list    
@@ -68,18 +68,28 @@ class MySen:
         # init to false, empty sentence      
         def __init__(self):
             self.sen      = ""
-            self.begin  = None
-            self.end     = None
+            self.begin  = False
+            self.end     = False
             
             
         # build a sentence
         def buildSen(self,line):
+                #print line
                 tokens = line.split()
+                #print tokens
                 if tokens[0] == '<s>':
+                    #print tokens
                     self.begin = True
-                    while tokens[0] != '</s>':
-                        self.sen = self.sen + tokens[0]+ '\\' + tokens[2]
+                if (self.begin) & (not self.end):
+                    print tokens               
+                if tokens[0] == '</s>':
+                    #print tokens
                     self.end = True
+                    self.reset()
+                #if (self.begin == True) & (len(tokens)>1):
+                    #print tokens
+                    #self.sen = self.sen + tokens[0]+ '\\' + tokens[2]
+                    #print self.sen
         
         
         # reset object

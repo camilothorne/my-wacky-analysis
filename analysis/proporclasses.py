@@ -30,7 +30,7 @@ class MyClass2:
 
 
     # object constructor
-    def __init__(self,pats,patts,fileid,count,freq,tag,tagger):
+    def __init__(self,pats,patts,fileid,count,freq,tag):
 
 
         self.pats = pats

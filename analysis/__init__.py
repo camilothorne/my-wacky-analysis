@@ -26,10 +26,10 @@ from propor import *
 
 
 # corpora root files and format
-plotting = '  foo '
-path     = "  goo "
-format   = "*.test"
-list     = ('ukwack')
+plotting      = '/home/camilothorne/wacky-corpus/plotting/'
+path            = "/home/camilothorne/wacky-corpus/wackypedia/"
+format       = ".*test"
+list               = ('ukwack')
 
 
 # all GQs
