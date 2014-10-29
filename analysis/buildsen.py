@@ -79,38 +79,31 @@ class MySen:
                 #print line
                 tokens = lines[i].split()
                 #print tokens
-            
+                                
                 if tokens[0] == '<s>':
-                    print tokens
                     self.begin = True
-                
-                while (self.begin==True) & (self.end==False):
-                    print lines[i]
-                    self.len = self.len + 1
-                #   print tokens               
-                
-                if tokens[0] == '</s>':
-                    print tokens
+                    posi = i+1
+                    #print 'pos ', i
+                    #print 'curr len ', len
+                    tokens = lines[posi].split()
+                    #while not(tokens[0] == '</s>'):
+                    while not(lines[posi+1].split()[0] == '</s>'):
+                        posi = posi + 1
+                        tokens = lines[posi].split()
+                        #print 'up len ', len
+                        #print tokens
+                        self.sen = self.sen + tokens[0]+ '\\' + tokens[2] + ' '
+                    self.len = posi - (i+1)
                     self.end = True
-                    
-                    print self.len
-                    
-                    self.reset()
                 
-                #if (self.begin == True) & (len(tokens)>1):
-                    #print tokens
-                    #self.sen = self.sen + tokens[0]+ '\\' + tokens[2]
-                    #print self.sen
-                    
-                if tokens[0] == '<s>':
-                    while not(tokens[0] == '</s'):
-                         i = i + 1
-                         tokens = lines[i].split()
-                
-                    
+                self.sen = self.sen.lower()
+                #print self.sen + '\n'
+                #print self.len
+        
         
         # reset object
         def reset(self):
             self.sen      = ""
             self.end     = False
-            self.begin  = False     
+            self.begin  = False
+            self.len       = 0   
