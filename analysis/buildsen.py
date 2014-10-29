@@ -74,9 +74,9 @@ class MySen:
             
             
         # build a sentence
-        def buildSen(self,i,lines):
+        def buildSen(self,i,lines,my_max):
             
-                #print line
+                #print my_max
                 tokens = lines[i].split()
                 #print tokens
                                 
@@ -85,14 +85,18 @@ class MySen:
                     posi = i+1
                     #print 'pos ', i
                     #print 'curr len ', len
-                    tokens = lines[posi].split()
+                    #tokens = lines[posi].split()
                     #while not(tokens[0] == '</s>'):
-                    while not(lines[posi+1].split()[0] == '</s>'):
+                    while not(lines[posi+1].split()[0] == '</s>' ):
                         posi = posi + 1
                         tokens = lines[posi].split()
                         #print 'up len ', len
                         #print tokens
                         self.sen = self.sen + tokens[0]+ '\\' + tokens[2] + ' '
+                        #print posi
+                        #print lines[4765]
+                        if posi+1 == my_max:
+                            break
                     self.len = posi - (i+1)
                     self.end = True
                 

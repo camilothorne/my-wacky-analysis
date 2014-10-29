@@ -447,7 +447,9 @@ class ProporStats:
                 
                 i = 0
             
-                while i  <  len(mydata.lines):
+                my_max = len(mydata.lines)
+            
+                while i  <  my_max:
                 #while i  < 25:
             
                 # parse the chunk
@@ -458,7 +460,7 @@ class ProporStats:
                     #print line
             
                     sen = MySen()
-                    sen.buildSen(i,lines)
+                    sen.buildSen(i,lines,my_max)
                 
                     #print line             
                     
@@ -555,12 +557,9 @@ class ProporStats:
                         print 'sen= ', sen.sen, '\n'
                     else:    
                         i = i + 1
-                    #i = i + sen.len
-                    #sen.reset()
-            
                     print 'explore at line= ', i, '\n'
+                
                 # move to new chunk
-                 
                 mydata.lines = mydata.myread()
             
             ####################################################################
