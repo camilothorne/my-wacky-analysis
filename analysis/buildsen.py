@@ -31,14 +31,14 @@ class OpenFile:
             
         
     # close file
-    def myclose(self):
+    def myclose(self):  
         
             self.bigfile.close()
             self.destroy()
     
 
     # buffered reading of file
-    def myread(self):
+    def myread(self):    
         
             lines = []
             try:
@@ -50,6 +50,7 @@ class OpenFile:
             
     # free memory buffer
     def destroy(self):
+        
         self.lines = None
         
         
@@ -63,10 +64,12 @@ class MySen:
         #begin : begin of sentence?
         #end    : end of sentence?
         #sen     : current sentence
+        #len     : length of current sentence
         
         
         # init to false, empty sentence      
         def __init__(self):
+            
             self.sen      = ""
             self.begin  = False
             self.end     = False
@@ -76,37 +79,24 @@ class MySen:
         # build a sentence
         def buildSen(self,i,lines,my_max):
             
-                #print my_max
                 tokens = lines[i].split()
-                #print tokens
-                                
                 if tokens[0] == '<s>':
                     self.begin = True
-                    posi = i+1
-                    #print 'pos ', i
-                    #print 'curr len ', len
-                    #tokens = lines[posi].split()
-                    #while not(tokens[0] == '</s>'):
+                    posi = i+1          
                     while not(lines[posi+1].split()[0] == '</s>' ):
                         posi = posi + 1
                         tokens = lines[posi].split()
-                        #print 'up len ', len
-                        #print tokens
-                        self.sen = self.sen + tokens[0]+ '\\' + tokens[2] + ' '
-                        #print posi
-                        #print lines[4765]
+                        self.sen = self.sen + tokens[0]+ '/' + tokens[2] + ' '
                         if posi+1 == my_max:
-                            break
+                            break                    
                     self.len = posi - (i+1)
-                    self.end = True
-                
+                    self.end = True              
                 self.sen = self.sen.lower()
-                #print self.sen + '\n'
-                #print self.len
         
         
         # reset object
         def reset(self):
+            
             self.sen      = ""
             self.end     = False
             self.begin  = False

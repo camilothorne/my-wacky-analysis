@@ -56,14 +56,14 @@ s13 = "Somebody/pn"
 s14 = "something/pn"
 s15 = "Something/pn"
 
-s16 = " some/dti"
-s17 = " Some/dti"
+s16 = " some/dt"
+s17 = " Some/dt"
 
-s18 = " a/at"
-s19 = " A/at"
+s18 = " a/dt"
+s19 = " A/dt"
 
-s20 = " many/ap "
-s21 = " Many/ap "
+s20 = " many/dt "
+s21 = " Many/dt "
 
 some = [s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21]
 
@@ -74,11 +74,11 @@ some = [s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21]
 s40 = " every/at "
 s41 = " Every/at "
 
-s42 = " all/abn "
-s43 = " All/abn "
+s42 = " all/dt "
+s43 = " All/dt "
 
-s44 = " the/at .*/nns "
-s45 = " The/at ./nns "
+s44 = " the/dt .*/nns "
+s45 = " The/dt ./nns "
 
 s46 = " everything/pn "
 s47 = " Everything/pn "
@@ -98,8 +98,8 @@ all = [s40,s41,s42,s43,s44,s45,s46,s47,s48,s49,s4a,s4b,s4c,s4d]
 
 # 8.1 exactly one
 
-s74 = " the/at "
-s75 = " The/at "
+s74 = " the/dt "
+s75 = " The/dt "
 
 the = [s74,s75]
 
@@ -187,9 +187,10 @@ lessthanpro = [s80b,s81b,s82b,s83b,s80bb,s81bb,s82bb,s83bb]
 # 9.2 p/k (p, k integers)
 
 s80c = " half/abn "
-s81c = " .*/cd .*/od "
+s81c = " .*/cd .*/nns "
+s81d = " .*/cd .*/nn "
 
-pro = [s80c,s81c]
+pro = [s80c,s81c,s81d]
 
 ####################################################################
 
@@ -224,20 +225,26 @@ kper = [s30c]
 
 # 5. most, more than half
 
-s51 = " most/ap "
-s52 = " Most/ap "
+s51 = " most/rbs "
+s52 = " Most/rbs "
+
+s51a = " most/dt "
+s52a = " Most/dt "
 
 s53 = " more/ap than/in half/abn "
 s54 = " More/ap than/in half/abn "
 
-most = [s51,s52,s53,s54]
+most = [s51,s52,s51a,s52a,s53,s54]
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
-s51b = " few/ap "
-s52b = " Few/ap "
+s51b = " few/dt "
+s52b = " Few/dt "
+
+s51bb = " few/jj "
+s52bb = " Few/jj "
 
 s53b = " less/ap than/in half/abn "
 s54b = " Less/ap than/in half/abn "
@@ -245,7 +252,7 @@ s54b = " Less/ap than/in half/abn "
 s53bb = " fewer/ap than/in half/abn "
 s54bb = " Fewer/ap than/in half/abn "
 
-few = [s51b,s52b,s53b,s54b,s53bb,s54bb]
+few = [s51b,s52b,s51bb,s52bb,s53b,s54b,s53bb,s54bb]
 
 
 ####################################################################
