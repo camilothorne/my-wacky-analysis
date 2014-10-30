@@ -47,14 +47,17 @@ s0 = ".*"        # anything!
 
 # 1. exists
 
-s10 = "someone/pn"
-s11 = "Someone/pn"
+s10 = "someone/nn"
+s11 = "Someone/nn"
 
-s12 = "somebody/pn"
-s13 = "Somebody/pn"
+s12 = "somebody/nn"
+s13 = "Somebody/nn"
 
-s14 = "something/pn"
-s15 = "Something/pn"
+s12a = "anybody/nn"
+s13a = "anybody/nn"
+
+s14 = "something/nn"
+s15 = "Something/nn"
 
 s16 = " some/dt"
 s17 = " Some/dt"
@@ -65,14 +68,14 @@ s19 = " A/dt"
 s20 = " many/dt "
 s21 = " Many/dt "
 
-some = [s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21]
+some = [s10,s11,s12,s13,s12a,s13a,s14,s15,s16,s17,s18,s19,s20,s21]
 
 ####################################################################
 
 # 4. all
 
-s40 = " every/at "
-s41 = " Every/at "
+s40 = " every/dt "
+s41 = " Every/dt "
 
 s42 = " all/dt "
 s43 = " All/dt "
@@ -80,14 +83,14 @@ s43 = " All/dt "
 s44 = " the/dt .*/nns "
 s45 = " The/dt ./nns "
 
-s46 = " everything/pn "
-s47 = " Everything/pn "
+s46 = " everything/nn "
+s47 = " Everything/nn "
 
-s48 = " everyone/pn " 
-s49 = " Everyone/pn "
+s48 = " everyone/nn " 
+s49 = " Everyone/nn "
 
-s4a = " everybody/pn " 
-s4b = " Everybody/pn " 
+s4a = " everybody/nn " 
+s4b = " Everybody/nn " 
 
 s4c = " each/dt "
 s4d = " Each/dt "
@@ -186,7 +189,7 @@ lessthanpro = [s80b,s81b,s82b,s83b,s80bb,s81bb,s82bb,s83bb]
 
 # 9.2 p/k (p, k integers)
 
-s80c = " half/abn "
+s80c = " half/nn "
 s81c = " .*/cd .*/nns "
 s81d = " .*/cd .*/nn "
 
