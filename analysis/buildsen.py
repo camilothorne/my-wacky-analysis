@@ -14,22 +14,7 @@ class OpenFile:
         self.lines = None
         self.bigfile = open(filename, 'r')
 
-
-#     # load file in huge list    
-#     def myopen(self):
-#         
-# #        bigfile = open(self.filename, 'r')
-#         try:
-#             self.lines = self.myread(self.bigfile)
-#         except:
-#             print 'error'
-#             while tmp_lines:
-#                 tmp_lines = bigfile.readlines(10000)
-#             self.lines = self.read(bigfile)
-#         finally:
-#             bigfile.close()
             
-        
     # close file
     def myclose(self):  
         
@@ -42,7 +27,7 @@ class OpenFile:
         
             lines = []
             try:
-                lines = self.bigfile.readlines(100000)
+                lines = self.bigfile.readlines(100000000)
             except:
                 print 'error'
             return lines
