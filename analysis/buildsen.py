@@ -5,7 +5,12 @@ Created on Jul 29, 2014
 
 # class to open big files
 class OpenFile:
-
+    
+    
+    # file : name of file
+    # lines : file buffered reader
+    # bigfile : file
+    
 
     # constructor
     def __init__(self,filename):
@@ -42,20 +47,20 @@ class OpenFile:
 ####################################################################
 
 
-# Class to generate sentences
+# class to generate sentences
 class MySen:
     
     
-        #begin : begin of sentence?
-        #end    : end of sentence?
-        #sen     : current sentence
-        #len     : length of current sentence
+        # begin : begin of sentence?
+        # end    : end of sentence?
+        # sen     : current sentence
+        # len     : length of current sentence
         
         
         # init to false, empty sentence      
         def __init__(self):
             
-            self.sen      = ""
+            self.sen      = " "
             self.begin  = False
             self.end     = False
             self.len      = 0
