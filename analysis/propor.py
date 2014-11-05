@@ -48,108 +48,113 @@ s0 = ".*"        # anything!
 # 1. exists
 
 s10 = "someone/nn"
-s11 = "Someone/nn"
+#s11 = "Someone/nn"
 
 s12 = "somebody/nn"
-s13 = "Somebody/nn"
+#s13 = "Somebody/nn"
 
 s12a = "anybody/nn"
-s13a = "anybody/nn"
+#s13a = "anybody/nn"
 
 s14 = "something/nn"
-s15 = "Something/nn"
+#s15 = "Something/nn"
 
 s16 = " some/dt"
-s17 = " Some/dt"
+#s17 = " Some/dt"
 
 s18 = " a/dt"
-s19 = " A/dt"
+#s19 = " A/dt"
 
 s20 = " many/dt "
-s21 = " Many/dt "
+#s21 = " Many/dt "
 
 s20a = " many/jj */nns"
-s21a = " Many/jj */nns"
+#s21a = " Many/jj */nns"
 
 s22 = " there/ex"
 s23 = " There/ex"
 
-some = [s10,s11,s12,s13,s12a,s13a,s14,s15,s16,s17,s18,s19,s20,s21,s20a,s21a,s22,s23]
+some = [s10,s12,s12a,s14,s16,s18,s20,s20a,s22,s23]
+#some = [s10,s11,s12,s13,s12a,s13a,s14,s15,s16,s17,s18,s19,s20,s21,s20a,s21a,s22,s23]
 
 ####################################################################
 
 # 4. all
 
 s40 = " every/dt "
-s41 = " Every/dt "
+#s41 = " Every/dt "
 
 s42 = " all/dt "
-s43 = " All/dt "
+#s43 = " All/dt "
 
 s44 = " the/dt .*/nns "
-s45 = " The/dt ./nns "
+#s45 = " The/dt ./nns "
 
 s46 = " everything/nn "
-s47 = " Everything/nn "
+#s47 = " Everything/nn "
 
 s48 = " everyone/nn " 
-s49 = " Everyone/nn "
+#s49 = " Everyone/nn "
 
 s4a = " everybody/nn " 
-s4b = " Everybody/nn " 
+#s4b = " Everybody/nn " 
 
 s4c = " each/dt "
-s4d = " Each/dt "
+#s4d = " Each/dt "
 
 s4e = " no/dt "
 
-all = [s40,s41,s42,s43,s44,s45,s46,s47,s48,s49,s4a,s4b,s4c,s4d,s4e]
+all = [s40,s42,s44,s46,s48,s4a,s4c,s4e]
+#all = [s40,s41,s42,s43,s44,s45,s46,s47,s48,s49,s4a,s4b,s4c,s4d,s4e]
 
 ####################################################################
 
 # 8.1 exactly one
 
 s74 = " the/dt "
-s75 = " The/dt "
+#s75 = " The/dt "
 
-the = [s74,s75]
+the = [s74]
+#the = [s74,s75]
 
 ####################################################################
 ####################################################################
 
 # 6. at most k, less than k (k integer)
 
-s60 = " at/in most/ap .*/cd "
-s61 = " At/in most/ap .*/cd "
+s60 = " at/in most/jjs .*/cd "
+#s61 = " At/in most/jjs .*/cd "
 
-s20b = " less/ap than/in .*/cd "
-s21b = " Less/ap than/in .*/cd "
+s20b = " less/jjr than/in .*/cd "
+#s21b = " Less/jjr than/in .*/cd "
 
-s20bb = " fewer/ap than/in .*/at .*/cd "
-s21bb = " Fewer/ap than/in .*/at .*/cd "
+s20bb = " fewer/jjr than/in .*/at .*/cd "
+#s21bb = " Fewer/jjr than/in .*/at .*/cd "
 
-s22b = " less/ap than/in .*/at .*/cd "
-s23b = " Less/ap than/in .*/at .*/cd "
+s22b = " less/jjr than/in .*/at .*/cd "
+#s23b = " Less/jjr than/in .*/at .*/cd "
 
-s22bb = " fewer/ap than/in .*/at .*/cd "
-s23bb = " Fewer/ap than/in .*/at .*/cd "
+s22bb = " fewer/jjr than/in .*/at .*/cd "
+#s23bb = " Fewer/jjr than/in .*/at .*/cd "
 
-lessk = [s20b,s21b,s22b,s23b,s20bb,s21bb,s22bb,s23bb,s60,s61]
+lessk = [s20b,s22b,s20bb,s22bb]
+#lessk = [s20b,s21b,s22b,s23b,s20bb,s21bb,s22bb,s23bb,s60,s61]
 
 ####################################################################
 
 # 7. at least k, more than k (k integer)
 
-s60b = " at/in least/ap .*/cd "
-s61b = " At/in least/ap .*/cd "
+s60b = " at/in least/jjs .*/cd "
+#s61b = " At/in least/jjs .*/cd "
 
-s20 = " more/ap than/in .*/cd "
-s21 = " More/ap than/in .*/cd "
+s20 = " more/jjr than/in .*/cd "
+#s21 = " More/jjr than/in .*/cd "
 
-s22 = " more/ap than/in .*/at .*/cd "
-s23 = " More/ap than/in .*/at .*/cd "
+s22 = " more/jjr than/in .*/at .*/cd "
+#s23 = " More/jjr than/in .*/at .*/cd "
 
-morek = [s20,s21,s22,s23,s60b,s61b]
+morek = [s20,s22,s60b]
+#morek = [s20,s21,s22,s23,s60b,s61b]
 
 ####################################################################
 
@@ -158,9 +163,10 @@ morek = [s20,s21,s22,s23,s60b,s61b]
 s70 = " .*/cd .*/nns "
 
 s71 = " exactly/rb .*/cd "
-s72 = " Exactly/rb .*/cd "
+#s72 = " Exactly/rb .*/cd "
 
-exactlyk = [s70,s71,s72]
+exactlyk = [s70,s71]
+#exactlyk = [s70,s71,s72]
 
 ####################################################################
 ####################################################################
@@ -168,66 +174,71 @@ exactlyk = [s70,s71,s72]
 # 9. more than p/k (p, k integers)
 
 s80 = " more/ap than/in half/abn "
-s81 = " More/ap than/in half/abn "
+#s81 = " More/ap than/in half/abn "
 
 s82 = " more/ap than/in .*/cd .*/od "
-s83 = " More/ap than/in .*/cd .*/od "
+#s83 = " More/ap than/in .*/cd .*/od "
 
-morethanpro = [s80,s81,s82,s83]
+morethanpro = [s80,s82]
+#morethanpro = [s80,s81,s82,s83]
 
 ####################################################################
 
 # 9.1 less than p/k (p, k integers)
 
-s80b = " less/jj than/in half/nn "
-s81b = " Less/jj than/in half/nn "
+s80b = " less/jjr than/in half/nn "
+#s81b = " Less/jjr than/in half/nn "
 
-s80bb = " fewer/jj than/in half/nn "
-s81bb = " Fewer/jj than/in half/nn "
+s80bb = " fewer/jjr than/in half/nn "
+#s81bb = " Fewer/jjr than/in half/nn "
 
-s82b = " less/ap than/in .*/cd .*/od "
-s83b = " Less/ap than/in .*/cd .*/od "
+s82b = " less/jjr than/in .*/nns of/in "
+#s83b = " Less/jjr than/in .*/nns of/in "
 
-s82bb = " fewer/ap than/in half/abn "
-s83bb = " Fewer/ap than/in half/abn "
+s82bb = " fewer/jjr than/in .*/nn of/in "
+#s83bb = " Fewer/jjr than/in .*/nn of/in "
 
-lessthanpro = [s80b,s81b,s82b,s83b,s80bb,s81bb,s82bb,s83bb]
+lessthanpro = [s80b,s80bb,s82b,s82bb]
+#lessthanpro = [s80b,s81b,s82b,s83b,s80bb,s81bb,s82bb,s83bb]
 
 ####################################################################
 
 # 9.2 p/k (p, k integers)
 
-s80c = " half/dt"
+s80c = " half/dt "
 s80d = " half/pdt "
+s80c = " half/nn of/in"
 
-s81c = " .*/cd .*/nns "
-s81d = " .*/cd .*/nn "
+s81c = "   .*/nns of/in "
+s81d = "  .*/nn of/in "
 
-pro = [s80c,s80d,s81c,s81d]
+pro = [s80c,s80d]
 
 ####################################################################
 
 # 3. more than k% (k a percentage)
 
-s30 = " more/jj than/in .*/cd percent/nn "
-s31 = " More/jj than/in .*/cd percent/nn "
+s30 = " more/jjr than/in .*/cd percent/nn "
+#s31 = " More/jjr than/in .*/cd percent/nn "
 
-s30a = " more/jj than/in %/cd "
-s31a = " More/jj than/in %/cd "
+s30a = " more/jjr than/in %/cd "
+#s31a = " More/jjr than/in %/cd "
 
-morekper = [s30,s31,s30a,s31a]
+morekper = [s30,s30a]
+#morekper = [s30,s31,s30a,s31a]
 
 ####################################################################
 
 # 3.1 less than k% (k a percentage)
 
-s30b = " less/jj than/in .*/cd percent/nn "
-s31b = " Less/jj than/in .*/cd percent/nn "
+s30b = " less/jjr than/in .*/cd percent/nn "
+#s31b = " Less/jjr than/in .*/cd percent/nn "
 
-s30bb = " less/jj than/in %/cd "
-s31bb = " Less/jj than/in %/cd "
+s30bb = " less/jjr than/in %/cd "
+#s31bb = " Less/jjr than/in %/cd "
 
-lesskper = [s30b,s31b,s30bb,s31bb]
+lesskper = [s30b,s30bb]
+#lesskper = [s30b,s31b,s30bb,s31bb]
 
 ####################################################################
 
@@ -243,33 +254,35 @@ kper = [s30c,s30d]
 # 5. most, more than half
 
 s51 = " most/jjs "
-s52 = " Most/jjs "
+#s52 = " Most/jjs "
 
 s51a = " most/dt "
-s52a = " Most/dt "
+#s52a = " Most/dt "
 
 s53 = " more/jjr than/in half/nn "
-s54 = " More/jjr than/in half/nn "
+#s54 = " More/jjr than/in half/nn "
 
-most = [s51,s52,s51a,s52a,s53,s54]
+most = [s51,s51a,s53]
+#most = [s51,s52,s51a,s52a,s53,s54]
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
 s51b = " few/jj "
-s52b = " Few/jj "
+#s52b = " Few/jj "
 
 s51bb = " few/jj "
-s52bb = " Few/jj "
+#s52bb = " Few/jj "
 
 s53b = " less/jj than/in half/nn "
-s54b = " Less/jj than/in half/nn "
+#s54b = " Less/jj than/in half/nn "
 
 s53bb = " fewer/jj than/in half/nn "
-s54bb = " Fewer/jj than/in half/nn "
+#s54bb = " Fewer/jj than/in half/nn "
 
-few = [s51b,s52b,s51bb,s52bb,s53b,s54b,s53bb,s54bb]
+few = [s51b,s51bb,s53b,s53bb]
+#few = [s51b,s52b,s51bb,s52bb,s53b,s54b,s53bb,s54bb]
 
 
 ####################################################################
@@ -374,7 +387,7 @@ class ProporStats:
             
             ####################################################################
             
-            print "==================================================="
+            #print "==================================================="
             print idf
             print "==================================================="
             
@@ -470,30 +483,24 @@ class ProporStats:
             while mydata.lines:
                 
                 i = 0
-            
                 my_max = len(mydata.lines)
-            
+                
+                # loop over chunk
                 while i  <  my_max:
-                #while i  < 25:
             
-                # parse the chunk
-
+                    # parse the chunk
                     lines = mydata.lines
                     line = mydata.lines[i]
                     
-                    #print line
-            
+                    # build sentence            
                     sen = MySen()
                     sen.buildSen(i,lines,my_max)
                 
-                    #print line             
-                    
+                    # if sentence built, apply patterns       
                     if sen.end == True:
-                        #sen.reset()
-                
-                        myline = sen.sen
                         
-                        print 'True!!!', '\n' 
+                        # retrieve POS tagged sentence
+                        myline = sen.sen
             
                         ####################################################################           
                     
@@ -575,13 +582,16 @@ class ProporStats:
                 
                         ####################################################################
                     
+                    # if a sentence is found, skip the lines it
+                    # covers in the loop, otherwise move to the
+                    # next line
                     if sen.len > 0:
                         i = i + sen.len
-                        print 'senlen=', sen.len, '\n'
-                        print 'sen= ', sen.sen, '\n'
+                        # print 'senlen=', sen.len, '\n'
+                        # print 'sen= ', sen.sen, '\n'
                     else:    
                         i = i + 1
-                    print 'explore at line= ', i, '\n'
+                    # print 'explore at line= ', i, '\n'
                 
                 # move to new chunk
                 mydata.lines = mydata.myread()
@@ -594,9 +604,10 @@ class ProporStats:
                     + c6.count + c7.count + c8.count + c9.count
                     + c10.count + c11.count + c12.count + c13.count 
                     + c14.count) + 1
-            
+    
+            print "corpus size : " + `corpus.count` + " sentences"        
             print "==================================================="
-            print tot, "total matches"
+            print "total matches: " + `tot` + " GQs"
             
             #relative frequencies
             c1.freq  = round(c1.count/tot,2)

@@ -27,7 +27,7 @@ class OpenFile:
         
             lines = []
             try:
-                lines = self.bigfile.readlines(100000000)
+                lines = self.bigfile.readlines(10000000)
             except:
                 print 'error'
             return lines
