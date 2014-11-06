@@ -33,7 +33,7 @@ class OpenFile:
         
             lines = []
             try:
-                lines = self.bigfile.readlines(10000000)
+                lines = self.bigfile.readlines(100)
             except:
                 print 'error'
             return lines
@@ -70,18 +70,37 @@ class MySen:
         # build a sentence
         def buildSen(self,i,lines,my_max):
             
+#                 tokens = lines[i].split()
+#                 if tokens[0] == '<s>':
+#                     self.begin = True
+#                     posi = i+1          
+#                     while not(lines[posi+1].split()[0] == '</s>' ):
+#                         posi = posi + 1
+#                         tokens = lines[posi].split()
+#                         self.sen = self.sen + tokens[0]+ '/' + tokens[2] + ' '
+#                         if posi+1 == my_max:                        
+#                             break            
+#                     self.len = posi - (i+1)
+#                     self.end = True              
+#                 self.sen = self.sen.lower()
+
                 tokens = lines[i].split()
                 if tokens[0] == '<s>':
                     self.begin = True
-                    posi = i+1          
-                    while not(lines[posi+1].split()[0] == '</s>' ):
-                        posi = posi + 1
-                        tokens = lines[posi].split()
-                        self.sen = self.sen + tokens[0]+ '/' + tokens[2] + ' '
-                        if posi+1 == my_max:
-                            break                    
-                    self.len = posi - (i+1)
-                    self.end = True              
+                    posi = i+1
+                    if posi+1 < my_max:          
+                        while not(lines[posi+1].split()[0] == '</s>' ):
+                            posi = posi + 1
+                            tokens = lines[posi].split()
+                            self.sen = self.sen + tokens[0]+ '/' + tokens[2] + ' '
+#                             print posi, my_max
+                            if posi+1 == my_max:
+#                                 print 'max'                            
+                                break            
+                        self.len = posi - (i+1)
+                        self.end = True
+#                     else:
+#                         print 'max'                        
                 self.sen = self.sen.lower()
         
         
