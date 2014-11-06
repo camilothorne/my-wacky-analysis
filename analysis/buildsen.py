@@ -3,6 +3,7 @@ Created on Jul 29, 2014
 @author: camilothorne
 '''
 
+
 # class to open big files
 class OpenFile:
     
@@ -17,7 +18,7 @@ class OpenFile:
 
         self.file = filename
         self.lines = None
-        self.bigfile = open(filename, 'r')
+        self.bigfile = open(filename,'r')
 
             
     # close file
