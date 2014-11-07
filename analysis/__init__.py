@@ -28,7 +28,7 @@ from propor import *
 # corpora root files and format
 plotting      = '/home/camilothorne/wacky-corpus/plotting/'
 path            = "/home/camilothorne/wacky-corpus/wackypedia/"
-format       = ".*test"
+format       = ".*testb"
 list               = ('ukwack')
 
 
