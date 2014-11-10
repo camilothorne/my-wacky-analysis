@@ -92,7 +92,7 @@ class MySen:
                         while not(lines[posi+1].split()[0] == '</s>' ):
                             posi = posi + 1
                             tokens = lines[posi].split()
-                            self.sen = self.sen + tokens[0]+ '/' + tokens[2] + ' '
+                            self.sen = self.sen + tokens[1]+ '/' + tokens[2] + ' '
 #                             print posi, my_max
                             if posi+1 == my_max:
 #                                 print 'max'                            

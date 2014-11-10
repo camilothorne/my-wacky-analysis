@@ -46,125 +46,125 @@ s0 = ".*"        # anything!
 
 # 1. exists
 
-s10 = " someone/nn"
-s12 = " somebody/nn"
-s12a = " anybody/nn"
-s14 = " something/nn"
-s16 = " some/dt"
-s18 = " a/dt"
-s20 = " many/dt "
-s20a = " many/jj */nns"
-s22 = " there/ex"
+ss10 = " someone/nn"
+ss12 = " somebody/nn"
+ss12a = " anybody/nn"
+ss14 = " something/nn"
+ss16 = " some/dt"
+ss18 = " a/dt"
+ss20 = " many/dt "
+ss20a = " many/jj */nns"
+ss22 = " there/ex"
 
 ####################################################################
 
 # 4. all
 
-s40 = " every/dt "
-s42 = " all/dt "
-s44 = " the/dt .*/nns "
-s46 = " everything/nn "
-s48 = " everyone/nn " 
-s4a = " everybody/nn " 
-s4c = " each/dt "
-s4e = " no/dt "
+ss40 = " every/dt "
+ss42 = " all/dt "
+ss44 = " the/dt .*/nns "
+ss46 = " everything/nn "
+ss48 = " everyone/nn " 
+ss4a = " everybody/nn " 
+ss4c = " each/dt "
+ss4e = " no/dt "
 
 ####################################################################
 
 # 8.1 exactly one
 
-s74 = " the/dt "
+ss74 = " the/dt "
 
 ####################################################################
 ####################################################################
 
 # 6. at most k, less than k (k integer)
 
-s60 = " at/in most/jjs .*/cd "
-s20b = " less/jjr than/in .*/cd "
-s20bb = " fewer/jjr than/in .*/at .*/cd "
-s22b = " less/jjr than/in .*/at .*/cd "
-s22bb = " fewer/jjr than/in .*/at .*/cd "
+ss60 = " at/in most/jjs .*/cd "
+ss20b = " less/jjr than/in .*/cd "
+ss20bb = " fewer/jjr than/in .*/at .*/cd "
+ss22b = " less/jjr than/in .*/at .*/cd "
+ss22bb = " fewer/jjr than/in .*/at .*/cd "
 
 ####################################################################
 
 # 7. at least k, more than k (k integer)
 
-s60b = " at/in least/jjs .*/cd "
-s20 = " more/jjr than/in .*/cd "
-s22 = " more/jjr than/in .*/at .*/cd "
+ss60b = " at/in least/jjs .*/cd "
+ss20 = " more/jjr than/in .*/cd "
+ss22 = " more/jjr than/in .*/at .*/cd "
 
 ####################################################################
 
 # 8. exactly k (k integer)
 
-s70 = " .*/cd .*/nns "
-s71 = " exactly/rb .*/cd "
+ss70 = " .*/cd .*/nns "
+ss71 = " exactly/rb .*/cd "
 
 ####################################################################
 ####################################################################
 
 # 9. more than p/k (p, k integers)
 
-s80 = " more/ap than/in half/abn "
-s82 = " more/ap than/in .*/cd .*/od "
+ss80 = " more/ap than/in half/abn "
+ss82 = " more/ap than/in .*/cd .*/od "
 
 ####################################################################
 
 # 9.1 less than p/k (p, k integers)
 
-s80b = " less/jjr than/in half/nn "
-s80bb = " fewer/jjr than/in half/nn "
-s82b = " less/jjr than/in .*/nns of/in "
-s82bb = " fewer/jjr than/in .*/nn of/in "
+ss80b = " less/jjr than/in half/nn "
+ss80bb = " fewer/jjr than/in half/nn "
+ss82b = " less/jjr than/in .*/nns of/in "
+ss82bb = " fewer/jjr than/in .*/nn of/in "
 
 ####################################################################
 
 # 9.2 p/k (p, k integers)
 
-s80c = " half/dt "
-s80d = " half/pdt "
-s80c = " half/nn of/in"
-s81c = "   .*/nns of/in "
-s81d = "  .*/nn of/in "
+ss80c = " half/dt "
+ss80d = " half/pdt "
+ss80c = " half/nn of/in"
+ss81c = "   .*/nns of/in "
+ss81d = "  .*/nn of/in "
 
 ####################################################################
 
 # 3. more than k% (k a percentage)
 
-s30 = " more/jjr than/in .*/cd percent/nn "
-s30a = " more/jjr than/in %/cd "
+ss30 = " more/jjr than/in .*/cd percent/nn "
+ss30a = " more/jjr than/in %/cd "
 
 ####################################################################
 
 # 3.1 less than k% (k a percentage)
 
-s30b = " less/jjr than/in .*/cd percent/nn "
-s30bb = " less/jjr than/in %/cd "
+ss30b = " less/jjr than/in .*/cd percent/nn "
+ss30bb = " less/jjr than/in %/cd "
 
 ####################################################################
 
 # 3.2 k% (k a percentage)
 
-s30c = " ./cd percent/nn "
-s30d = " %/cd "
+ss30c = " ./cd percent/nn "
+ss30d = " %/cd "
 
 ####################################################################
 
 # 5. most, more than half
 
-s51 = " most/jjs "
-s51a = " most/dt "
-s53 = " more/jjr than/in half/nn "
+ss51 = " most/jjs "
+ss51a = " most/dt "
+ss53 = " more/jjr than/in half/nn "
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
-s51b = " few/jj "
-s51bb = " few/jj "
-s53b = " less/jj than/in half/nn "
-s53bb = " fewer/jj than/in half/nn "
+ss51b = " few/jj "
+ss51bb = " few/jj "
+ss53b = " less/jj than/in half/nn "
+ss53bb = " fewer/jj than/in half/nn "
 
 
 ####################################################################
@@ -174,22 +174,22 @@ s53bb = " fewer/jj than/in half/nn "
 ####################################################################
 
 
-aristotelian = [s10,s12,s12a,s14,s16,s18,s20,s20a,s22,
-                s40,s42,s44,s46,s48,s4a,s4c,s4e,
-                s74]
+aristotelian = [ss10,ss12,ss12a,ss14,ss16,ss18,ss20,ss20a,ss22,
+                ss40,ss42,ss44,ss46,ss48,ss4a,ss4c,ss4e,
+                ss74]
 
-proportional = [s51b,s51bb,s53b,s53bb,
-                s51,s51a,s53,
-                s30c,s30d,
-                s30b,s30bb,
-                s30,s30a,
-                s80c,s80d,
-                s80b,s80bb,s82b,s82bb,
-                s80,s82]
+proportional = [ss51b,ss51bb,ss53b,ss53bb,
+                ss51,ss51a,ss53,
+                ss30c,ss30d,
+                ss30b,ss30bb,
+                ss30,ss30a,
+                ss80c,ss80d,
+                ss80b,ss80bb,ss82b,ss82bb,
+                ss80,ss82]
                 
-counting   = [s70,s71,
-                s20,s22,s60b,
-                s20b,s22b,s20bb,s22bb]
+counting  = [ss70,ss71,
+                ss20,ss22,ss60b,
+                ss20b,ss22b,ss20bb,ss22bb]
 
 
 ####################################################################
@@ -199,7 +199,7 @@ counting   = [s70,s71,
 # Class encoding the plot(s) + test(s)
 
 
-class ProporStats:
+class ProporStatsCum:
    
     
     # corpus            : path to corpora
@@ -236,15 +236,15 @@ class ProporStats:
         self.fileStats(path,fileids)
         
         # plotting vars
-        figname = "Base GQs"
+        figname = "Base GQs  (by class)"
         figpath = plotting +'/'+ figname.replace(' ', '-') + '-stats.pdf'
         savpath = plotting +'/'+ figname.replace(' ', '-')
         
         # plotting
-        MyPlot(self.stats,self.classstats,figname, "three",plotting,list) # all
+        MyPlot(self.stats,self.classstats,figname, "three",plotting,list) # per class (no regression)
         
         # generating report
-        SaveStats(self.classstats,self.stats,figpath,savpath,plotting) # all
+        SaveStats(self.classstats,self.stats,figpath,savpath,plotting) # per class
         
         
     #############################################################
@@ -255,7 +255,7 @@ class ProporStats:
     def fileStats(self,path,fileids):
                 
         # starting the title
-        tit = "Base GQs"
+        tit = "Base GQs (by class)"
         
         # stat classes
         C1 = MyClassStats2("ari",[],0,tit)
@@ -333,29 +333,18 @@ class ProporStats:
                         
                         # retrieve POS tagged sentence
                         myline = sen.sen
-            
                         ####################################################################           
-                    
                         # corpus
                         corpus.openSen(myline,corpus.pats,corpus.patts)        
-                    
-                        ####################################################################
                         ####################################################################            
-                        
                         # class 1
                         c1.openSen(myline,c1.pats,c1.patts)
-                        
                         ####################################################################
-                        
                         # class 2    
                         c2.openSen(myline,c2.pats,c2.patts)
-                        
                         ####################################################################
-                        ####################################################################
-             
                         # class 3 
-                        c3.openSen(myline,c3.pats,c3.patts)    
-                                    
+                        c3.openSen(myline,c3.pats,c3.patts)                                 
                         ####################################################################
                     
                     # if a sentence is found, skip the lines it
