@@ -28,8 +28,8 @@ from propor import *
 # corpora root files and format
 plotting      = '/home/camilothorne/wacky-corpus/plotting/'
 path            = "/home/camilothorne/wacky-corpus/wackypedia/"
-format       = ".*testb"
-list               = ('ukwack')
+format       = ".*txt"
+list               = ('ukw1', 'ukw2', 'ukw3', 'ukw4')
 
 
 # all GQs
