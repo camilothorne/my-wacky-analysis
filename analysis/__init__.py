@@ -9,10 +9,10 @@ Created on Jul 29, 2014
 
 #================#
 #================#
-#                                     #
-#         Stats script        #
-#         (init file)             #
-#                                      #
+#
+#  Stats script
+#  (init file)   
+#
 #================#
 #================#
 
@@ -29,9 +29,9 @@ from proporcum import *
 
 # corpora root files and format
 plotting      = '/home/camilothorne/wacky-corpus/plotting/'
-path            = "/home/camilothorne/wacky-corpus/wackypedia/"
-format       = ".*txt"
-list               = ('wackypedia')
+path          = "/home/camilothorne/wacky-corpus/wackypedia/"
+format        = ".*test"
+list          = ('wackypedia')
 
 
 # all GQs
