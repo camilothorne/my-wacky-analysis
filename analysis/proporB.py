@@ -269,7 +269,7 @@ few = [s51b,s51bb,s53b,s53bb]
 # Class encoding the plot(s) + test(s)
 
 
-class ProporStats:
+class ProporStatsF:
    
     
     # corpus            : path to corpora

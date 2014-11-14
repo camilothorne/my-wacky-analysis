@@ -31,7 +31,7 @@ from proporcum import *
 plotting      = '/home/camilothorne/wacky-corpus/plotting/'
 path          = "/home/camilothorne/wacky-corpus/wackypedia/"
 format        = ".*test"
-list          = ('wacky','dewack')
+list          = ('wacky')
 
 
 # all GQs

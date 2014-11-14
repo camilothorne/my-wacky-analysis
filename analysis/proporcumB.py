@@ -60,15 +60,15 @@ ss20 = " many/dt "
 ss20a = " many/jj */nns"
 ss22 = " there/ex"
 
-dss10 = " someone/nn"
-dss12 = " somebody/nn"
-dss12a = " anybody/nn"
-dss14 = " something/nn"
-dss16 = " some/dt"
-dss18 = " a/dt"
-dss20 = " many/dt "
-dss20a = " many/jj */nns"
-dss22 = " there/ex"
+dss10 = " /jemand"
+dss12 = " "
+dss12a = " "
+dss14 = " /etwas"
+dss16 = " "
+dss18 = " art/ein"
+dss20 = " manche "
+dss20a = " /manche nns/.* "
+dss22 = " /es /gibt"
 
 ####################################################################
 
@@ -269,7 +269,7 @@ counting  = [ss70,ss71,
 # Class encoding the plot(s) + test(s)
 
 
-class ProporStatsCum:
+class ProporStatsCumF:
    
     
     # corpus            : path to corpora

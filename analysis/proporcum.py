@@ -264,7 +264,7 @@ class ProporStatsCum:
         C2 = MyClassStats2("cnt",[],0,tit)
         C3 = MyClassStats2("pro",[],0,tit)
 
-        self.classstatsCum = [C1,C2,C3]     
+        self.classstats = [C1,C2,C3]     
         
         print "###################################################"
         print "GQ STATS (by class)"
