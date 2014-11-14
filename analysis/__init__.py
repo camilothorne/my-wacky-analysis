@@ -31,10 +31,10 @@ from proporcum import *
 plotting      = '/home/camilothorne/wacky-corpus/plotting/'
 path          = "/home/camilothorne/wacky-corpus/wackypedia/"
 format        = ".*test"
-list          = ('wackypedia')
+list          = ('wacky','dewack')
 
 
 # all GQs
 ProporStats(path, format, list, plotting)
 # by GQ class
-ProporStats(path, format, list, plotting)
+ProporStatsCum(path, format, list, plotting)

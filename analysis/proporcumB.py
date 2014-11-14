@@ -1,14 +1,16 @@
 '''
-Created on Nov 10, 2014
-@author: camilothorne
+Created on Nov 14, 2014
+@author: camilo
 '''
+
 
 #===================#
 #===================#
 #
 # Class likelihoods
 #
-#   (by Q class)
+#   (by Q class:
+#    ENG + DEU)
 # 
 #===================#
 #===================#
@@ -58,6 +60,16 @@ ss20 = " many/dt "
 ss20a = " many/jj */nns"
 ss22 = " there/ex"
 
+dss10 = " someone/nn"
+dss12 = " somebody/nn"
+dss12a = " anybody/nn"
+dss14 = " something/nn"
+dss16 = " some/dt"
+dss18 = " a/dt"
+dss20 = " many/dt "
+dss20a = " many/jj */nns"
+dss22 = " there/ex"
+
 ####################################################################
 
 # 4. all
@@ -71,11 +83,22 @@ ss4a = " everybody/nn "
 ss4c = " each/dt "
 ss4e = " no/dt "
 
+dss40 = " every/dt "
+dss42 = " all/dt "
+dss44 = " the/dt .*/nns "
+dss46 = " everything/nn "
+dss48 = " everyone/nn " 
+dss4a = " everybody/nn " 
+dss4c = " each/dt "
+dss4e = " no/dt "
+
 ####################################################################
 
 # 8.1 exactly one
 
 ss74 = " the/dt "
+
+dss74 = " art/d "
 
 ####################################################################
 ####################################################################
@@ -88,6 +111,12 @@ ss20bb = " fewer/jjr than/in .*/at .*/cd "
 ss22b = " less/jjr than/in .*/at .*/cd "
 ss22bb = " fewer/jjr than/in .*/at .*/cd "
 
+dss60 = " at/in most/jjs .*/cd "
+dss20b = " less/jjr than/in .*/cd "
+dss20bb = " fewer/jjr than/in .*/at .*/cd "
+dss22b = " less/jjr than/in .*/at .*/cd "
+dss22bb = " fewer/jjr than/in .*/at .*/cd "
+
 ####################################################################
 
 # 7. at least k, more than k (k integer)
@@ -96,12 +125,19 @@ ss60b = " at/in least/jjs .*/cd "
 ss20 = " more/jjr than/in .*/cd "
 ss22 = " more/jjr than/in .*/at .*/cd "
 
+dss60b = " at/in least/jjs .*/cd "
+dss20 = " more/jjr than/in .*/cd "
+dss22 = " more/jjr than/in .*/at .*/cd "
+
 ####################################################################
 
 # 8. exactly k (k integer)
 
 ss70 = " .*/cd .*/nns "
 ss71 = " exactly/rb .*/cd "
+
+dss70 = " .*/cd .*/nns "
+dss71 = " exactly/rb .*/cd "
 
 ####################################################################
 ####################################################################
@@ -110,6 +146,9 @@ ss71 = " exactly/rb .*/cd "
 
 ss80 = " more/ap than/in half/abn "
 ss82 = " more/ap than/in .*/cd .*/od "
+
+dss80 = " more/ap than/in half/abn "
+dss82 = " more/ap than/in .*/cd .*/od "
 
 ####################################################################
 
@@ -120,6 +159,11 @@ ss80bb = " fewer/jjr than/in half/nn "
 ss82b = " less/jjr than/in .*/nns of/in "
 ss82bb = " fewer/jjr than/in .*/nn of/in "
 
+dss80b = " less/jjr than/in half/nn "
+dss80bb = " fewer/jjr than/in half/nn "
+dss82b = " less/jjr than/in .*/nns of/in "
+dss82bb = " fewer/jjr than/in .*/nn of/in "
+
 ####################################################################
 
 # 9.2 p/k (p, k integers)
@@ -127,8 +171,14 @@ ss82bb = " fewer/jjr than/in .*/nn of/in "
 ss80c = " half/dt "
 ss80d = " half/pdt "
 ss80c = " half/nn of/in"
-ss81c = "   .*/nns of/in "
-ss81d = "  .*/nn of/in "
+ss81c = " .*/nns of/in "
+ss81d = " .*/nn of/in "
+
+dss80c = " half/dt "
+dss80d = " half/pdt "
+dss80c = " half/nn of/in"
+dss81c = " .*/nns of/in "
+dss81d = " .*/nn of/in "
 
 ####################################################################
 
@@ -137,6 +187,9 @@ ss81d = "  .*/nn of/in "
 ss30 = " more/jjr than/in .*/cd percent/nn "
 ss30a = " more/jjr than/in %/cd "
 
+dss30 = " more/jjr than/in .*/cd percent/nn "
+dss30a = " more/jjr than/in %/cd "
+
 ####################################################################
 
 # 3.1 less than k% (k a percentage)
@@ -144,12 +197,18 @@ ss30a = " more/jjr than/in %/cd "
 ss30b = " less/jjr than/in .*/cd percent/nn "
 ss30bb = " less/jjr than/in %/cd "
 
+dss30b = " less/jjr than/in .*/cd percent/nn "
+dss30bb = " less/jjr than/in %/cd "
+
 ####################################################################
 
 # 3.2 k% (k a percentage)
 
 ss30c = " ./cd percent/nn "
 ss30d = " %/cd "
+
+dss30c = " ./cd percent/nn "
+dss30d = " %/cd "
 
 ####################################################################
 
@@ -159,6 +218,10 @@ ss51 = " most/jjs "
 ss51a = " most/dt "
 ss53 = " more/jjr than/in half/nn "
 
+dss51 = " most/jjs "
+dss51a = " most/dt "
+dss53 = " more/jjr than/in half/nn "
+
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
@@ -167,6 +230,11 @@ ss51b = " few/jj "
 ss51bb = " few/jj "
 ss53b = " less/jj than/in half/nn "
 ss53bb = " fewer/jj than/in half/nn "
+
+dss51b = " few/jj "
+dss51bb = " few/jj "
+dss53b = " less/jj than/in half/nn "
+dss53bb = " fewer/jj than/in half/nn "
 
 
 ####################################################################
@@ -482,5 +550,6 @@ class ProporStatsCum:
         s.mySkew(sample1)                       # skewness     
         s.myEntropy(sample2)                    # entropy
         s.myChiTest(sample1,s.uniFor(sample1))  # X^2 test   
+
 
 
