@@ -280,9 +280,9 @@ class ProporStatsCumF:
         self.classstats = [] # classes
         self.path = path # path of corpus
         self.format = myformat # format of file(s)
-        self.occStats(path,myformat,list,plotting) # collects stats + plots them
+        self.list = mylist        
+        self.occStats(path,myformat,self.list,plotting) # collects stats + plots them
         self.statTestB(self.classstats) # runs the stat tests
-        self.list = mylist
         self.plotting = plotting    
 
     
