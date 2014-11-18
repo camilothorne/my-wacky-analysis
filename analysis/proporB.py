@@ -45,7 +45,7 @@ s0 = ".*"        # anything!
 ####################################################################
 ####################################################################
 
-# 1. exists
+# exists
 
 s10 = " someone/nn"
 s12 = " somebody/nn"
@@ -54,24 +54,25 @@ s14 = " something/nn"
 s16 = " some/dt"
 s18 = " a/dt"
 s20 = " many/dt "
-s20a = " many/jj */nns"
+s21 = " many/jj */nns"
 s22 = " there/ex"
 
-ds10 = " someone/nn"
-ds12 = " somebody/nn"
-ds12a = " anybody/nn"
-ds14 = " something/nn"
-ds16 = " some/dt"
-ds18 = " a/dt"
-ds20 = " many/dt "
-ds20a = " many/jj */nns"
-ds22 = " there/ex"
+ds10 = " pis/jemand "
+ds14 = " pis/etwas "
+ds15 = " piat/etwas "
+ds16 = " ne/irgendetwas "
+ds17 = " art/ein "
+ds18 = " pper/es vvfnn/gibt "
+ds20 = " pis/manch "
+ds21 = " piat/manch "
+ds22 = " piat/viel "
 
-some = [s10,s12,s12a,s14,s16,s18,s20,s20a,s22]
+some = [s10,s12,s12a,s14,s16,s18,s20,s21,s22,
+        ds10,ds14,ds15,ds16,ds17,ds18,ds20,ds21,ds22]
 
 ####################################################################
 
-# 4. all
+# all
 
 s40 = " every/dt "
 s42 = " all/dt "
@@ -82,31 +83,29 @@ s4a = " everybody/nn "
 s4c = " each/dt "
 s4e = " no/dt "
 
-ds40 = " every/dt "
-ds42 = " all/dt "
-ds44 = " the/dt .*/nns "
-ds46 = " everything/nn "
-ds48 = " everyone/nn " 
-ds4a = " everybody/nn " 
-ds4c = " each/dt "
-ds4e = " no/dt "
+ds40 = " piat/alle "
+ds41 = " pis/alle "
+ds42 = " piat/kein "
+ds46 = " piat/jed "
 
-all = [s40,s42,s44,s46,s48,s4a,s4c,s4e]
+all = [s40,s42,s44,s46,s48,s4a,s4c,s4e,
+       ds40,ds41,ds42,ds46]
 
 ####################################################################
 
-# 8.1 exactly one
+# exactly one
 
 s74 = " the/dt "
 
 ds74 = " art/d "
 
-the = [s74,ds74]
+the = [s74,
+       ds74]
 
 ####################################################################
 ####################################################################
 
-# 6. at most k, less than k (k integer)
+# at most k, less than k (k integer)
 
 s60 = " at/in most/jjs .*/cd "
 s20b = " less/jjr than/in .*/cd "
@@ -114,72 +113,74 @@ s20bb = " fewer/jjr than/in .*/at .*/cd "
 s22b = " less/jjr than/in .*/at .*/cd "
 s22bb = " fewer/jjr than/in .*/at .*/cd "
 
-ds60 = " at/in most/jjs .*/cd "
-ds20b = " less/jjr than/in .*/cd "
-ds20bb = " fewer/jjr than/in .*/at .*/cd "
-ds22b = " less/jjr than/in .*/at .*/cd "
-ds22bb = " fewer/jjr than/in .*/at .*/cd "
+ds60 = " adv/hochstens card/@card@ "
+ds20b = " piat/weniger kokom/als card/@card@ "
 
-lessk = [s20b,s22b,s20bb,s22bb]
+lessk = [s20b,s22b,s20bb,s22bb,
+         ds60,ds20b]
 
 ####################################################################
 
-# 7. at least k, more than k (k integer)
+# at least k, more than k (k integer)
 
 s60b = " at/in least/jjs .*/cd "
 s20 = " more/jjr than/in .*/cd "
 s22 = " more/jjr than/in .*/at .*/cd "
 
-ds60b = " at/in least/jjs .*/cd "
-ds20 = " more/jjr than/in .*/cd "
-ds22 = " more/jjr than/in .*/at .*/cd "
+ds60b = " adv/mindestens card/@card@ "
+ds20 = " piat/mehr kokom/als card/@card@ "
 
-morek = [s20,s22,s60b]
+morek = [s20,s22,s60b,
+         ds60b,ds20]
 
 ####################################################################
 
-# 8. exactly k (k integer)
+# exactly k (k integer)
 
 s70 = " .*/cd .*/nns "
 s71 = " exactly/rb .*/cd "
 
-ds70 = " .*/cd .*/nns "
-ds71 = " exactly/rb .*/cd "
+ds70 = " card/@card@ nn/.* "
 
-exactlyk = [s70,s71]
+exactlyk = [s70,s71,
+            ds70]
 
 ####################################################################
 ####################################################################
 
-# 9. more than p/k (p, k integers)
+# more than p/k (p, k integers)
 
 s80 = " more/ap than/in half/abn "
-s82 = " more/ap than/in .*/cd .*/od "
+s82 = " more/ap than/in .*/cd of/in "
 
-ds80 = " more/ap than/in half/abn "
-ds82 = " more/ap than/in .*/cd .*/od "
+ds80 = " piat/mehr kokom/als adjd/halb "
+ds82 = " appr/uber adjd/halb "
+ds80a = " piat/mehr kokom/als card/@card@ appr/von"
+ds82a = " appr/uber card/@card@ appr/von "
 
-morethanpro = [s80,s82]
+morethanpro = [s80,s82,
+               ds80,ds82,ds80a,ds82a]
 
 ####################################################################
 
-# 9.1 less than p/k (p, k integers)
+# less than p/k (p, k integers)
 
 s80b = " less/jjr than/in half/nn "
 s80bb = " fewer/jjr than/in half/nn "
-s82b = " less/jjr than/in .*/nns of/in "
-s82bb = " fewer/jjr than/in .*/nn of/in "
+s82b = " less/jjr than/in .*/cd of/in "
+s82bb = " fewer/jjr than/in .*/cd of/in "
 
-ds80b = " less/jjr than/in half/nn "
-ds80bb = " fewer/jjr than/in half/nn "
-ds82b = " less/jjr than/in .*/nns of/in "
-ds82bb = " fewer/jjr than/in .*/nn of/in "
+ds80b = " piat/weniger kokom/als adjd/halb "
+ds80bb = " piat/weniger kokom/als card/@card@ appr/von "
+ds80bbb = " appr/unter card/@card@ appr/von "
+ds80bbbb = " appr/unter adjd/halb "
 
-lessthanpro = [s80b,s80bb,s82b,s82bb]
+lessthanpro = [s80b,s80bb,s82b,s82bb,
+               ds80b,ds80bb,ds80bbb,ds80bbbb]
 
 ####################################################################
 
-# 9.2 p/k (p, k integers)
+# p/k (p, k integers)
 
 s80c = " half/dt "
 s80d = " half/pdt "
@@ -187,79 +188,81 @@ s80c = " half/nn of/in"
 s81c = " .*/nns of/in "
 s81d = " .*/nn of/in "
 
-ds80c = " half/dt "
-ds80d = " half/pdt "
-ds80c = " half/nn of/in"
-ds81c = " .*/nns of/in "
-ds81d = " .*/nn of/in "
+ds80c = " adja/halb "
+ds80d = " adja/halb appr/von "
+ds80e = " card/@card@ appr/von "
 
-pro = [s80c,s80d]
+pro = [s80c,s80d,
+       ds80c,ds80d,ds80e]
 
 ####################################################################
 
-# 3. more than k% (k a percentage)
+# more than k% (k a percentage)
 
 s30 = " more/jjr than/in .*/cd percent/nn "
 s30a = " more/jjr than/in %/cd "
 
-ds30 = " more/jjr than/in .*/cd percent/nn "
-ds30a = " more/jjr than/in %/cd "
+ds30 = " appr/uber card/@card@ nn/%"
+ds30a = " piat/mehr kokom/als card/@card@ nn/% "
 
-morekper = [s30,s30a]
+morekper = [s30,s30a,
+            ds30,ds30a]
 
 ####################################################################
 
-# 3.1 less than k% (k a percentage)
+# less than k% (k a percentage)
 
 s30b = " less/jjr than/in .*/cd percent/nn "
 s30bb = " less/jjr than/in %/cd "
 
-ds30b = " less/jjr than/in .*/cd percent/nn "
-ds30bb = " less/jjr than/in %/cd "
+ds30b = " appr/unter card/@card@ nn/%"
+ds30bb = " piat/weniger kokom/als card/@card@ nn/% "
 
-lesskper = [s30b,s30bb]
+lesskper = [s30b,s30bb,
+            ds30b,ds30bb]
 
 ####################################################################
 
-# 3.2 k% (k a percentage)
+# k% (k a percentage)
 
 s30c = " ./cd percent/nn "
 s30d = " %/cd "
 
-ds30c = " ./cd percent/nn "
-ds30d = " %/cd "
+ds30d = " nn/% "
 
-kper = [s30c,s30d]
+kper = [s30c,s30d,ds30d,
+        ds30d]
 
 ####################################################################
 
-# 5. most, more than half
+# most, more than half
 
 s51 = " most/jjs "
 s51a = " most/dt "
 s53 = " more/jjr than/in half/nn "
 
-ds51 = " most/jjs "
-ds51a = " most/dt "
-ds53 = " more/jjr than/in half/nn "
+ds51 = " adv/fast piat/jed "
+ds51a = " piat/mehr kokom/als adjd/halb "
+ds53 = " appr/uber adjd/halb "
 
-most = [s51,s51a,s53]
+most = [s51,s51a,s53,
+        ds51,ds51a,ds53]
 
 ####################################################################
 
-# 5.1 few, less than half, fewer than half
+# few, less than half, fewer than half
 
 s51b = " few/jj "
-s51bb = " few/jj "
+s51bb = " few/dt "
 s53b = " less/jj than/in half/nn "
 s53bb = " fewer/jj than/in half/nn "
 
-ds51b = " few/jj "
-ds51bb = " few/jj "
-ds53b = " less/jj than/in half/nn "
-ds53bb = " fewer/jj than/in half/nn "
+ds51b = " piat/wenig "
+ds53b = " piat/wenig kokom/als adjd/halb "
+ds53bb = " appr/unter adjd/halb "
 
-few = [s51b,s51bb,s53b,s53bb]
+few = [s51b,s51bb,s53b,s53bb,
+       ds51b,ds53b,ds53bb]
 
 
 ####################################################################

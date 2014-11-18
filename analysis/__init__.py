@@ -23,18 +23,18 @@ sys.path.append(u'../mynltk/')
 
 
 # analysis functions
-from propor import *
-from proporcum import *
+from proporB import *
+from proporcumB import *
 
 
 # corpora root files and format
-plotting      = '/home/camilothorne/wacky-corpus/plotting/'
+plotting      = '/home/camilothorne/wacky-corpus/plotting-deu/'
 path          = "/home/camilothorne/wacky-corpus/wackypedia/"
 format        = ".*test"
-list          = ('wacky')
+list          = ('wacky','stut')
 
 
 # all GQs
-ProporStats(path, format, list, plotting)
+ProporStatsF(path, format, list, plotting)
 # by GQ class
-ProporStatsCum(path, format, list, plotting)
+ProporStatsCumF(path, format, list, plotting)

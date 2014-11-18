@@ -48,7 +48,7 @@ s0 = ".*"        # anything!
 ####################################################################
 ####################################################################
 
-# 1. exists
+# exists
 
 ss10 = " someone/nn"
 ss12 = " somebody/nn"
@@ -57,22 +57,22 @@ ss14 = " something/nn"
 ss16 = " some/dt"
 ss18 = " a/dt"
 ss20 = " many/dt "
-ss20a = " many/jj */nns"
+ss21 = " many/jj */nns"
 ss22 = " there/ex"
 
-dss10 = " /jemand"
-dss12 = " "
-dss12a = " "
-dss14 = " /etwas"
-dss16 = " "
-dss18 = " art/ein"
-dss20 = " manche "
-dss20a = " /manche nns/.* "
-dss22 = " /es /gibt"
+dss10 = " pis/jemand "
+dss14 = " pis/etwas "
+dss15 = " piat/etwas "
+dss16 = " ne/irgendetwas "
+dss17 = " art/ein "
+dss18 = " pper/es vvfnn/gibt "
+dss20 = " pis/manch "
+dss21 = " piat/manch "
+dss22 = " piat/viel "
 
 ####################################################################
 
-# 4. all
+# all
 
 ss40 = " every/dt "
 ss42 = " all/dt "
@@ -83,18 +83,14 @@ ss4a = " everybody/nn "
 ss4c = " each/dt "
 ss4e = " no/dt "
 
-dss40 = " every/dt "
-dss42 = " all/dt "
-dss44 = " the/dt .*/nns "
-dss46 = " everything/nn "
-dss48 = " everyone/nn " 
-dss4a = " everybody/nn " 
-dss4c = " each/dt "
-dss4e = " no/dt "
+dss40 = " piat/alle "
+dss41 = " pis/alle "
+dss42 = " piat/kein "
+dss46 = " piat/jed "
 
 ####################################################################
 
-# 8.1 exactly one
+# exactly one
 
 ss74 = " the/dt "
 
@@ -103,7 +99,7 @@ dss74 = " art/d "
 ####################################################################
 ####################################################################
 
-# 6. at most k, less than k (k integer)
+# at most k, less than k (k integer)
 
 ss60 = " at/in most/jjs .*/cd "
 ss20b = " less/jjr than/in .*/cd "
@@ -111,62 +107,59 @@ ss20bb = " fewer/jjr than/in .*/at .*/cd "
 ss22b = " less/jjr than/in .*/at .*/cd "
 ss22bb = " fewer/jjr than/in .*/at .*/cd "
 
-dss60 = " at/in most/jjs .*/cd "
-dss20b = " less/jjr than/in .*/cd "
-dss20bb = " fewer/jjr than/in .*/at .*/cd "
-dss22b = " less/jjr than/in .*/at .*/cd "
-dss22bb = " fewer/jjr than/in .*/at .*/cd "
+dss60 = " adv/hochstens card/@card@ "
+dss20b = " piat/weniger kokom/als card/@card@ "
 
 ####################################################################
 
-# 7. at least k, more than k (k integer)
+# at least k, more than k (k integer)
 
 ss60b = " at/in least/jjs .*/cd "
 ss20 = " more/jjr than/in .*/cd "
 ss22 = " more/jjr than/in .*/at .*/cd "
 
-dss60b = " at/in least/jjs .*/cd "
-dss20 = " more/jjr than/in .*/cd "
-dss22 = " more/jjr than/in .*/at .*/cd "
+dss60b = " adv/mindestens card/@card@ "
+dss20 = " piat/mehr kokom/als card/@card@ "
 
 ####################################################################
 
-# 8. exactly k (k integer)
+# exactly k (k integer)
 
 ss70 = " .*/cd .*/nns "
 ss71 = " exactly/rb .*/cd "
 
-dss70 = " .*/cd .*/nns "
-dss71 = " exactly/rb .*/cd "
+dss70 = " card/@card@ nn/.* "
 
 ####################################################################
 ####################################################################
 
-# 9. more than p/k (p, k integers)
+# more than p/k (p, k integers)
 
 ss80 = " more/ap than/in half/abn "
 ss82 = " more/ap than/in .*/cd .*/od "
 
-dss80 = " more/ap than/in half/abn "
-dss82 = " more/ap than/in .*/cd .*/od "
+dss80 = " piat/mehr kokom/als adjd/halb "
+dss82 = " appr/uber adjd/halb "
+dss80a = " piat/mehr kokom/als card/@card@ appr/von"
+dss82a = " appr/uber card/@card@ appr/von "
 
 ####################################################################
 
-# 9.1 less than p/k (p, k integers)
+# less than p/k (p, k integers)
 
 ss80b = " less/jjr than/in half/nn "
 ss80bb = " fewer/jjr than/in half/nn "
 ss82b = " less/jjr than/in .*/nns of/in "
 ss82bb = " fewer/jjr than/in .*/nn of/in "
 
-dss80b = " less/jjr than/in half/nn "
-dss80bb = " fewer/jjr than/in half/nn "
-dss82b = " less/jjr than/in .*/nns of/in "
-dss82bb = " fewer/jjr than/in .*/nn of/in "
+dss80b = " piat/weniger kokom/als adjd/halb "
+dss80bb = " piat/weniger kokom/als card/@card@ appr/von "
+dss80bbb = " appr/unter card/@card@ appr/von "
+dss80bbbb = " appr/unter adjd/halb "
 
 ####################################################################
 
-# 9.2 p/k (p, k integers)
+# p/k (p, k integers)
 
 ss80c = " half/dt "
 ss80d = " half/pdt "
@@ -174,67 +167,63 @@ ss80c = " half/nn of/in"
 ss81c = " .*/nns of/in "
 ss81d = " .*/nn of/in "
 
-dss80c = " half/dt "
-dss80d = " half/pdt "
-dss80c = " half/nn of/in"
-dss81c = " .*/nns of/in "
-dss81d = " .*/nn of/in "
+dss80c = " adja/halb "
+dss80d = " adja/halb appr/von "
+dss80e = " card/@card@ appr/von "
 
 ####################################################################
 
-# 3. more than k% (k a percentage)
+# more than k% (k a percentage)
 
 ss30 = " more/jjr than/in .*/cd percent/nn "
 ss30a = " more/jjr than/in %/cd "
 
-dss30 = " more/jjr than/in .*/cd percent/nn "
-dss30a = " more/jjr than/in %/cd "
+dss30 = " appr/uber card/@card@ nn/%"
+dss30a = " piat/mehr kokom/als card/@card@ nn/% "
 
 ####################################################################
 
-# 3.1 less than k% (k a percentage)
+# less than k% (k a percentage)
 
 ss30b = " less/jjr than/in .*/cd percent/nn "
 ss30bb = " less/jjr than/in %/cd "
 
-dss30b = " less/jjr than/in .*/cd percent/nn "
-dss30bb = " less/jjr than/in %/cd "
+dss30b = " appr/unter card/@card@ nn/%"
+dss30bb = " piat/weniger kokom/als card/@card@ nn/% "
 
 ####################################################################
 
-# 3.2 k% (k a percentage)
+# k% (k a percentage)
 
 ss30c = " ./cd percent/nn "
 ss30d = " %/cd "
 
-dss30c = " ./cd percent/nn "
-dss30d = " %/cd "
+dss30d = " nn/% "
 
 ####################################################################
 
-# 5. most, more than half
+# most, more than half
 
 ss51 = " most/jjs "
 ss51a = " most/dt "
 ss53 = " more/jjr than/in half/nn "
 
-dss51 = " most/jjs "
-dss51a = " most/dt "
-dss53 = " more/jjr than/in half/nn "
+dss51 = " adv/fast piat/jed "
+dss51a = " piat/mehr kokom/als adjd/halb "
+dss53 = " appr/uber adjd/halb "
 
 ####################################################################
 
-# 5.1 few, less than half, fewer than half
+# few, less than half, fewer than half
 
 ss51b = " few/jj "
 ss51bb = " few/jj "
 ss53b = " less/jj than/in half/nn "
 ss53bb = " fewer/jj than/in half/nn "
 
-dss51b = " few/jj "
-dss51bb = " few/jj "
-dss53b = " less/jj than/in half/nn "
-dss53bb = " fewer/jj than/in half/nn "
+dss51b = " piat/wenig "
+dss53b = " piat/wenig kokom/als adjd/halb "
+dss53bb = " appr/unter adjd/halb "
 
 
 ####################################################################
@@ -244,22 +233,27 @@ dss53bb = " fewer/jj than/in half/nn "
 ####################################################################
 
 
-aristotelian = [ss10,ss12,ss12a,ss14,ss16,ss18,ss20,ss20a,ss22,
-                ss40,ss42,ss44,ss46,ss48,ss4a,ss4c,ss4e,
-                ss74]
+aristotelian = [ss10,ss12,ss12a,ss14,ss16,ss18,ss20,ss21,ss22,
+                ss40,ss42,ss44,ss46,ss48,ss4a,ss4c,ss4e,ss74,
+                dss10,dss14,dss15,dss16,dss17,dss18,dss20,dss21,dss22,
+                dss40,dss41,dss42,dss46,dss74               
+                ]
 
-proportional = [ss51b,ss51bb,ss53b,ss53bb,
-                ss51,ss51a,ss53,
-                ss30c,ss30d,
-                ss30b,ss30bb,
-                ss30,ss30a,
-                ss80c,ss80d,
-                ss80b,ss80bb,ss82b,ss82bb,
-                ss80,ss82]
+proportional = [ss51b,ss51bb,ss53b,ss53bb,ss51,
+                ss51a,ss53,ss30c,ss30d,ss30b,
+                ss30bb,ss30,ss30a,ss80c,ss80d,
+                ss80b,ss80bb,ss82b,ss82bb,ss80,ss82,
+                dss80,dss82,dss80a,dss82a,
+                dss80b,dss80bb,dss80bbb,dss80bbbb,
+                dss80c,dss80d,dss80e,dss30,dss30a,
+                dss30b,dss30bb,dss30d,dss51b,
+                dss53b,dss53bb,dss51,dss51a,dss53
+                ]
                 
-counting  = [ss70,ss71,
-                ss20,ss22,ss60b,
-                ss20b,ss22b,ss20bb,ss22bb]
+counting  = [ss70,ss71,ss20,ss22,ss60b,
+            ss20b,ss22b,ss20bb,ss22bb,dss60,
+            dss20b,dss60b,dss20,dss30d
+            ]
 
 
 ####################################################################
@@ -306,7 +300,7 @@ class ProporStatsCumF:
         self.fileStats(path,fileids)
         
         # plotting vars
-        figname = "Base GQs  (by class)"
+        figname = "Base GQs (by class - Eng & Deu)"
         figpath = plotting +'/'+ figname.replace(' ', '-') + '-stats.pdf'
         savpath = plotting +'/'+ figname.replace(' ', '-')
         
@@ -325,14 +319,14 @@ class ProporStatsCumF:
     def fileStats(self,path,fileids):
                 
         # starting the title
-        tit = "Base GQs (by class)"
+        tit = "Base GQs (by class - Eng & Deu)"
         
         # stat classes
         C1 = MyClassStats2("ari",[],0,tit)
         C2 = MyClassStats2("cnt",[],0,tit)
         C3 = MyClassStats2("pro",[],0,tit)
 
-        self.classstatsCum = [C1,C2,C3]     
+        self.classstats = [C1,C2,C3]     
         
         print "###################################################"
         print "GQ STATS (by class)"
