@@ -31,10 +31,10 @@ from proporcumB import *
 plotting      = '/home/camilothorne/wacky-corpus/plotting-deu/'
 path          = "/home/camilothorne/wacky-corpus/wackypedia/"
 format        = ".*test"
-list          = ('wacky','stut')
-
+listA          = ('mean','cumul','stut','wacky')
+listB          = ('stut','wacky')
 
 # all GQs
-ProporStatsF(path, format, list, plotting)
+ProporStatsF(path, format, listA, plotting)
 # by GQ class
-ProporStatsCumF(path, format, list, plotting)
+ProporStatsCumF(path, format, listB, plotting)

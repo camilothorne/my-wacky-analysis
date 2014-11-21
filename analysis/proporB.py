@@ -113,7 +113,7 @@ s20bb = " fewer/jjr than/in .*/at .*/cd "
 s22b = " less/jjr than/in .*/at .*/cd "
 s22bb = " fewer/jjr than/in .*/at .*/cd "
 
-ds60 = " adv/hochstens card/@card@ "
+ds60 = " adv/h\p{L}chstens card/@card@ "
 ds20b = " piat/weniger kokom/als card/@card@ "
 
 lessk = [s20b,s22b,s20bb,s22bb,
@@ -154,9 +154,9 @@ s80 = " more/ap than/in half/abn "
 s82 = " more/ap than/in .*/cd of/in "
 
 ds80 = " piat/mehr kokom/als adjd/halb "
-ds82 = " appr/uber adjd/halb "
+ds82 = " appr/\p{L}ber adjd/halb "
 ds80a = " piat/mehr kokom/als card/@card@ appr/von"
-ds82a = " appr/uber card/@card@ appr/von "
+ds82a = " appr/\p{L}ber card/@card@ appr/von "
 
 morethanpro = [s80,s82,
                ds80,ds82,ds80a,ds82a]
@@ -243,7 +243,7 @@ s53 = " more/jjr than/in half/nn "
 
 ds51 = " adv/fast piat/jed "
 ds51a = " piat/mehr kokom/als adjd/halb "
-ds53 = " appr/uber adjd/halb "
+ds53 = " appr/\p{L}ber adjd/halb "
 
 most = [s51,s51a,s53,
         ds51,ds51a,ds53]
@@ -309,7 +309,7 @@ class ProporStatsF:
         self.fileStats(path,fileids)
         
         # plotting vars
-        figname = "Base GQs (Eng & Deu)"
+        figname = "Base GQs"
         figpath = plotting +'/'+ figname.replace(' ', '-') + '-stats.pdf'
         savpath = plotting +'/'+ figname.replace(' ', '-')
         
@@ -328,7 +328,7 @@ class ProporStatsF:
     def fileStats(self,path,fileids):
                 
         # starting the title
-        tit = "Base GQs"
+        tit = "GQs"
         
         # stat classes
         

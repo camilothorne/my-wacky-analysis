@@ -107,7 +107,7 @@ ss20bb = " fewer/jjr than/in .*/at .*/cd "
 ss22b = " less/jjr than/in .*/at .*/cd "
 ss22bb = " fewer/jjr than/in .*/at .*/cd "
 
-dss60 = " adv/hochstens card/@card@ "
+dss60 = " adv/h\p{L}chstens card/@card@ "
 dss20b = " piat/weniger kokom/als card/@card@ "
 
 ####################################################################
@@ -139,9 +139,9 @@ ss80 = " more/ap than/in half/abn "
 ss82 = " more/ap than/in .*/cd .*/od "
 
 dss80 = " piat/mehr kokom/als adjd/halb "
-dss82 = " appr/uber adjd/halb "
+dss82 = " appr/\p{L}ber adjd/halb "
 dss80a = " piat/mehr kokom/als card/@card@ appr/von"
-dss82a = " appr/uber card/@card@ appr/von "
+dss82a = " appr/\p{L}ber card/@card@ appr/von "
 
 ####################################################################
 
@@ -178,7 +178,7 @@ dss80e = " card/@card@ appr/von "
 ss30 = " more/jjr than/in .*/cd percent/nn "
 ss30a = " more/jjr than/in %/cd "
 
-dss30 = " appr/uber card/@card@ nn/%"
+dss30 = " appr/\p{L}ber card/@card@ nn/%"
 dss30a = " piat/mehr kokom/als card/@card@ nn/% "
 
 ####################################################################
@@ -210,7 +210,7 @@ ss53 = " more/jjr than/in half/nn "
 
 dss51 = " adv/fast piat/jed "
 dss51a = " piat/mehr kokom/als adjd/halb "
-dss53 = " appr/uber adjd/halb "
+dss53 = " appr/\p{L}ber adjd/halb "
 
 ####################################################################
 
@@ -300,7 +300,7 @@ class ProporStatsCumF:
         self.fileStats(path,fileids)
         
         # plotting vars
-        figname = "Base GQs (by class - Eng & Deu)"
+        figname = "GQs by class"
         figpath = plotting +'/'+ figname.replace(' ', '-') + '-stats.pdf'
         savpath = plotting +'/'+ figname.replace(' ', '-')
         
@@ -319,7 +319,7 @@ class ProporStatsCumF:
     def fileStats(self,path,fileids):
                 
         # starting the title
-        tit = "Base GQs (by class - Eng & Deu)"
+        tit = "GQs by class"
         
         # stat classes
         C1 = MyClassStats2("ari",[],0,tit)
