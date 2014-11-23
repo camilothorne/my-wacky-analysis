@@ -29,9 +29,9 @@ from nltk.corpus import PlaintextCorpusReader
 
 
 # my classes
-from analysis.proporclasses import MyClass2, MyPatts2, MyClassStats2
-from analysis.savestats import SaveStats
-from analysis.buildsen import *
+from proporclasses import MyClass2, MyPatts2, MyClassStats2
+from savestats import SaveStats
+from buildsen import *
 
 
 ####################################################################
@@ -367,7 +367,7 @@ class ProporStatsF:
             
             ####################################################################
             
-            #print "==================================================="
+            print "==================================================="
             print idf
             print "==================================================="
             
@@ -568,7 +568,7 @@ class ProporStatsF:
                     if sen.len > 0:
                         i = i + sen.len
                         # print 'senlen=', sen.len, '\n'
-                        print 'sen= ', sen.sen, '\n'
+                        #print 'sen= ', sen.sen, '\n'
                     else:    
                         i = i + 1
                     # print 'explore at line= ', i, '\n'
@@ -628,7 +628,7 @@ class ProporStatsF:
         sort = self.sortClass(self.classstats)
         self.classstats = sort
         print "###################################################"
-        self.printClasses(self.classstats)
+        #self.printClasses(self.classstats)
     
 
     ############################################################# 

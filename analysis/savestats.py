@@ -22,7 +22,7 @@ class SaveStats:
         res = self.makeRes(self.classstats, self.stats, self.plotfile)
         # saving the report
         print "###################################################"
-        print "\n\npreparing report...\n\n"
+        #print "\npreparing report...\n"
         self.compileFile(self.path, res, report)
         self.fileSave(path + ".txt", res)
 
@@ -103,4 +103,5 @@ class SaveStats:
         myfile.write("\n\n")
         myfile.write("\end{document}")
         myfile.close()
-        call(['/usr/bin/pdflatex','-output-directory='+report,path],shell=False)
+        with open('/home/camilo/wacky-corpus/wackypedia/TeX.txt', 'w') as f:
+            call(['/usr/bin/pdflatex','-output-directory='+report,path],shell=False,stdout=f)
