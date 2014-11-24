@@ -18,8 +18,8 @@ Created on Jul 29, 2014
 
 
 # custom libraries
-#import sys
-#sys.path.append(u'../mynltk/')
+import sys
+sys.path.append(u'../../quan-nltk/')
 
 
 # analysis functions
