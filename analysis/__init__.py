@@ -28,9 +28,9 @@ from proporcumB import *
 
 
 # corpora root files and format
-plotting      = '/home/camilothorne/wacky-corpus/plotting-deu/'
-path          = "/home/camilothorne/wacky-corpus/wackypedia/"
-format        = ".*test"
+plotting      = '/home/camilothorne/wacky-corpus/plotting-huge/'
+path          = "/home/camilothorne/wacky-corpus/wacky-huge/"
+format        = ".*tagged"
 listA          = ('mean','cumul','stut','wacky')
 listB          = ('stut','wacky')
 
