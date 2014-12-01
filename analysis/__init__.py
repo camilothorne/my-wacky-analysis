@@ -31,8 +31,8 @@ from proporcumB import *
 plotting      = '/home/camilothorne/wacky-corpus/plotting-huge/'
 path          = "/home/camilothorne/wacky-corpus/wacky-huge/"
 format        = ".*tagged"
-listA          = ('mean','cumul','stut','wacky')
-listB          = ('stut','wacky')
+listA          = ('mean','cumul','wacky','stut')
+listB          = ('wacky','stut')
 
 # all GQs
 ProporStatsF(path, format, listA, plotting)
