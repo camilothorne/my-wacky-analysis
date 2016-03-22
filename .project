@@ -3,7 +3,7 @@
 	<name>quan-wacky</name>
 	<comment></comment>
 	<projects>
-		<project>quan-nltk</project>
+		<project>quan-script</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

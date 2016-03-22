@@ -19,7 +19,7 @@ Created on Jul 29, 2014
 
 # custom libraries
 import sys
-sys.path.append(u'../../quan-nltk/')
+#sys.path.append(u'../quan-nltk/')
 
 
 # analysis functions
@@ -28,9 +28,9 @@ from proporcumB import *
 
 
 # corpora root files and format
-plotting      = '/home/camilothorne/wacky-corpus/plotting-huge/'
-path          = "/home/camilothorne/wacky-corpus/wacky-huge/"
-format        = ".*tagged"
+plotting      = '/home/camilo/wacky-corpus/wackypedia/plotting/'
+path          = "/home/camilo/wacky-corpus/wackypedia/"
+format        = ".*test"
 listA          = ('mean','cumul','wacky','stut')
 listB          = ('wacky','stut')
 
