@@ -52,23 +52,23 @@ s12 = " somebody/nn"
 s12a = " anybody/nn"
 s14 = " something/nn"
 s16 = " some/dt"
-s18 = " a/dt"
+# s18 = " a/dt"
 s20 = " many/dt "
 s21 = " many/jj */nns"
-s22 = " there/ex"
+# s22 = " there/ex"
 
 ds10 = " pis/jemand "
 ds14 = " pis/etwas "
 ds15 = " piat/etwas "
-ds16 = " ne/irgendetwas "
-ds17 = " art/ein "
-ds18 = " pper/es vvfnn/gibt "
+# ds16 = " ne/irgendetwas "
+# ds17 = " art/ein "
+# ds18 = " pper/es vvfnn/gibt "
 ds20 = " pis/manch "
 ds21 = " piat/manch "
 ds22 = " piat/viel "
 
-some = [s10,s12,s12a,s14,s16,s18,s20,s21,s22,
-        ds10,ds14,ds15,ds16,ds17,ds18,ds20,ds21,ds22]
+some = [s10,s12,s12a,s14,s16,s20,s21,
+        ds10,ds14,ds15,ds20,ds21,ds22]
 
 ####################################################################
 
@@ -76,7 +76,7 @@ some = [s10,s12,s12a,s14,s16,s18,s20,s21,s22,
 
 s40 = " every/dt "
 s42 = " all/dt "
-s44 = " the/dt .*/nns "
+# s44 = " the/dt .*/nns "
 s46 = " everything/nn "
 s48 = " everyone/nn " 
 s4a = " everybody/nn " 
@@ -88,19 +88,19 @@ ds41 = " pis/alle "
 ds42 = " piat/kein "
 ds46 = " piat/jed "
 
-aall = [s40,s42,s44,s46,s48,s4a,s4c,s4e,
+aall = [s40,s42,s46,s48,s4a,s4c,s4e,
        ds40,ds41,ds42,ds46]
 
 ####################################################################
 
-# exactly one
-
-s74 = " the/dt "
-
-ds74 = " art/d "
-
-the = [s74,
-       ds74]
+# # exactly one
+# 
+# s74 = " the/dt "
+# 
+# ds74 = " art/d "
+# 
+# the = [s74,
+#        ds74]
 
 ####################################################################
 ####################################################################
@@ -154,12 +154,10 @@ s80 = " more/ap than/in half/abn "
 s82 = " more/ap than/in .*/cd of/in "
 
 ds80 = " piat/mehr kokom/als adjd/halb "
-ds82 = " appr/\p{L}ber adjd/halb "
 ds80a = " piat/mehr kokom/als card/@card@ appr/von"
-ds82a = " appr/\p{L}ber card/@card@ appr/von "
 
 morethanpro = [s80,s82,
-               ds80,ds82,ds80a,ds82a]
+               ds80,ds80a]
 
 ####################################################################
 
@@ -172,11 +170,9 @@ s82bb = " fewer/jjr than/in .*/cd of/in "
 
 ds80b = " piat/weniger kokom/als adjd/halb "
 ds80bb = " piat/weniger kokom/als card/@card@ appr/von "
-ds80bbb = " appr/unter card/@card@ appr/von "
-ds80bbbb = " appr/unter adjd/halb "
 
 lessthanpro = [s80b,s80bb,s82b,s82bb,
-               ds80b,ds80bb,ds80bbb,ds80bbbb]
+               ds80b,ds80bb]
 
 ####################################################################
 
@@ -202,11 +198,10 @@ pro = [s80c,s80d,
 s30 = " more/jjr than/in .*/cd percent/nn "
 s30a = " more/jjr than/in %/cd "
 
-ds30 = " appr/uber card/@card@ nn/%"
 ds30a = " piat/mehr kokom/als card/@card@ nn/% "
 
 morekper = [s30,s30a,
-            ds30,ds30a]
+            ds30a]
 
 ####################################################################
 
@@ -215,11 +210,10 @@ morekper = [s30,s30a,
 s30b = " less/jjr than/in .*/cd percent/nn "
 s30bb = " less/jjr than/in %/cd "
 
-ds30b = " appr/unter card/@card@ nn/%"
 ds30bb = " piat/weniger kokom/als card/@card@ nn/% "
 
 lesskper = [s30b,s30bb,
-            ds30b,ds30bb]
+            ds30bb]
 
 ####################################################################
 
@@ -243,10 +237,9 @@ s53 = " more/jjr than/in half/nn "
 
 ds51 = " adv/fast piat/jed "
 ds51a = " piat/mehr kokom/als adjd/halb "
-ds53 = " appr/\p{L}ber adjd/halb "
 
 most = [s51,s51a,s53,
-        ds51,ds51a,ds53]
+        ds51,ds51a]
 
 ####################################################################
 
@@ -259,10 +252,9 @@ s53bb = " fewer/jj than/in half/nn "
 
 ds51b = " piat/wenig "
 ds53b = " piat/wenig kokom/als adjd/halb "
-ds53bb = " appr/unter adjd/halb "
 
 few = [s51b,s51bb,s53b,s53bb,
-       ds51b,ds53b,ds53bb]
+       ds51b,ds53b]
 
 
 ####################################################################
@@ -335,7 +327,6 @@ class ProporStatsF:
         C1  =   MyClassStats2("all",[],0,tit)
         C2  =   MyClassStats2("some",[],0,tit)
         
-        C3 =    MyClassStats2("the",[],0,tit)
         C4 =    MyClassStats2(">k",[],0,tit)
         C5 =    MyClassStats2("<k",[],0,tit)
         C6 =    MyClassStats2("k",[],0,tit)
@@ -349,7 +340,7 @@ class ProporStatsF:
         C12 =   MyClassStats2("<k/100",[],0,tit)
         C14 =   MyClassStats2("k/100",[],0,tit)
         
-        self.classstats = [C1,C2,C3,C4,C5,C6,C7,C8,C9,
+        self.classstats = [C1,C2,C4,C5,C6,C7,C8,C9,
                            C10,C13,C11,C12,C14]        
         
         print "###################################################"
@@ -394,9 +385,9 @@ class ProporStatsF:
             ####################################################################  
     
             # the
-            P3 = MyPatts2(the).P
-            N3 = MyPatts2(rest).P
-            c3 = MyClass2(P3,N3,idf,0,0,"the")                      
+#             P3 = MyPatts2(the).P
+#             N3 = MyPatts2(rest).P
+#             c3 = MyClass2(P3,N3,idf,0,0,"the")                      
             
             # >k
             P4 = MyPatts2(morek).P
@@ -502,7 +493,7 @@ class ProporStatsF:
                         ####################################################################
              
                         # the   
-                        c3.openSen(myline,c3.pats,c3.patts)    
+                        #c3.openSen(myline,c3.pats,c3.patts)    
                                     
                         ####################################################################
                         
@@ -580,7 +571,7 @@ class ProporStatsF:
             ####################################################################
                        
             # total cum count
-            tot = (c1.count + c2.count + c3.count + c4.count + c5.count +
+            tot = (c1.count + c2.count + c4.count + c5.count +
                     + c6.count + c7.count + c8.count + c9.count
                     + c10.count + c11.count + c12.count + c13.count 
                     + c14.count) + 1
@@ -592,7 +583,7 @@ class ProporStatsF:
             #relative frequencies
             c1.freq  = round(c1.count/tot,2)
             c2.freq  = round(c2.count/tot,2)
-            c3.freq  = round(c3.count/tot,2)
+            #c3.freq  = round(c3.count/tot,2)
             c4.freq  = round(c4.count/tot,2)
             c5.freq  = round(c5.count/tot,2)
             c6.freq  = round(c6.count/tot,2)            
@@ -607,7 +598,7 @@ class ProporStatsF:
             
             ####################################################################            
             
-            filestats = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c13,c11,c12,c14]
+            filestats = [c1,c2,c4,c5,c6,c7,c8,c9,c10,c13,c11,c12,c14]
             
             ####################################################################  
             

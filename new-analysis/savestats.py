@@ -1,4 +1,3 @@
-#import re, string, array
 from subprocess import call, Popen
 
 
@@ -18,16 +17,22 @@ class SaveStats:
         self.path = path + ".tex"
         self.plotfile = plotfile
         self.stats = stats
-        # building the report
-        res = self.makeRes(self.classstats, self.stats, self.plotfile)
-        # saving the report
+        # building the report, saving the tables
+        resL = self.makeRes(self.classstats, self.stats, self.plotfile)
+        resC = self.makeCSV(self.classstats, self.stats)
+        
+        print resC
+        print path
+        
+        self.fileSave(path + ".txt", resL)
+        self.fileSave(path + ".csv", resC)        
+        # preparing report
         print "###################################################"
-        #print "\npreparing report...\n"
-        self.compileFile(self.path, res, report)
-        self.fileSave(path + ".txt", res)
+        print "\npreparing report...\n"
+        self.compileFile(self.path, resL, report)
 
 
-    # make contingency table
+    # make frequency table
     def makeRes(self,classstats,stats,plotfile):
 
         # init frequencies
@@ -80,7 +85,47 @@ class SaveStats:
         return res
 
 
-    # save the table in a .tex file
+    # write down complexities and lengths (in number of words)
+    def printRest(self,classtats):
+        rows = ""
+        if len(classtats) > 3:
+            rows = rows + "len,2,2,1,4,4,2,4,4,1,2,1,1,1" + "\n"
+            rows = rows + "comp,k-FA,k-FA,PDA,PDA,PDA,PDA,PDA,PDA,PDA,PDA,k-FA,2-FA,PDA" + "\n"            
+            return rows
+        else:
+            rows = rows + "comp,PDA,k-FA,2-FA" + "\n"
+            return rows
+
+
+    # make full csv table
+    def makeCSV(self,classstats,stats):   
+
+        # print class names
+        table = "feat"
+        for cla in classstats:
+            table = table + "," + r''+cla.tag
+        table = table + "\n"
+
+        # print freqs
+        for idf in stats.keys():
+            table = table + idf[:6]
+            for cla1 in classstats:
+                for cla2 in stats[idf]:
+                    if cla1.tag == cla2.tag:
+                        table = table + "," + `cla2.count`
+            table = table + "\n"
+        
+        # print lengths and class names
+        table = table + self.printRest(classstats) 
+        
+        # print complete table    
+        table = table + "\n"
+
+        # return table
+        return table
+
+
+    # save the table in a file
     def fileSave(self,path,res):
         myfile = open(path,'w')
         myfile.write(res)

@@ -47,15 +47,15 @@ class MyStats:
                 fre = FreqDist(word.lower() for word in words if word.isalpha())
                 self.bar_count(fre,n,figA,2*k,2*i,id,li)
                 self.bar_freq(fre,n,figB,2*k,2*i,id,li)
-                figA.savefig('/home/camilo/Desktop/complex-freq.eps')
-                figB.savefig('/home/camilo/Desktop/complex-relfreq.eps')
+                figA.savefig('/home/camilo/Desktop/complex-freq.pdf')
+                figB.savefig('/home/camilo/Desktop/complex-relfreq.pdf')
             else:
                 words = wordlists.words(id)
                 fre = FreqDist(word.lower() for word in words if word.isalpha())
                 self.bar_count(fre,n,figA,k,1,id,li)
                 self.bar_freq(fre,n,figB,k,1,id,li)
-                figA.savefig('/home/camilo/Desktop/simple-freq.eps')
-                figB.savefig('/home/camilo/Desktop/simple-relfreq.eps')             
+                figA.savefig('/home/camilo/Desktop/simple-freq.pdf')
+                figB.savefig('/home/camilo/Desktop/simple-relfreq.pdf')             
         pylab.show()
 
     
@@ -214,6 +214,7 @@ class MyStats:
     # plotting the tags of the x/y axis (freqs)       
     def plotticks(self,ax,words):
         ax.set_xticklabels(words,rotation='90')
+
 
     # plotting the legend            
     def plotLegend(self,ax,li):

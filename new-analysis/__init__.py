@@ -29,7 +29,10 @@ fformat        = ".*test"
 listA          = ('mean','cumul','wacky','stut')
 listB          = ('wacky','stut')
 
+
 # all GQs
 ProporStatsF(path, fformat, listA, plotting)
+
+
 # by GQ class
 ProporStatsCumF(path, fformat, listB, plotting)
