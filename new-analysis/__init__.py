@@ -2,7 +2,7 @@
 
 
 '''
-Created on Jul 29, 2014
+Created on April 8, 2016
 @author: camilothorne
 '''
 
@@ -15,11 +15,6 @@ Created on Jul 29, 2014
 #
 #================#
 #================#
-
-
-# custom libraries
-import sys
-#sys.path.append(u'../quan-nltk/')
 
 
 # analysis functions
