@@ -65,7 +65,7 @@ class MyPlot:
         #mytime = '%.2f' % time()
         mytime = ""
         fig.savefig(path+'/'+name.replace(' ', '-')+'-stats'+mytime+'.pdf')
-        #pylab.show()
+        pylab.show()
 
 
     # plotter/container 2 (barplot)
@@ -80,7 +80,7 @@ class MyPlot:
         #mytime = '%.2f' % time()
         mytime = ""
         fig.savefig(path+'/'+name.replace(' ', '-')+'-stats'+mytime+'.pdf')
-    #pylab.show()
+        pylab.show()
     
 
     #################################################
@@ -406,8 +406,8 @@ class MyPlot:
         #frame.set_facecolor('0.80')     # set the frame face color to light gray
         frame.set_facecolor('1.0')       # set the frame face color to white
         for t in leg.get_texts():
-            #t.set_fontsize('medium')      # the legend text fontsize
-            t.set_fontsize('12')      # the legend text fontsize
+            #t.set_fontsize('medium')    # the legend text fontsize
+            t.set_fontsize('12')         # the legend text fontsize
         for l in leg.get_lines():
             l.set_linewidth(1.5)         # the legend line width
 

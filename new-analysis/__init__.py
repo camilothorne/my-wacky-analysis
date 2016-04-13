@@ -25,9 +25,16 @@ from proporcumB import *
 # corpora root files and format
 plotting      = '/home/camilo/wacky-corpus/wackypedia/plotting/'
 path          = "/home/camilo/wacky-corpus/wackypedia/"
-fformat        = ".*test"
-listA          = ('mean','cumul','wacky','stut')
-listB          = ('wacky','stut')
+
+#fformat        = ".*test"
+
+fformat        = ".*testa"
+
+# listA          = ('mean','cumul','wacky','stut')
+# listB          = ('wacky','stut')
+
+listA          = ('mean','cumul','wackypedia')
+listB          = ('wackypedia','')
 
 
 # all GQs
