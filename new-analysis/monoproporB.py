@@ -1,6 +1,6 @@
 '''
-Created on Nov 14, 2014
-@author: camilo
+Created on Jul 29, 2014
+@author: camilothorne
 '''
 
 
@@ -9,9 +9,6 @@ Created on Nov 14, 2014
 #
 # Class likelihoods
 #
-#   (by Q class:
-#    ENG + DEU)
-# 
 #===================#
 #===================#
 
@@ -48,212 +45,141 @@ s0 = ".*"        # anything!
 ####################################################################
 ####################################################################
 
-# exists
+# 1. exists
 
-ss10 = " someone/nn"
-ss12 = " somebody/nn"
-ss12a = " anybody/nn"
-ss14 = " something/nn"
-ss16 = " some/dt"
-ss18 = " a/dt"
-ss20 = " many/dt "
-ss21 = " many/jj */nns"
-ss22 = " there/ex"
+s10 = " someone/nn"
+s12 = " somebody/nn"
+s12a = " anybody/nn"
+s14 = " something/nn"
+s16 = " some/dt"
+s20 = " many/dt "
 
-dss10 = " pis/jemand "
-dss14 = " pis/etwas "
-dss15 = " piat/etwas "
-dss16 = " ne/irgendetwas "
-dss17 = " art/ein "
-dss18 = " pper/es vvfnn/gibt "
-dss20 = " pis/manch "
-dss21 = " piat/manch "
-dss22 = " piat/viel "
+some = [s10,s12,s12a,s14,s16,s20]
 
 ####################################################################
 
-# all
+# 4. all
 
-ss40 = " every/dt "
-ss42 = " all/dt "
-ss44 = " the/dt .*/nns "
-ss46 = " everything/nn "
-ss48 = " everyone/nn " 
-ss4a = " everybody/nn " 
-ss4c = " each/dt "
-ss4e = " no/dt "
+s40 = " every/dt "
+s42 = " all/dt "
+s46 = " everything/nn "
+s48 = " everyone/nn " 
+s4a = " everybody/nn " 
+s4c = " each/dt "
+s4e = " no/dt "
 
-dss40 = " piat/alle "
-dss41 = " pis/alle "
-dss42 = " piat/kein "
-dss46 = " piat/jed "
-
-####################################################################
-
-# exactly one
-
-ss74 = " the/dt "
-
-dss74 = " art/d "
+all = [s40,s42,s46,s48,s4a,s4c,s4e]
 
 ####################################################################
 ####################################################################
 
-# at most k, less than k (k integer)
+# 6. at most k, less than k (k integer)
 
-ss60 = " at/in most/jjs .*/cd "
-ss20b = " less/jjr than/in .*/cd "
-ss20bb = " fewer/jjr than/in .*/at .*/cd "
-ss22b = " less/jjr than/in .*/at .*/cd "
-ss22bb = " fewer/jjr than/in .*/at .*/cd "
+s60 = " at/in most/jjs .*/cd "
+s20b = " less/jjr than/in .*/cd "
+s20bb = " fewer/jjr than/in .*/at .*/cd "
+s22b = " less/jjr than/in .*/at .*/cd "
+s22bb = " fewer/jjr than/in .*/at .*/cd "
 
-dss60 = " adv/h\p{L}chstens card/@card@ "
-dss20b = " piat/weniger kokom/als card/@card@ "
-
-####################################################################
-
-# at least k, more than k (k integer)
-
-ss60b = " at/in least/jjs .*/cd "
-ss20 = " more/jjr than/in .*/cd "
-ss22 = " more/jjr than/in .*/at .*/cd "
-
-dss60b = " adv/mindestens card/@card@ "
-dss20 = " piat/mehr kokom/als card/@card@ "
+lessk = [s20b,s22b,s20bb,s22bb]
 
 ####################################################################
 
-# exactly k (k integer)
+# 7. at least k, more than k (k integer)
 
-ss70 = " .*/cd .*/nns "
-ss71 = " exactly/rb .*/cd "
+s60b = " at/in least/jjs .*/cd "
+s20 = " more/jjr than/in .*/cd "
+s22 = " more/jjr than/in .*/at .*/cd "
 
-dss70 = " card/@card@ nn/.* "
+morek = [s20,s22,s60b]
+
+####################################################################
+
+# 8. exactly k (k integer)
+
+s70 = " .*/cd .*/nns "
+s71 = " exactly/rb .*/cd "
+
+exactlyk = [s70,s71]
 
 ####################################################################
 ####################################################################
 
-# more than p/k (p, k integers)
+# 9. more than p/k (p, k integers)
 
-ss80 = " more/ap than/in half/abn "
-ss82 = " more/ap than/in .*/cd .*/od "
+s80 = " more/ap than/in half/abn "
+s82 = " more/ap than/in .*/cd .*/od "
 
-dss80 = " piat/mehr kokom/als adjd/halb "
-dss82 = " appr/\p{L}ber adjd/halb "
-dss80a = " piat/mehr kokom/als card/@card@ appr/von"
-dss82a = " appr/\p{L}ber card/@card@ appr/von "
+morethanpro = [s80,s82]
 
 ####################################################################
 
-# less than p/k (p, k integers)
+# 9.1 less than p/k (p, k integers)
 
-ss80b = " less/jjr than/in half/nn "
-ss80bb = " fewer/jjr than/in half/nn "
-ss82b = " less/jjr than/in .*/nns of/in "
-ss82bb = " fewer/jjr than/in .*/nn of/in "
+s80b = " less/jjr than/in half/nn "
+s80bb = " fewer/jjr than/in half/nn "
+s82b = " less/jjr than/in .*/nns of/in "
+s82bb = " fewer/jjr than/in .*/nn of/in "
 
-dss80b = " piat/weniger kokom/als adjd/halb "
-dss80bb = " piat/weniger kokom/als card/@card@ appr/von "
-dss80bbb = " appr/unter card/@card@ appr/von "
-dss80bbbb = " appr/unter adjd/halb "
+lessthanpro = [s80b,s80bb,s82b,s82bb]
 
 ####################################################################
 
-# p/k (p, k integers)
+# 9.2 p/k (p, k integers)
 
-ss80c = " half/dt "
-ss80d = " half/pdt "
-ss80c = " half/nn of/in"
-ss81c = " .*/nns of/in "
-ss81d = " .*/nn of/in "
+s80c = " half/dt "
+s80d = " half/pdt "
+s80c = " half/nn of/in"
+s81c = "   .*/nns of/in "
+s81d = "  .*/nn of/in "
 
-dss80c = " adja/halb "
-dss80d = " adja/halb appr/von "
-dss80e = " card/@card@ appr/von "
+pro = [s80c,s80d]
 
 ####################################################################
 
-# more than k% (k a percentage)
+# 3. more than k% (k a percentage)
 
-ss30 = " more/jjr than/in .*/cd percent/nn "
-ss30a = " more/jjr than/in %/cd "
+s30 = " more/jjr than/in .*/cd percent/nn "
+s30a = " more/jjr than/in %/cd "
 
-dss30 = " appr/\p{L}ber card/@card@ nn/%"
-dss30a = " piat/mehr kokom/als card/@card@ nn/% "
-
-####################################################################
-
-# less than k% (k a percentage)
-
-ss30b = " less/jjr than/in .*/cd percent/nn "
-ss30bb = " less/jjr than/in %/cd "
-
-dss30b = " appr/unter card/@card@ nn/%"
-dss30bb = " piat/weniger kokom/als card/@card@ nn/% "
+morekper = [s30,s30a]
 
 ####################################################################
 
-# k% (k a percentage)
+# 3.1 less than k% (k a percentage)
 
-ss30c = " ./cd percent/nn "
-ss30d = " %/cd "
+s30b = " less/jjr than/in .*/cd percent/nn "
+s30bb = " less/jjr than/in %/cd "
 
-dss30d = " nn/% "
-
-####################################################################
-
-# most, more than half
-
-ss51 = " most/jjs "
-ss51a = " most/dt "
-ss53 = " more/jjr than/in half/nn "
-
-dss51 = " adv/fast piat/jed "
-dss51a = " piat/mehr kokom/als adjd/halb "
-dss53 = " appr/\p{L}ber adjd/halb "
+lesskper = [s30b,s30bb]
 
 ####################################################################
 
-# few, less than half, fewer than half
+# 3.2 k% (k a percentage)
 
-ss51b = " few/jj "
-ss51bb = " few/dt "
-ss53b = " less/jj than/in half/nn "
-ss53bb = " fewer/jj than/in half/nn "
+s30c = " ./cd percent/nn "
+s30d = " %/cd "
 
-dss51b = " piat/wenig "
-dss53b = " piat/wenig kokom/als adjd/halb "
-dss53bb = " appr/unter adjd/halb "
-
+kper = [s30c,s30d]
 
 ####################################################################
-####################################################################
-# B. superclasses
-####################################################################
+
+# 5. most, more than half
+
+s51a = " most/dt "
+s53 = " more/jjr than/in half/nn "
+
+most = [s51a,s53]
+
 ####################################################################
 
+# 5.1 few, less than half, fewer than half
 
-aristotelian = [ss10,ss12,ss12a,ss14,ss16,ss18,ss20,ss21,ss22,
-                ss40,ss42,ss44,ss46,ss48,ss4a,ss4c,ss4e,ss74,
-                dss10,dss14,dss15,dss16,dss17,dss18,dss20,dss21,dss22,
-                dss40,dss41,dss42,dss46,dss74               
-                ]
+s51bb = " few/dt "
+s53b = " less/jj than/in half/nn "
+s53bb = " fewer/jj than/in half/nn "
 
-proportional = [ss51b,ss51bb,ss53b,ss53bb,ss51,
-                ss51a,ss53,ss30c,ss30d,ss30b,
-                ss30bb,ss30,ss30a,ss80c,ss80d,
-                ss80b,ss80bb,ss82b,ss82bb,ss80,ss82,
-                dss80,dss82,dss80a,dss82a,
-                dss80b,dss80bb,dss80bbb,dss80bbbb,
-                dss80c,dss80d,dss80e,dss30,dss30a,
-                dss30b,dss30bb,dss30d,dss51b,
-                dss53b,dss53bb,dss51,dss51a,dss53
-                ]
-                
-counting  = [ss70,ss71,ss20,ss22,ss60b,
-            ss20b,ss22b,ss20bb,ss22bb,dss60,
-            dss20b,dss60b,dss20,dss30d
-            ]
+few = [s51bb,s53b,s53bb]
 
 
 ####################################################################
@@ -263,7 +189,7 @@ counting  = [ss70,ss71,ss20,ss22,ss60b,
 # Class encoding the plot(s) + test(s)
 
 
-class ProporStatsCumF:
+class ProporStatsE:
    
     
     # corpus            : path to corpora
@@ -300,15 +226,15 @@ class ProporStatsCumF:
         self.fileStats(path,fileids)
         
         # plotting vars
-        figname = "GQs by class"
+        figname = "Base GQs"
         figpath = plotting +'/'+ figname.replace(' ', '-') + '-stats.pdf'
         savpath = plotting +'/'+ figname.replace(' ', '-')
         
         # plotting
-        MyPlot(self.stats,self.classstats,figname, "three",plotting,list) # per class (no regression)
+        MyPlot(self.stats,self.classstats,figname, "one",plotting,list) # all
         
         # generating report
-        SaveStats(self.classstats,self.stats,figpath,savpath,plotting) # per class
+        SaveStats(self.classstats,self.stats,figpath,savpath,plotting) # all
         
         
     #############################################################
@@ -319,17 +245,31 @@ class ProporStatsCumF:
     def fileStats(self,path,fileids):
                 
         # starting the title
-        tit = "GQs by class"
+        tit = "Base GQs"
         
         # stat classes
-        C1 = MyClassStats2("ari",[],0,tit)
-        C2 = MyClassStats2("cnt",[],0,tit)
-        C3 = MyClassStats2("pro",[],0,tit)
-
-        self.classstats = [C1,C2,C3]     
+        
+        C1  =   MyClassStats2("all",[],0,tit)
+        C2  =   MyClassStats2("some",[],0,tit)
+        
+        C4 =    MyClassStats2(">k",[],0,tit)
+        C5 =    MyClassStats2("<k",[],0,tit)
+        C6 =    MyClassStats2("k",[],0,tit)
+        
+        C7 =    MyClassStats2("most",[],0,tit)
+        C8 =    MyClassStats2("few",[],0,tit)
+        C9 =    MyClassStats2(">p/k",[],0,tit)             
+        C10 =   MyClassStats2("<p/k",[],0,tit)
+        C13 =   MyClassStats2("p/k",[],0,tit)
+        C11 =   MyClassStats2(">k/100",[],0,tit)
+        C12 =   MyClassStats2("<k/100",[],0,tit)
+        C14 =   MyClassStats2("k/100",[],0,tit)
+        
+        self.classstats = [C1,C2,C4,C5,C6,C7,C8,C9,
+                           C10,C13,C11,C12,C14]        
         
         print "###################################################"
-        print "GQ STATS (by class)"
+        print "GQ STATS"
         print "###################################################"
         
         # computing the stats
@@ -343,7 +283,7 @@ class ProporStatsCumF:
             
             ####################################################################
             
-            print "==================================================="
+            #print "==================================================="
             print idf
             print "==================================================="
             
@@ -357,20 +297,75 @@ class ProporStatsCumF:
             
             ####################################################################  
             
-            # class 1
-            P1 = MyPatts2(aristotelian).P
+            # some
+            P1 = MyPatts2(some).P
             N1 = MyPatts2(rest).P
-            c1 = MyClass2(P1,N1,idf,0,0,"ari")
+            c1 = MyClass2(P1,N1,idf,0,0,"some")
             
-            # class 2
-            P2 = MyPatts2(counting).P
+            # all
+            P2 = MyPatts2(all).P
             N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"cnt")           
+            c2 = MyClass2(P2,N2,idf,0,0,"all")           
+            
+            ####################################################################                
+            
+            # >k
+            P4 = MyPatts2(morek).P
+            N4 = MyPatts2(rest).P
+            c4 = MyClass2(P4,N4,idf,0,0,">k")                      
+            
+            # <k
+            P5 = MyPatts2(lessk).P
+            N5 = MyPatts2(rest).P
+            c5 = MyClass2(P5,N5,idf,0,0,"<k")
+
+            # k
+            P6 = MyPatts2(exactlyk).P
+            N6 = MyPatts2(rest).P
+            c6 = MyClass2(P6,N6,idf,0,0,"k")
+            
+            ####################################################################
+            
+            # most
+            P7 = MyPatts2(most).P
+            N7 = MyPatts2(rest).P
+            c7 = MyClass2(P7,N7,idf,0,0,"most")
+                 
+            # few
+            P8 = MyPatts2(few).P
+            N8 = MyPatts2(rest).P
+            #few
+            c8 = MyClass2(P8,N8,idf,0,0,"few")
                 
-            # class 3
-            P3 = MyPatts2(proportional).P
-            N3 = MyPatts2(rest).P
-            c3 = MyClass2(P3,N3,idf,0,0,"pro")                                 
+            # >k/100
+            P9 = MyPatts2(morekper).P
+            N9 = MyPatts2(rest).P
+            c9 = MyClass2(P9,N9,idf,0,0,">k/100")
+    
+            # <k/100
+            P10 = MyPatts2(lesskper).P
+            N10 = MyPatts2(rest).P
+            c10 = MyClass2(P10,N10,idf,0,0,"<k/100")
+                
+            # k/100
+            P13 = MyPatts2(kper).P
+            N13 = MyPatts2(rest).P
+            c13 = MyClass2(P13,N13,idf,0,0,"k/100")
+                
+            # >p/k
+            P11 = MyPatts2(morethanpro).P
+            N11 = MyPatts2(rest).P
+            c11 = MyClass2(P11,N11,idf,0,0,">p/k")                    
+            
+            # <p/k
+            P12 = MyPatts2(lessthanpro).P
+            N12 = MyPatts2(rest).P
+            c12 = MyClass2(P12,N12,idf,0,0,"<p/k")
+            
+            # p/k
+            P14 = MyPatts2(pro).P
+            N14 = MyPatts2(rest).P
+            c14 = MyClass2(P14,N14,idf,0,0,"p/k")                      
             
             ####################################################################  
             ####################################################################            
@@ -397,18 +392,80 @@ class ProporStatsCumF:
                         
                         # retrieve POS tagged sentence
                         myline = sen.sen
+            
                         ####################################################################           
+                    
                         # corpus
                         corpus.openSen(myline,corpus.pats,corpus.patts)        
+                    
+                        ####################################################################
                         ####################################################################            
-                        # class 1
+                        
+                        # some
                         c1.openSen(myline,c1.pats,c1.patts)
+                        
                         ####################################################################
-                        # class 2    
+                        
+                        # all      
                         c2.openSen(myline,c2.pats,c2.patts)
+                        
                         ####################################################################
-                        # class 3 
-                        c3.openSen(myline,c3.pats,c3.patts)                                 
+                        ####################################################################
+                        
+                        # >k
+                        c4.openSen(myline,c4.pats,c4.patts)
+                        
+                        ####################################################################
+                        
+                        # <k
+                        c5.openSen(myline,c5.pats,c5.patts)
+                        
+                        ####################################################################
+                        
+                        # k
+                        c6.openSen(myline,c6.pats,c6.patts)
+                        
+                        ####################################################################
+                        ####################################################################
+              
+                        # most
+                        c7.openSen(myline,c7.pats,c7.patts)
+                        
+                        ####################################################################
+                        
+                        #few
+                        c8.openSen(myline,c8.pats,c8.patts)
+                        
+                        ####################################################################            
+                                  
+                        #>k/100
+                        c9.openSen(myline,c9.pats,c9.patts)
+                        
+                        ####################################################################
+            
+                        #<k100
+                        c10.openSen(myline,c10.pats,c10.patts)
+                        
+                        ####################################################################
+                        
+                        # k/100
+                        c13.openSen(myline,c13.pats,c13.patts)
+              
+                        ####################################################################
+                        
+                        # >p/k
+                        c11.openSen(myline,c11.pats,c11.patts)
+                        
+                        ####################################################################
+                        
+                        # <p/k
+                        c12.openSen(myline,c12.pats,c12.patts)
+            
+                        ####################################################################
+                        
+                        # p/k
+                        c14.openSen(myline,c14.pats,c14.patts)
+                
                         ####################################################################
                     
                     # if a sentence is found, skip the lines it
@@ -417,7 +474,7 @@ class ProporStatsCumF:
                     if sen.len > 0:
                         i = i + sen.len
                         # print 'senlen=', sen.len, '\n'
-                        #print 'sen= ', sen.sen, '\n'
+                        print 'sen= ', sen.sen, '\n'
                     else:    
                         i = i + 1
                     # print 'explore at line= ', i, '\n'
@@ -429,7 +486,10 @@ class ProporStatsCumF:
             ####################################################################
                        
             # total cum count
-            tot = (c1.count + c2.count + c3.count) + 1
+            tot = (c1.count + c2.count + c4.count + c5.count +
+                    + c6.count + c7.count + c8.count + c9.count
+                    + c10.count + c11.count + c12.count + c13.count 
+                    + c14.count) + 1
     
             print "corpus size : " + `corpus.count` + " sentences"        
             print "==================================================="
@@ -438,11 +498,21 @@ class ProporStatsCumF:
             #relative frequencies
             c1.freq  = round(c1.count/tot,2)
             c2.freq  = round(c2.count/tot,2)
-            c3.freq  = round(c3.count/tot,2)
+            c4.freq  = round(c4.count/tot,2)
+            c5.freq  = round(c5.count/tot,2)
+            c6.freq  = round(c6.count/tot,2)            
+            c7.freq  = round(c7.count/tot,2)
+            c8.freq  = round(c8.count/tot,2)
+            c9.freq  = round(c9.count/tot,2)
+            c10.freq = round(c10.count/tot,2)
+            c11.freq = round(c11.count/tot,2)
+            c12.freq = round(c12.count/tot,2)
+            c13.freq = round(c13.count/tot,2)
+            c14.freq = round(c14.count/tot,2)
             
             ####################################################################            
             
-            filestats = [c1,c2,c3]
+            filestats = [c1,c2,c4,c5,c6,c7,c8,c9,c10,c13,c11,c12,c14]
             
             ####################################################################  
             
@@ -463,7 +533,7 @@ class ProporStatsCumF:
         sort = self.sortClass(self.classstats)
         self.classstats = sort
         print "###################################################"
-        #self.printClasses(self.classstats)
+        self.printClasses(self.classstats)
     
 
     ############################################################# 
@@ -544,6 +614,4 @@ class ProporStatsCumF:
         s.mySkew(sample1)                       # skewness     
         s.myEntropy(sample2)                    # entropy
         s.myChiTest(sample1,s.uniFor(sample1))  # X^2 test   
-
-
 

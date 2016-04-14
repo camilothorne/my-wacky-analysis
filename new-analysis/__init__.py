@@ -18,8 +18,8 @@ Created on April 8, 2016
 
 
 # analysis functions
-from proporB import *
-from proporcumB import *
+from monoproporB import *
+from monoproporcumB import *
 
 
 # corpora root files and format
@@ -38,8 +38,8 @@ listB          = ('wackypedia','')
 
 
 # all GQs
-ProporStatsF(path, fformat, listA, plotting)
+ProporStatsE(path, fformat, listA, plotting)
 
 
 # by GQ class
-ProporStatsCumF(path, fformat, listB, plotting)
+ProporStatsCumE(path, fformat, listB, plotting)
