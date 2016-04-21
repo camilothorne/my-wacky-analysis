@@ -21,8 +21,8 @@ from operator import attrgetter
 
 
 # my plotting + test classes
-from corpuspkg.statsplot import MyPlot
-from corpuspkg.statstests import STest
+from statsplot import MyPlot
+from statstests import STest
 
 
 # nltk
