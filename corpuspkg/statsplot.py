@@ -65,7 +65,7 @@ class MyPlot:
         #mytime = '%.2f' % time()
         mytime = ""
         fig.savefig(path+'/'+name.replace(' ', '-')+'-stats'+mytime+'.pdf')
-        pylab.show()
+        #pylab.show()
 
 
     # plotter/container 2 (barplot)
@@ -80,7 +80,7 @@ class MyPlot:
         #mytime = '%.2f' % time()
         mytime = ""
         fig.savefig(path+'/'+name.replace(' ', '-')+'-stats'+mytime+'.pdf')
-        pylab.show()
+        #pylab.show()
     
 
     #################################################

@@ -345,7 +345,7 @@ class ProporStatsCumE:
                     if sen.len > 0:
                         i = i + sen.len
                         # print 'senlen=', sen.len, '\n'
-                        print 'sen= ', sen.sen, '\n'
+                        # print 'sen= ', sen.sen, '\n'
                     else:    
                         i = i + 1
                     # print 'explore at line= ', i, '\n'
