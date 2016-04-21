@@ -19,10 +19,6 @@ from operator import attrgetter
 #from math import ceil
 
 
-import sys
-sys.path.append("../corpuspkg")
-
-
 # my plotting + test classes
 from corpuspkg.statsplot import MyPlot
 from corpuspkg.statstests import STest

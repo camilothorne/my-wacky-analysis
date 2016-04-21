@@ -6,8 +6,9 @@ Created on April 8, 2016
 @author: camilothorne
 '''
 
+# custom libraries
 import sys
-sys.path.append("../corpuspkg")
+sys.path.append(u'../corpuspkg/')
 
 
 #================#
