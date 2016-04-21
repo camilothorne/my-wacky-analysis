@@ -13,6 +13,10 @@ Created on Jul 29, 2014
 #===================#
 
 
+import sys
+sys.path.append("../corpuspkg")
+
+
 # python
 from __future__ import division
 from operator import attrgetter
