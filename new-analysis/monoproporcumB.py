@@ -61,6 +61,7 @@ ss20 = " many/dt "
 
 ss40 = " every/dt "
 ss42 = " all/dt "
+ss42a = " all/pdt "
 ss46 = " everything/nn "
 ss48 = " everyone/nn " 
 ss4a = " everybody/nn " 
@@ -145,6 +146,7 @@ ss30d = " %/cd "
 
 # 5. most, more than half
 
+ss51 = " most/jjs "
 ss51a = " most/dt "
 ss53 = " more/jjr than/in half/nn "
 
@@ -152,6 +154,7 @@ ss53 = " more/jjr than/in half/nn "
 
 # 5.1 few, less than half, fewer than half
 
+ss51b = " few/jj "
 ss51bb = " few/dt "
 ss53b = " less/jj than/in half/nn "
 ss53bb = " fewer/jj than/in half/nn "
@@ -165,9 +168,9 @@ ss53bb = " fewer/jj than/in half/nn "
 
 
 aristotelian = [ss10,ss12,ss12a,ss14,ss16,ss20,
-                ss40,ss42,ss48,ss4a,ss4c,ss4e]
+                ss40,ss42,ss42a,ss48,ss4a,ss4c,ss4e]
 
-proportional = [ss51bb,ss53b,ss53bb,
+proportional = [ss51bb,ss53b,ss53bb,ss51,ss51b,
                 ss51a,ss53,
                 ss30c,ss30d,
                 ss30b,ss30bb,

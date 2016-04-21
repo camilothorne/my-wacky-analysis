@@ -62,13 +62,14 @@ some = [s10,s12,s12a,s14,s16,s20]
 
 s40 = " every/dt "
 s42 = " all/dt "
+s42a = " all/pdt "
 s46 = " everything/nn "
 s48 = " everyone/nn " 
 s4a = " everybody/nn " 
 s4c = " each/dt "
 s4e = " no/dt "
 
-all = [s40,s42,s46,s48,s4a,s4c,s4e]
+all = [s40,s42,s42a,s46,s48,s4a,s4c,s4e]
 
 ####################################################################
 ####################################################################
@@ -166,20 +167,22 @@ kper = [s30c,s30d]
 
 # 5. most, more than half
 
+ss51 = " most/jjs "
 s51a = " most/dt "
 s53 = " more/jjr than/in half/nn "
 
-most = [s51a,s53]
+most = [s51a,s53,ss51]
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
+ss51b = " few/jj "
 s51bb = " few/dt "
 s53b = " less/jj than/in half/nn "
 s53bb = " fewer/jj than/in half/nn "
 
-few = [s51bb,s53b,s53bb]
+few = [s51bb,s53b,s53bb,ss51b]
 
 
 ####################################################################
