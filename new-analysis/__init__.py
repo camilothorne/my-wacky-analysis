@@ -6,6 +6,9 @@ Created on April 8, 2016
 @author: camilothorne
 '''
 
+import sys
+sys.path.append("../corpuspkg")
+
 
 #================#
 #================#
