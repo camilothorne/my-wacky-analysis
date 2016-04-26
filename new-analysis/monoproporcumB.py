@@ -171,9 +171,9 @@ ss30d   = " .*/cd %/nn "
 
 # 5. most, more than half
 
-ss51    = " most/jjs "
-ss51a   = " most/dt "
-ss52    = " most/rbs "
+ss51     = " most/jjs "
+ss51a    = " most/dt "
+ss52     = " most/rbs "
 
 ss53     = " more/jjr than/in half/nn "
 ss53a    = " more/jjr than/in half/nn " #ss53a
