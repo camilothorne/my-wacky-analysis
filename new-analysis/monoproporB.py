@@ -47,12 +47,12 @@ s0 = ".*"        # anything!
 
 # 1. exists
 
-s10 = " someone/nn"
-s12 = " somebody/nn"
-s12a = " anybody/nn"
-s14 = " something/nn"
-s16 = " some/dt"
-s20 = " many/dt "
+s10     = " someone/nn"
+s12     = " somebody/nn"
+s12a    = " anybody/nn"
+s14     = " something/nn"
+s16     = " some/dt"
+s20     = " many/jj "
 
 some = [s10,s12,s12a,s14,s16,s20]
 
@@ -60,14 +60,14 @@ some = [s10,s12,s12a,s14,s16,s20]
 
 # 4. all
 
-s40 = " every/dt "
-s42 = " all/dt "
-s42a = " all/pdt "
-s46 = " everything/nn "
-s48 = " everyone/nn " 
-s4a = " everybody/nn " 
-s4c = " each/dt "
-s4e = " no/dt "
+s40     = " every/dt "
+s42     = " all/dt "
+s42a    = " all/pdt "
+s46     = " everything/nn "
+s48     = " everyone/nn " 
+s4a     = " everybody/nn " 
+s4c     = " each/dt "
+s4e     = " no/dt "
 
 all = [s40,s42,s42a,s46,s48,s4a,s4c,s4e]
 
@@ -76,51 +76,59 @@ all = [s40,s42,s42a,s46,s48,s4a,s4c,s4e]
 
 # 6. at most k, less than k (k integer)
 
-s60 = " at/in most/jjs .*/cd "
-s20b = " less/jjr than/in .*/cd "
-s20bb = " fewer/jjr than/in .*/at .*/cd "
-s22b = " less/jjr than/in .*/at .*/cd "
-s22bb = " fewer/jjr than/in .*/at .*/cd "
+s60     = " at/in most/jjs .*/cd "
 
-lessk = [s20b,s22b,s20bb,s22bb]
+s20b    = " less/rbr than/in .*/cd "
+s20bb   = " less/jjr than/in .*/cd "
+
+s20c    = " fewer/jjr than/in .*/cd "
+
+lessk = [s20b,s20c,s60]
 
 ####################################################################
 
 # 7. at least k, more than k (k integer)
 
-s60b = " at/in least/jjs .*/cd "
-s20 = " more/jjr than/in .*/cd "
-s22 = " more/jjr than/in .*/at .*/cd "
+s60b     = " at/in least/jjs .*/cd "
 
-morek = [s20,s22,s60b]
+s20      = " more/rbr than/in .*/cd "
+s20a     = " more/jjr than/in .*/cd "
+
+morek = [s20,s20a,s60b]
 
 ####################################################################
 
 # 8. exactly k (k integer)
 
-s70 = " .*/cd .*/nns "
-s71 = " exactly/rb .*/cd "
+s70    = " .*/cd [a-z]{1,12}/nns "
+s70a   = " .*/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
+s70b   = " .*/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
+s71    = " exactly/rb .*/cd "
 
-exactlyk = [s70,s71]
+exactlyk = [s70,s70a,s70b,s71]
 
 ####################################################################
 ####################################################################
 
 # 9. more than p/k (p, k integers)
 
-s80 = " more/ap than/in half/abn "
-s82 = " more/ap than/in .*/cd .*/od "
+s80  = " more/rbr than/in half/nn "
+s80a = " more/jjr than/in half/nn "
 
-morethanpro = [s80,s82]
+s82  = " more/rbr than/in .*/cd .*/nns of/in "
+s82a = " more/jjr than/in .*/cd .*/nns of/in "
+
+morethanpro = [s80,s82,s80a,s82a]
 
 ####################################################################
 
 # 9.1 less than p/k (p, k integers)
 
-s80b = " less/jjr than/in half/nn "
-s80bb = " fewer/jjr than/in half/nn "
-s82b = " less/jjr than/in .*/nns of/in "
-s82bb = " fewer/jjr than/in .*/nn of/in "
+s80b    = " less/rbr than/in half/nn "
+s80bb   = " fewer/jjr than/in half/nn "
+
+s82b    = " less/rbr than/in .*/cd .*/nns of/in "
+s82bb   = " fewer/jjr than/in .*/cd .*/nn of/in "
 
 lessthanpro = [s80b,s80bb,s82b,s82bb]
 
@@ -128,38 +136,48 @@ lessthanpro = [s80b,s80bb,s82b,s82bb]
 
 # 9.2 p/k (p, k integers)
 
-s80c = " half/dt "
-s80d = " half/pdt "
-s80c = " half/nn of/in"
-s81c = "   .*/nns of/in "
-s81d = "  .*/nn of/in "
+s80c    = " half/dt "
+s80d    = " half/pdt "
+s80e    = " half/nn of/in"
 
-pro = [s80c,s80d]
+s81c    = " .*/cd .*/nns of/in "
+s81d    = " .*/cd .*/nn of/in "
+
+pro = [s80c,s80d,s80e,s81c,s81d]
 
 ####################################################################
 
 # 3. more than k% (k a percentage)
 
-s30 = " more/jjr than/in .*/cd percent/nn "
-s30a = " more/jjr than/in %/cd "
+s30     = " more/rbr than/in .*/cd percent/nn "
+s30a    = " more/rbr than/in .*/cd %/nn "
 
-morekper = [s30,s30a]
+s30aa   = " more/jjr than/in .*/cd percent/nn "
+s30aaa  = " more/jjr than/in .*/cd %/nn "
+
+morekper = [s30,s30a,s30aa,s30aaa]
 
 ####################################################################
 
 # 3.1 less than k% (k a percentage)
 
-s30b = " less/jjr than/in .*/cd percent/nn "
-s30bb = " less/jjr than/in %/cd "
+s30b     = " less/rbr than/in .*/cd percent/nn "
+s30bb    = " less/rbr than/in .*/cd %/nn "
 
-lesskper = [s30b,s30bb]
+s30bx    = " less/jjr than/in .*/cd percent/nn "
+s30bbx   = " less/jjr than/in .*/cd %/nn "
+
+s30bc    = " fewer/jjr than/in .*/cd percent/nn "
+s30bcx   = " fewer/jjr than/in .*/cd %/nn "
+
+lesskper = [s30b,s30bb,s30bx,s30bbx,s30bc,s30bcx]
 
 ####################################################################
 
 # 3.2 k% (k a percentage)
 
-s30c = " ./cd percent/nn "
-s30d = " %/cd "
+s30c    = " .*/cd percent/nn "
+s30d    = " .*/cd %/NN"
 
 kper = [s30c,s30d]
 
@@ -167,20 +185,24 @@ kper = [s30c,s30d]
 
 # 5. most, more than half
 
-ss51 = " most/jjs "
-s51a = " most/dt "
-s53 = " more/jjr than/in half/nn "
+s52     = " most/rbs "
+s51     = " most/jjs "
+s51a    = " most/dt "
 
-most = [s51a,s53,ss51]
+s53     = " more/rbr than/in half/nn "
+s53a    = " more/jjr than/in half/nn "
+
+most = [s51a,s53,s51,s52,s53a]
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
-ss51b = " few/jj "
-s51bb = " few/dt "
-s53b = " less/jj than/in half/nn "
-s53bb = " fewer/jj than/in half/nn "
+ss51b   = " few/jj "
+s51bb   = " few/dt "
+
+s53b    = " less/rbr than/in half/nn "
+s53bb   = " fewer/jjr than/in half/nn "
 
 few = [s51bb,s53b,s53bb,ss51b]
 

@@ -46,118 +46,147 @@ s0 = ".*"        # anything!
 ####################################################################
 ####################################################################
 
+####################################################################
+# ARISTOTELIAN
+####################################################################
+
 # 1. exists
 
-ss10 = " someone/nn"
-ss12 = " somebody/nn"
-ss12a = " anybody/nn"
-ss14 = " something/nn"
-ss16 = " some/dt"
-ss20 = " many/dt "
+ss10    = " someone/nn"
+ss12    = " somebody/nn"
+ss12a   = " anybody/nn"
+ss14    = " something/nn"
+ss16    = " some/dt"
+ss20    = " many/jj "
 
 ####################################################################
 
 # 4. all
 
-ss40 = " every/dt "
-ss42 = " all/dt "
-ss42a = " all/pdt "
-ss46 = " everything/nn "
-ss48 = " everyone/nn " 
-ss4a = " everybody/nn " 
-ss4c = " each/dt "
-ss4e = " no/dt "
+ss40    = " every/dt "
+ss42    = " all/dt "
+ss42a   = " all/pdt "
+ss46    = " everything/nn "
+ss48    = " everyone/nn " 
+ss4a    = " everybody/nn " 
+ss4c    = " each/dt "
+ss4e    = " no/dt "
 
 ####################################################################
+# COUNTING
 ####################################################################
 
 # 6. at most k, less than k (k integer)
 
-ss60 = " at/in most/jjs .*/cd "
-ss20b = " less/jjr than/in .*/cd "
-ss20bb = " fewer/jjr than/in .*/at .*/cd "
-ss22b = " less/jjr than/in .*/at .*/cd "
-ss22bb = " fewer/jjr than/in .*/at .*/cd "
+ss60    = " at/in most/jjs .*/cd "
+
+ss20b   = " less/rbr than/in .*/cd "
+ss20bb   = " less/jjr than/in .*/cd " # ss20bb
+
+ss20c   = " fewer/jjr than/in .*/cd "
 
 ####################################################################
 
 # 7. at least k, more than k (k integer)
 
-ss60b = " at/in least/jjs .*/cd "
-ss20 = " more/jjr than/in .*/cd "
-ss22 = " more/jjr than/in .*/at .*/cd "
+ss60b   = " at/in least/jjs .*/cd "
+
+ss20    = " more/rbr than/in .*/cd "
+ss20a   = " more/jjr than/in .*/cd "    # ss20a
 
 ####################################################################
 
 # 8. exactly k (k integer)
 
-ss70 = " .*/cd .*/nns "
-ss71 = " exactly/rb .*/cd "
+ss70    = " .*/cd [a-z]{1,12}/nns "
+ss70a   = " .*/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
+ss70b   = " .*/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
+ss71    = " exactly/rb .*/cd "
 
 ####################################################################
+# PROPORTIONAL
 ####################################################################
 
 # 9. more than p/k (p, k integers)
 
-ss80 = " more/ap than/in half/abn "
-ss82 = " more/ap than/in .*/cd .*/od "
+ss80    = " more/rbr than/in half/nn "
+ss80a   = " more/jjr than/in half/nn "              #ss80a
+
+ss82    = " more/rbr than/in .*/cd .*/nns of/in "
+ss82a   = " more/jjr than/in .*/cd .*/nns of/in "   #ss82a
 
 ####################################################################
 
 # 9.1 less than p/k (p, k integers)
 
-ss80b = " less/jjr than/in half/nn "
-ss80bb = " fewer/jjr than/in half/nn "
-ss82b = " less/jjr than/in .*/nns of/in "
-ss82bb = " fewer/jjr than/in .*/nn of/in "
+ss80b   = " less/rbr than/in half/nn "
+ss80bb  = " fewer/jjr than/in half/nn "
+
+ss82b   = " less/rbr than/in .*/nns of/in "
+ss82bb  = " fewer/jjr than/in .*/nn of/in "
 
 ####################################################################
 
 # 9.2 p/k (p, k integers)
 
-ss80c = " half/dt "
-ss80d = " half/pdt "
-ss80c = " half/nn of/in"
-ss81c = "   .*/nns of/in "
-ss81d = "  .*/nn of/in "
+ss80c   = " half/dt "
+ss80d   = " half/pdt "
+ss80e   = " half/nn of/in"
+
+ss81c   = " .*/cd .*/nns of/in "
+ss81d   = " .*/cd .*/nn of/in "
 
 ####################################################################
 
 # 3. more than k% (k a percentage)
 
-ss30 = " more/jjr than/in .*/cd percent/nn "
-ss30a = " more/jjr than/in %/cd "
+ss30    = " more/rbr than/in .*/cd percent/nn "
+ss30a   = " more/rbr than/in .*/cd %/nn "
+
+ss30aa   = " more/jjr than/in .*/cd percent/nn "    #ss30aa
+ss30aaa  = " more/jjr than/in .*/cd %/nn "          #ss30aaa
 
 ####################################################################
 
 # 3.1 less than k% (k a percentage)
 
-ss30b = " less/jjr than/in .*/cd percent/nn "
-ss30bb = " less/jjr than/in %/cd "
+
+ss30b     = " less/rbr than/in .*/cd percent/nn "
+ss30bb    = " less/rbr than/in .*/cd %/nn "
+
+ss30bx    = " less/jjr than/in .*/cd percent/nn "   #ss30bx
+ss30bbx   = " less/jjr than/in .*/cd %/nn "         #ss30bbx
+
+ss30bc    = " fewer/jjr than/in .*/cd percent/nn "
+ss30bcx   = " fewer/jjr than/in .*/cd %/nn "        #ss30bcx
 
 ####################################################################
 
 # 3.2 k% (k a percentage)
 
-ss30c = " ./cd percent/nn "
-ss30d = " %/cd "
+ss30c   = " .*/cd percent/nn "
+ss30d   = " .*/cd %/nn "
 
 ####################################################################
 
 # 5. most, more than half
 
-ss51 = " most/jjs "
-ss51a = " most/dt "
-ss53 = " more/jjr than/in half/nn "
+ss51    = " most/jjs "
+ss51a   = " most/dt "
+ss52    = " most/rbs "
+
+ss53     = " more/jjr than/in half/nn "
+ss53a    = " more/jjr than/in half/nn " #ss53a
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
-ss51b = " few/jj "
-ss51bb = " few/dt "
-ss53b = " less/jj than/in half/nn "
-ss53bb = " fewer/jj than/in half/nn "
+ss51b   = " few/jj "
+ss51bb  = " few/dt "
+
+ss53b   = " less/rbr than/in half/nn "
+ss53bb  = " fewer/jjr than/in half/nn "
 
 
 ####################################################################
@@ -171,17 +200,19 @@ aristotelian = [ss10,ss12,ss12a,ss14,ss16,ss20,
                 ss40,ss42,ss42a,ss48,ss4a,ss4c,ss4e]
 
 proportional = [ss51bb,ss53b,ss53bb,ss51,ss51b,
-                ss51a,ss53,
+                ss51a,ss53,ss52,
                 ss30c,ss30d,
                 ss30b,ss30bb,
-                ss30,ss30a,
-                ss80c,ss80d,
+                ss30,ss30a,ss30bc,
+                ss80c,ss80d,ss80e,ss81c,ss81d,
                 ss80b,ss80bb,ss82b,ss82bb,
-                ss80,ss82]
+                ss80,ss82,
+                ss53a,ss30bx,ss30bbx,ss30bcx,ss30aa,ss30aaa,
+                ss80a,ss82a]
                 
-counting  = [ss70,ss71,
-                ss20,ss22,ss60b,
-                ss20b,ss22b,ss20bb,ss22bb]
+counting  = [ss70,ss71,ss20c,ss70b,
+                ss20,ss60b,ss20b,
+                ss20a,ss20bb]
 
 
 ####################################################################
