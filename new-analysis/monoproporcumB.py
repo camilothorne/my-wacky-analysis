@@ -127,7 +127,7 @@ ss82bb  = " fewer/jjr than/in .*/nn of/in "
 
 ####################################################################
 
-# 9.2 p/k (p, k integers)
+# 9.2 p/k (p, k integers)                                     TODO
 
 ss80c   = " half/dt "
 ss80d   = " half/pdt "
