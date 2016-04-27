@@ -140,8 +140,8 @@ s80c    = " half/dt "
 s80d    = " half/pdt "
 s80e    = " half/nn of/in"
 
-s81c    = " .*/cd .*/nns of/in "
-s81d    = " .*/cd .*/nn of/in "
+s81c    = " .*/cd [a-z]{1,12}/nns of/in "
+s81d    = " .*/cd [a-z]{1,12}/nn of/in "
 
 pro = [s80c,s80d,s80e,s81c,s81d]
 

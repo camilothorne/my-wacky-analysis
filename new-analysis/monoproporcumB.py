@@ -133,8 +133,8 @@ ss80c   = " half/dt "
 ss80d   = " half/pdt "
 ss80e   = " half/nn of/in"
 
-ss81c   = " .*/cd .*/nns of/in "
-ss81d   = " .*/cd .*/nn of/in "
+ss81c   = " .*/cd [a-z]{1,12}/nns of/in "
+ss81d   = " .*/cd [a-z]{1,12}/nn of/in "
 
 ####################################################################
 
