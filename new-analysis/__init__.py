@@ -25,6 +25,7 @@ sys.path.append(u'../corpuspkg/')
 # analysis functions
 from monoproporB import *
 from monoproporcumB import *
+from qpatterns import *
 
 
 # corpora root files and format
@@ -43,8 +44,12 @@ listB          = ('wackypedia','')
 
 
 # all GQs
-ProporStatsE(path, fformat, listA, plotting)
+#ProporStatsE(path, fformat, listA, plotting)
 
 
 # by GQ class
-ProporStatsCumE(path, fformat, listB, plotting)
+#ProporStatsCumE(path, fformat, listB, plotting)
+
+
+# by pattern
+ProporStatsP(path, fformat, listA, plotting)

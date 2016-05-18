@@ -346,7 +346,7 @@ class MyPlot:
         mytime = ""
         fig.savefig(path+name+'-stats'+mytime+'.eps')
         fig.savefig(path+name+'-stats'+mytime+'.pdf')
-        #pylab.show()
+        pylab.show()
 
 
     # simple barplot (no grouping into classes)
@@ -364,10 +364,10 @@ class MyPlot:
         num_items = len(stats)
         ind = pylab.arange(num_items)
         width = 1
-        maxi = 0.25
+        maxi  = 1
         xdata = ind
         # plot labels
-        ax.set_ylabel("relative frequency\n",fontsize='12')
+        ax.set_ylabel("frequency\n",fontsize='12')
         ax.set_title(name+'\n\n',
                      fontstyle='normal',fontsize='12')
         ax.set_xticks(ind+(width/2))

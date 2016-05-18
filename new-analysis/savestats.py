@@ -13,23 +13,28 @@ class SaveStats:
 
     # constructor
     def __init__(self,classstats,stats,plotfile,path,report):
+        
         self.classstats = classstats
         self.path = path + ".tex"
         self.plotfile = plotfile
         self.stats = stats
+        
         # building the report, saving the tables
         resL = self.makeRes(self.classstats, self.stats, self.plotfile)
         resC = self.makeCSV(self.classstats, self.stats)
+        resD = self.makeCSVB(self.classstats, self.stats)
         
-        print resC
+        print "\n"+resD
         print path
         
-        self.fileSave(path + ".txt", resL)
-        self.fileSave(path + ".csv", resC)        
+        #self.fileSave(path + ".txt", resL)
+        #self.fileSave(path + ".csv", resC)
+        self.fileSave(path + "-B.csv", resD)                   
+        
         # preparing report
-        print "###################################################"
-        print "\npreparing report...\n"
-        self.compileFile(self.path, resL, report)
+        #print "###################################################"
+        #print "\npreparing report...\n"
+        #self.compileFile(self.path, resL, report)
 
 
     # make frequency table
@@ -47,7 +52,8 @@ class SaveStats:
 
         # print class names
         for cla in classstats:
-            table = table + " & " + r''+cla.tag
+            #table = table + " & " + r''+cla.tag
+            table = table + " & " + cla.tag
             freqs[cla.tag] = [[],0]
         table = table + r'\\' + "\n"
         table = table + r'\hline' + "\n"
@@ -123,6 +129,24 @@ class SaveStats:
 
         # return table
         return table
+    
+    
+    # make full csv table (second method)
+    def makeCSVB(self,classstats,stats):   
+
+        # print class names
+        table = "GQ, Freq\n"
+
+        # print freqs
+        for idf in stats.keys():
+            table = table + idf[:6]
+            for cla1 in classstats:
+                for cla2 in stats[idf]:
+                    if cla1.tag == cla2.tag:
+                        table = table + cla1.tag + "," + `cla2.count` + "\n"
+
+        # return table
+        return table    
 
 
     # save the table in a file
