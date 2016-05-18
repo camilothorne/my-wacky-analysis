@@ -26,6 +26,7 @@ sys.path.append(u'../corpuspkg/')
 from monoproporB import *
 from monoproporcumB import *
 from qpatterns import *
+from dpatterns import *
 
 
 # corpora root files and format
@@ -53,3 +54,8 @@ listB          = ('wackypedia','')
 
 # by pattern
 ProporStatsP(path, fformat, listA, plotting)
+
+print "\n...DISJOINT...\n"
+
+# disjoint
+ProporStatsPD(path, fformat, listA, plotting)
