@@ -2,7 +2,7 @@
 
 
 '''
-Created on April 8, 2016
+Created on May 18, 2016
 @author: camilothorne
 '''
 
@@ -33,12 +33,15 @@ from dpatterns import *
 plotting      = '/home/camilo/wacky-corpus/wackypedia/plotting/'
 path          = "/home/camilo/wacky-corpus/wackypedia/"
 
-#fformat        = ".*test"
 
-fformat        = ".*testa"
+#fformat        = ".*test"      # test 1
+#fformat        = ".*testa"     # test 2
+fformat        = ".*english"    # wacky corpus
+
 
 # listA          = ('mean','cumul','wacky','stut')
 # listB          = ('wacky','stut')
+
 
 listA          = ('mean','cumul','wackypedia')
 listB          = ('wackypedia','')
@@ -55,7 +58,6 @@ listB          = ('wackypedia','')
 # by pattern
 ProporStatsP(path, fformat, listB, plotting)
 
-print "\n...DISJOINT...\n"
 
-# disjoint
-ProporStatsPD(path, fformat, listB, plotting)
+# by disjoint pattern
+#ProporStatsPD(path, fformat, listB, plotting)
