@@ -326,101 +326,100 @@ class ProporStatsE:
         # stat classes
         
         # all
-        C11  =   MyClassStats2(s40.strip(),[],0,tit)
-        C12  =   MyClassStats2(s42.strip(),[],0,tit)
-        C13  =   MyClassStats2(s42a.strip(),[],0,tit)
-        C14  =   MyClassStats2(s46.strip(),[],0,tit)
-        C15  =   MyClassStats2(s48.strip(),[],0,tit)
-        C16  =   MyClassStats2(s4a.strip(),[],0,tit)
-        C17  =   MyClassStats2(s4c.strip(),[],0,tit)
-        C18  =   MyClassStats2(s4e.strip(),[],0,tit)                              
+        C11  =   MyClassStats2(all1[0].strip,[],0,tit)
+        C12  =   MyClassStats2(all2[0].strip,[],0,tit)
+        C13  =   MyClassStats2(all3[0].strip,[],0,tit)
+        C14  =   MyClassStats2(all4[0].strip,[],0,tit)
+        C15  =   MyClassStats2(all5[0].strip,[],0,tit)
+        C16  =   MyClassStats2(all6[0].strip,[],0,tit)
+        C17  =   MyClassStats2(all7[0].strip,[],0,tit)
+        C18  =   MyClassStats2(all8[0].strip,[],0,tit)                              
         
         # some
-        C21  =   MyClassStats2(s10.strip(),[],0,tit)
-        C22  =   MyClassStats2(s12.strip(),[],0,tit)        
-        C23  =   MyClassStats2(s12a.strip(),[],0,tit)
-        C24  =   MyClassStats2(s14.strip(),[],0,tit)
-        C25  =   MyClassStats2(s16.strip(),[],0,tit)
-        C26  =   MyClassStats2(s20.strip(),[],0,tit)        
+        C21  =   MyClassStats2(some1[0].strip,[],0,tit)
+        C22  =   MyClassStats2(some2[0].strip,[],0,tit)        
+        C23  =   MyClassStats2(some3[0].strip,[],0,tit)
+        C24  =   MyClassStats2(some4[0].strip,[],0,tit)
+        C25  =   MyClassStats2(some5[0].strip,[],0,tit)
+        C26  =   MyClassStats2(some6[0].strip,[],0,tit)        
         
         # > k
-        C41 =    MyClassStats2(s60b.strip(),[],0,tit)
-        C42 =    MyClassStats2(s20.strip(),[],0,tit)
-        C43 =    MyClassStats2(s20a.strip(),[],0,tit)        
+        C41 =    MyClassStats2(morek1[0].strip,[],0,tit)
+        C42 =    MyClassStats2(morek2[0].strip,[],0,tit)
+        C43 =    MyClassStats2(morek3[0].strip,[],0,tit)        
         
         # < k
-        C51 =    MyClassStats2(s20b.strip(),[],0,tit)
-        C52 =    MyClassStats2(s20c.strip(),[],0,tit)
-        C53 =    MyClassStats2(s60.strip(),[],0,tit)
+        C51 =    MyClassStats2(lessk1[0].strip,[],0,tit)
+        C52 =    MyClassStats2(lessk2[0].strip,[],0,tit)
+        C53 =    MyClassStats2(lessk3[0].strip,[],0,tit)
         
         # k
-        C61 =    MyClassStats2(s70.strip(),[],0,tit)
-        C62 =    MyClassStats2(s70a.strip(),[],0,tit)
-        C63 =    MyClassStats2(s70b.strip(),[],0,tit)
-        C64 =    MyClassStats2(s71.strip(),[],0,tit)        
+        C61 =    MyClassStats2(exactlyk1[0].strip,[],0,tit)
+        C62 =    MyClassStats2(exactlyk2[0].strip,[],0,tit)
+        C63 =    MyClassStats2(exactlyk3[0].strip,[],0,tit)
+        C64 =    MyClassStats2(exactlyk4[0].strip,[],0,tit)        
         
         # most
-        C71 =    MyClassStats2(s51a.strip(),[],0,tit)
-        C72 =    MyClassStats2(s53.strip(),[],0,tit)
-        C73 =    MyClassStats2(s51.strip(),[],0,tit)
-        C74 =    MyClassStats2(s52.strip(),[],0,tit)
-        C75 =    MyClassStats2(s53a.strip(),[],0,tit)
+        C71 =    MyClassStats2(most1[0].strip,[],0,tit)
+        C72 =    MyClassStats2(most2[0].strip,[],0,tit)
+        C73 =    MyClassStats2(most3[0].strip,[],0,tit)
+        C74 =    MyClassStats2(most4[0].strip,[],0,tit)
+        C75 =    MyClassStats2(most5[0].strip,[],0,tit)
         
         # few
-        C81 =    MyClassStats2(s51bb.strip(),[],0,tit)
-        C82 =    MyClassStats2(s53b.strip(),[],0,tit)
-        C83 =    MyClassStats2(s53bb.strip(),[],0,tit)
-        C84 =    MyClassStats2(ss51b.strip(),[],0,tit)
+        C81 =    MyClassStats2(few1[0].strip,[],0,tit)
+        C82 =    MyClassStats2(few2[0].strip,[],0,tit)
+        C83 =    MyClassStats2(few3[0].strip,[],0,tit)
+        C84 =    MyClassStats2(few4[0].strip,[],0,tit)
         
         # > p/k
-        C91 =    MyClassStats2(s80.strip(),[],0,tit)    
-        C92 =    MyClassStats2(s82.strip(),[],0,tit)    
-        C93 =    MyClassStats2(s80a.strip(),[],0,tit)    
-        C94 =    MyClassStats2(s82a.strip(),[],0,tit)                 
+        C91 =    MyClassStats2(morethanpro1[0].strip,[],0,tit)    
+        C92 =    MyClassStats2(morethanpro2[0].strip,[],0,tit)    
+        C93 =    MyClassStats2(morethanpro3[0].strip,[],0,tit)    
+        C94 =    MyClassStats2(morethanpro4[0].strip,[],0,tit)                 
         
         # < p/k
-        C101 =   MyClassStats2(s80b.strip(),[],0,tit)
-        C102 =   MyClassStats2(s80bb.strip(),[],0,tit)
-        C103 =   MyClassStats2(s82b.strip(),[],0,tit)
-        C104 =   MyClassStats2(s82bb.strip(),[],0,tit)
+        C101 =   MyClassStats2(lessthanpro1[0].strip,[],0,tit)
+        C102 =   MyClassStats2(lessthanpro2[0].strip,[],0,tit)
+        C103 =   MyClassStats2(lessthanpro3[0].strip,[],0,tit)
+        C104 =   MyClassStats2(lessthanpro4[0].strip,[],0,tit)
         
         # p/k
-        C131 =   MyClassStats2(s80c.strip(),[],0,tit)
-        C132 =   MyClassStats2(s80d.strip(),[],0,tit)
-        C133 =   MyClassStats2(s80e.strip(),[],0,tit)
-        C134 =   MyClassStats2(s81c.strip(),[],0,tit)
-        C135 =   MyClassStats2(s81d.strip(),[],0,tit)        
+        C131 =   MyClassStats2(pro1[0].strip,[],0,tit)
+        C132 =   MyClassStats2(pro2[0].strip,[],0,tit)
+        C133 =   MyClassStats2(pro3[0].strip,[],0,tit)
+        C134 =   MyClassStats2(pro4[0].strip,[],0,tit)
+        C135 =   MyClassStats2(pro5[0].strip,[],0,tit)        
         
         # > p%
-        C111 =   MyClassStats2(s30.strip(),[],0,tit)
-        C112 =   MyClassStats2(s30a.strip(),[],0,tit)
-        C113 =   MyClassStats2(s30aa.strip(),[],0,tit)
-        C114 =   MyClassStats2(s30aaa.strip(),[],0,tit)
+        C111 =   MyClassStats2(morekper1[0].strip,[],0,tit)
+        C112 =   MyClassStats2(morekper2[0].strip,[],0,tit)
+        C113 =   MyClassStats2(morekper3[0].strip,[],0,tit)
+        C114 =   MyClassStats2(morekper4[0].strip,[],0,tit)
         
         # < p%
-        C121 =   MyClassStats2(s30b.strip(),[],0,tit)
-        C122 =   MyClassStats2(s30bb.strip(),[],0,tit)
-        C123 =   MyClassStats2(s30bx.strip(),[],0,tit)
-        C124 =   MyClassStats2(s30bbx.strip(),[],0,tit)
-        C125 =   MyClassStats2(s30bc.strip(),[],0,tit)
-        C126 =   MyClassStats2(s30bcx.strip(),[],0,tit)
+        C121 =   MyClassStats2(lesskper1[0].strip,[],0,tit)
+        C122 =   MyClassStats2(lesskper2[0].strip,[],0,tit)
+        C123 =   MyClassStats2(lesskper3[0].strip,[],0,tit)
+        C124 =   MyClassStats2(lesskper4[0].strip,[],0,tit)
+        C125 =   MyClassStats2(lesskper5[0].strip,[],0,tit)
         
         # p%
-        C141 =   MyClassStats2(s30c.strip(),[],0,tit)
-        C142 =   MyClassStats2(s30d.strip(),[],0,tit)
+        C141 =   MyClassStats2(kper1[0].strip,[],0,tit)
+        C142 =   MyClassStats2(kper2[0].strip,[],0,tit)
         
         self.classstats = [C12,C12,C13,C14,C15,C16,C17,C18,
-                           C21,C22,C23,C24,C25,
+                           C21,C22,C23,C24,C25,C26,
                            C41,C42,C43,
                            C51,C52,C53,
                            C61,C62,C63,C64,
-                           C71,C71,C71,C71,C71,
+                           C71,C72,C73,C74,C75,
                            C81,C82,C83,C84,
                            C91,C92,C93,C94,
                            C101,C102,C103,C104,
                            C131,C132,C133,C134,C135,
                            C111,C112,C113,C114,
-                           C121,C122,C123,C124,C125,C126,
+                           C121,C122,C123,C124,C125,
                            C141,C142]        
         
         print "###################################################"
@@ -452,174 +451,252 @@ class ProporStatsE:
             
             ####################################################################  
             
-            # some
-            P1 = MyPatts2(some).P
-            N1 = MyPatts2(rest).P
-            c1 = MyClass2(P1,N1,idf,0,0,"some")
-            
-            P1 = MyPatts2(some).P
-            N1 = MyPatts2(rest).P
-            c1 = MyClass2(P1,N1,idf,0,0,"some")
-
-            P1 = MyPatts2(some).P
-            N1 = MyPatts2(rest).P
-            c1 = MyClass2(P1,N1,idf,0,0,"some")
-            
-            P1 = MyPatts2(some).P
-            N1 = MyPatts2(rest).P
-            c1 = MyClass2(P1,N1,idf,0,0,"some")
-            
-            P1 = MyPatts2(some).P
-            N1 = MyPatts2(rest).P
-            c1 = MyClass2(P1,N1,idf,0,0,"some")                                    
-            
             # all
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")   
-                    
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")  
+            P11 = MyPatts2(all1).P
+            N11 = MyPatts2(rest).P
+            c11 = MyClass2(P11,N11,idf,0,0,all1[0].strip())
             
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")   
-                    
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")
+            P12 = MyPatts2(all2).P
+            N12 = MyPatts2(rest).P
+            c12 = MyClass2(P12,N12,idf,0,0,all2[0].strip())
+
+            P13 = MyPatts2(all3).P
+            N13 = MyPatts2(rest).P
+            c13 = MyClass2(P13,N13,idf,0,0,all3[0].strip())
             
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")   
-                    
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")  
+            P14 = MyPatts2(all4).P
+            N14 = MyPatts2(rest).P
+            c14 = MyClass2(P14,N14,idf,0,0,all4[0].strip())
             
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")   
+            P15 = MyPatts2(all5).P
+            N15 = MyPatts2(rest).P
+            c15 = MyClass2(P15,N15,idf,0,0,all5[0].strip())       
+            
+            P16 = MyPatts2(all6).P
+            N16 = MyPatts2(rest).P
+            c16 = MyClass2(P16,N16,idf,0,0,all6[0].strip()) 
+            
+            P17 = MyPatts2(all7).P
+            N17 = MyPatts2(rest).P
+            c17 = MyClass2(P17,N17,idf,0,0,all7[0].strip()) 
+            
+            P18 = MyPatts2(all8).P
+            N18 = MyPatts2(rest).P
+            c18 = MyClass2(P18,N18,idf,0,0,all8[0].strip())                                                                  
+            
+            # some
+            P21 = MyPatts2(some1).P
+            N21 = MyPatts2(rest).P           
+            c21 = MyClass2(P21,N21,idf,0,0,some1.strip())   
                     
-            P2 = MyPatts2(all).P
-            N2 = MyPatts2(rest).P           
-            c2 = MyClass2(P2,N2,idf,0,0,"all")                             
+            P22 = MyPatts2(some2).P
+            N22 = MyPatts2(rest).P           
+            c22 = MyClass2(P22,N22,idf,0,0,some2[0].strip())  
+            
+            P23 = MyPatts2(some3).P
+            N23 = MyPatts2(rest).P           
+            c23 = MyClass2(P23,N23,idf,0,0,some3[0].strip())   
+                    
+            P24 = MyPatts2(some4).P
+            N24 = MyPatts2(rest).P           
+            c24 = MyClass2(P24,N24,idf,0,0,some4[0].strip())
+            
+            P25 = MyPatts2(some5).P
+            N25 = MyPatts2(rest).P           
+            c25 = MyClass2(P25,N25,idf,0,0,some5[0].strip())    
+            
+            P26 = MyPatts2(some6).P
+            N26 = MyPatts2(rest).P           
+            c26 = MyClass2(P26,N26,idf,0,0,some6[0].strip())                           
             
             ####################################################################                
             
             # >k
-            P4 = MyPatts2(morek).P
-            N4 = MyPatts2(rest).P
-            c4 = MyClass2(P4,N4,idf,0,0,">k")                      
+            P41 = MyPatts2(morek1).P
+            N41 = MyPatts2(rest).P
+            c41 = MyClass2(P41,N41,idf,0,0,morek1[0].strip())                      
 
-            P4 = MyPatts2(morek).P
-            N4 = MyPatts2(rest).P
-            c4 = MyClass2(P4,N4,idf,0,0,">k")  
+            P42 = MyPatts2(morek2).P
+            N42 = MyPatts2(rest).P
+            c42 = MyClass2(P42,N42,idf,0,0,morek2[0].strip())  
             
-            P4 = MyPatts2(morek).P
-            N4 = MyPatts2(rest).P
-            c4 = MyClass2(P4,N4,idf,0,0,">k")                         
+            P43 = MyPatts2(morek3).P
+            N43 = MyPatts2(rest).P
+            c43 = MyClass2(P43,N43,idf,0,0,morek3[0].strip())                         
             
             # <k
-            P5 = MyPatts2(lessk).P
-            N5 = MyPatts2(rest).P
-            c5 = MyClass2(P5,N5,idf,0,0,"<k")
+            P51 = MyPatts2(lessk1).P
+            N51 = MyPatts2(rest).P
+            c51 = MyClass2(P51,N51,idf,0,0,lessk2[0].strip)
 
-            P5 = MyPatts2(lessk).P
-            N5 = MyPatts2(rest).P
-            c5 = MyClass2(P5,N5,idf,0,0,"<k")
+            P52 = MyPatts2(lessk2).P
+            N52 = MyPatts2(rest).P
+            c52 = MyClass2(P52,N52,idf,0,0,lessk2[0].strip)
 
-            P5 = MyPatts2(lessk).P
-            N5 = MyPatts2(rest).P
-            c5 = MyClass2(P5,N5,idf,0,0,"<k")
-
+            P53 = MyPatts2(lessk3).P
+            N53 = MyPatts2(rest).P
+            c53 = MyClass2(P53,N53,idf,0,0,lessk3[0].strip)
+            
             # k
-            P6 = MyPatts2(exactlyk).P
-            N6 = MyPatts2(rest).P
-            c6 = MyClass2(P6,N6,idf,0,0,"k")
+            P61 = MyPatts2(exactlyk1).P
+            N61 = MyPatts2(rest).P
+            c61 = MyClass2(P61,N61,idf,0,0,exactlyk1[0].strip)
 
-            P6 = MyPatts2(exactlyk).P
-            N6 = MyPatts2(rest).P
-            c6 = MyClass2(P6,N6,idf,0,0,"k")
+            P62 = MyPatts2(exactlyk2).P
+            N62 = MyPatts2(rest).P
+            c62 = MyClass2(P62,N62,idf,0,0,exactlyk2[0].strip())
             
-            P6 = MyPatts2(exactlyk).P
-            N6 = MyPatts2(rest).P
-            c6 = MyClass2(P6,N6,idf,0,0,"k")
+            P63 = MyPatts2(exactlyk3).P
+            N63 = MyPatts2(rest).P
+            c63 = MyClass2(P63,N63,idf,0,0,exactlyk3[0].strip())
             
-            P6 = MyPatts2(exactlyk).P
-            N6 = MyPatts2(rest).P
-            c6 = MyClass2(P6,N6,idf,0,0,"k")                        
+            P64 = MyPatts2(exactlyk4).P
+            N64 = MyPatts2(rest).P
+            c64 = MyClass2(P64,N64,idf,0,0,exactlyk4[0].strip())                        
             
             ####################################################################
             
             # most
-            P7 = MyPatts2(most).P
-            N7 = MyPatts2(rest).P
-            c7 = MyClass2(P7,N7,idf,0,0,"most")
+            P71 = MyPatts2(most1).P
+            N71 = MyPatts2(rest).P
+            c71 = MyClass2(P71,N71,idf,0,0,most1[0].strip)
             
-            P7 = MyPatts2(most).P
-            N7 = MyPatts2(rest).P
-            c7 = MyClass2(P7,N7,idf,0,0,"most")
+            P72 = MyPatts2(most2).P
+            N72 = MyPatts2(rest).P
+            c72 = MyClass2(P72,N72,idf,0,0,most2[0].strip)
                         
-            P7 = MyPatts2(most).P
-            N7 = MyPatts2(rest).P
-            c7 = MyClass2(P7,N7,idf,0,0,"most")
+            P73 = MyPatts2(most3).P
+            N73 = MyPatts2(rest).P
+            c73 = MyClass2(P73,N73,idf,0,0,most3[0].strip)
             
-            P7 = MyPatts2(most).P
-            N7 = MyPatts2(rest).P
-            c7 = MyClass2(P7,N7,idf,0,0,"most")
+            P74 = MyPatts2(most4).P
+            N74 = MyPatts2(rest).P
+            c74 = MyClass2(P74,N74,idf,0,0,most4[0].strip)
             
-            P7 = MyPatts2(most).P
-            N7 = MyPatts2(rest).P
-            c7 = MyClass2(P7,N7,idf,0,0,"most")            
+            P75 = MyPatts2(most5).P
+            N75 = MyPatts2(rest).P
+            c75 = MyClass2(P75,N75,idf,0,0,most5[0].strip)            
                              
             # few
-            P8 = MyPatts2(few).P
-            N8 = MyPatts2(rest).P
-            c8 = MyClass2(P8,N8,idf,0,0,"few")
+            P81 = MyPatts2(few1).P
+            N81 = MyPatts2(rest).P
+            c81 = MyClass2(P81,N81,idf,0,0,few1[0].strip)
 
-            P8 = MyPatts2(few).P
-            N8 = MyPatts2(rest).P
-            c8 = MyClass2(P8,N8,idf,0,0,"few")
+            P82 = MyPatts2(few2).P
+            N82 = MyPatts2(rest).P
+            c82 = MyClass2(P82,N82,idf,0,0,few2[0].strip)
 
-            P8 = MyPatts2(few).P
-            N8 = MyPatts2(rest).P
-            c8 = MyClass2(P8,N8,idf,0,0,"few")
+            P83 = MyPatts2(few3).P
+            N83 = MyPatts2(rest).P
+            c83 = MyClass2(P83,N83,idf,0,0,few3[0].strip)
 
-            P8 = MyPatts2(few).P
-            N8 = MyPatts2(rest).P
-            c8 = MyClass2(P8,N8,idf,0,0,"few")
+            P84 = MyPatts2(few4).P
+            N84 = MyPatts2(rest).P
+            c84 = MyClass2(P84,N84,idf,0,0,few4[0].strip)
                 
             # >k/100
-            P9 = MyPatts2(morekper).P
-            N9 = MyPatts2(rest).P
-            c9 = MyClass2(P9,N9,idf,0,0,">k/100")
+            P91 = MyPatts2(morekper1).P
+            N91 = MyPatts2(rest).P
+            c91 = MyClass2(P91,N91,idf,0,0,morekper1[0].strip)
+            
+            P92 = MyPatts2(morekper2).P
+            N92 = MyPatts2(rest).P
+            c92 = MyClass2(P92,N92,idf,0,0,morekper2[0].strip)
+            
+            P93 = MyPatts2(morekper3).P
+            N93 = MyPatts2(rest).P
+            c93 = MyClass2(P93,N93,idf,0,0,morekper3[0].strip)
+            
+            P94 = MyPatts2(morekper4).P
+            N94 = MyPatts2(rest).P
+            c94 = MyClass2(P94,N94,idf,0,0,morekper4[0].strip)
     
             # <k/100
-            P10 = MyPatts2(lesskper).P
-            N10 = MyPatts2(rest).P
-            c10 = MyClass2(P10,N10,idf,0,0,"<k/100")
+            P101 = MyPatts2(lesskper1).P
+            N101 = MyPatts2(rest).P
+            c101 = MyClass2(P101,N101,idf,0,0,lesskper1[0].strip)
+
+            P102 = MyPatts2(lesskper2).P
+            N102 = MyPatts2(rest).P
+            c102 = MyClass2(P102,N102,idf,0,0,lesskper2[0].strip)
+
+            P103 = MyPatts2(lesskper3).P
+            N103 = MyPatts2(rest).P
+            c103 = MyClass2(P103,N103,idf,0,0,lesskper3[0].strip)
+
+            P104 = MyPatts2(lesskper4).P
+            N104 = MyPatts2(rest).P
+            c104 = MyClass2(P104,N104,idf,0,0,lesskper4[0].strip)
+
+            P105 = MyPatts2(lesskper5).P
+            N105 = MyPatts2(rest).P
+            c105 = MyClass2(P105,N105,idf,0,0,lesskper5[0].strip)
                 
             # k/100
-            P13 = MyPatts2(kper).P
-            N13 = MyPatts2(rest).P
-            c13 = MyClass2(P13,N13,idf,0,0,"k/100")
+            P131 = MyPatts2(kper1).P
+            N131 = MyPatts2(rest).P
+            c131 = MyClass2(P131,N131,idf,0,0,kper1[0].strip)
+
+            P132 = MyPatts2(kper2).P
+            N132 = MyPatts2(rest).P
+            c132 = MyClass2(P132,N132,idf,0,0,kper2[0].strip)
                 
             # >p/k
-            P11 = MyPatts2(morethanpro).P
-            N11 = MyPatts2(rest).P
-            c11 = MyClass2(P11,N11,idf,0,0,">p/k")                    
+            P111 = MyPatts2(morethanpro1).P
+            N111 = MyPatts2(rest).P
+            c111 = MyClass2(P111,N111,idf,0,0,morethanpro1[0].strip)                    
+ 
+            P112 = MyPatts2(morethanpro2).P
+            N112 = MyPatts2(rest).P
+            c112 = MyClass2(P112,N112,idf,0,0,morethanpro2[0].strip)   
+ 
+            P113 = MyPatts2(morethanpro3).P
+            N113 = MyPatts2(rest).P
+            c113 = MyClass2(P113,N113,idf,0,0,morethanpro3[0].strip)   
+ 
+            P114 = MyPatts2(morethanpro4).P
+            N114 = MyPatts2(rest).P
+            c114 = MyClass2(P114,N114,idf,0,0,morethanpro4[0].strip)   
             
             # <p/k
-            P12 = MyPatts2(lessthanpro).P
-            N12 = MyPatts2(rest).P
-            c12 = MyClass2(P12,N12,idf,0,0,"<p/k")
+
+            P121 = MyPatts2(lessthanpro1).P
+            N121 = MyPatts2(rest).P
+            c121 = MyClass2(P121,N121,idf,0,0,lessthanpro1[0].strip)
+
+            P122 = MyPatts2(lessthanpro2).P
+            N122 = MyPatts2(rest).P
+            c122 = MyClass2(P122,N122,idf,0,0,lessthanpro2[0].strip)
+
+            P123 = MyPatts2(lessthanpro3).P
+            N123 = MyPatts2(rest).P
+            c123 = MyClass2(P123,N123,idf,0,0,lessthanpro3[0].strip)
+            
+            P124 = MyPatts2(lessthanpro4).P
+            N124 = MyPatts2(rest).P
+            c124 = MyClass2(P124,N124,idf,0,0,lessthanpro4[0].strip)
             
             # p/k
-            P14 = MyPatts2(pro).P
-            N14 = MyPatts2(rest).P
-            c14 = MyClass2(P14,N14,idf,0,0,"p/k")                      
+
+            P141 = MyPatts2(pro1).P
+            N141 = MyPatts2(rest).P
+            c141 = MyClass2(P141,N141,idf,0,0,pro1[0].strip)   
+
+            P142 = MyPatts2(pro2).P
+            N142 = MyPatts2(rest).P
+            c142 = MyClass2(P142,N142,idf,0,0,pro2[0].strip)   
+
+            P143 = MyPatts2(pro3).P
+            N143 = MyPatts2(rest).P
+            c143 = MyClass2(P143,N143,idf,0,0,pro3[0].strip)   
+
+            P144 = MyPatts2(pro4).P
+            N144 = MyPatts2(rest).P
+            c144 = MyClass2(P144,N144,idf,0,0,pro4[0].strip)   
+            
+            P145 = MyPatts2(pro5).P
+            N145 = MyPatts2(rest).P
+            c145 = MyClass2(P145,N145,idf,0,0,pro5[0].strip)                      
             
             ####################################################################  
             ####################################################################            
@@ -655,70 +732,88 @@ class ProporStatsE:
                         ####################################################################
                         ####################################################################            
                         
+                        # all
+                        c11.openSen(myline,c11.pats,c11.patts)  
+                        c12.openSen(myline,c12.pats,c12.patts)
+                        c13.openSen(myline,c13.pats,c13.patts)
+                        c14.openSen(myline,c14.pats,c14.patts)
+                        c15.openSen(myline,c15.pats,c16.patts)
+                        c16.openSen(myline,c16.pats,c16.patts) 
+                        c17.openSen(myline,c17.pats,c17.patts)
+                        c18.openSen(myline,c18.pats,c18.patts)   
+                        
                         # some
-                        c1.openSen(myline,c1.pats,c1.patts)
+                        c21.openSen(myline,c21.pats,c21.patts)
+                        c22.openSen(myline,c22.pats,c22.patts)
+                        c23.openSen(myline,c23.pats,c23.patts)
+                        c24.openSen(myline,c24.pats,c24.patts)
+                        c25.openSen(myline,c25.pats,c25.patts)
+                        c26.openSen(myline,c26.pats,c26.patts)
                         
-                        ####################################################################
+                        # > k
+                        c41.openSen(myline,c41.pats,c41.patts)
+                        c42.openSen(myline,c42.pats,c42.patts)
+                        c43.openSen(myline,c43.pats,c43.patts)
                         
-                        # all      
-                        c2.openSen(myline,c2.pats,c2.patts)
-                        
-                        ####################################################################
-                        ####################################################################
-                        
-                        # >k
-                        c4.openSen(myline,c4.pats,c4.patts)
-                        
-                        ####################################################################
-                        
-                        # <k
-                        c5.openSen(myline,c5.pats,c5.patts)
-                        
-                        ####################################################################
+                        # < k
+                        c51.openSen(myline,c51.pats,c51.patts)
+                        c52.openSen(myline,c52.pats,c52.patts)
+                        c53.openSen(myline,c53.pats,c53.patts)
                         
                         # k
-                        c6.openSen(myline,c6.pats,c6.patts)
+                        c61.openSen(myline,c61.pats,c61.patts)
+                        c62.openSen(myline,c62.pats,c62.patts)
+                        c63.openSen(myline,c63.pats,c63.patts)
+                        c64.openSen(myline,c64.pats,c64.patts)
                         
-                        ####################################################################
-                        ####################################################################
-              
                         # most
-                        c7.openSen(myline,c7.pats,c7.patts)
+                        c71.openSen(myline,c71.pats,c71.patts)
+                        c72.openSen(myline,c72.pats,c72.patts)
+                        c73.openSen(myline,c73.pats,c73.patts)
+                        c74.openSen(myline,c74.pats,c74.patts)
+                        c75.openSen(myline,c75.pats,c75.patts)
                         
-                        ####################################################################
+                        # few
+                        c81.openSen(myline,c81.pats,c81.patts)
+                        c82.openSen(myline,c82.pats,c82.patts)
+                        c83.openSen(myline,c83.pats,c83.patts)
+                        c84.openSen(myline,c84.pats,c84.patts)
                         
-                        #few
-                        c8.openSen(myline,c8.pats,c8.patts)
+                        # >k/100
+                        c91.openSen(myline,c91.pats,c91.patts)
+                        c92.openSen(myline,c92.pats,c92.patts)
+                        c93.openSen(myline,c93.pats,c93.patts)
+                        c94.openSen(myline,c94.pats,c94.patts)
                         
-                        ####################################################################            
-                                  
-                        #>k/100
-                        c9.openSen(myline,c9.pats,c9.patts)
-                        
-                        ####################################################################
-            
-                        #<k100
-                        c10.openSen(myline,c10.pats,c10.patts)
-                        
-                        ####################################################################
+                        # <k/100
+                        c101.openSen(myline,c101.pats,c101.patts)
+                        c102.openSen(myline,c102.pats,c102.patts)
+                        c103.openSen(myline,c103.pats,c103.patts)
+                        c104.openSen(myline,c104.pats,c104.patts)
+                        c105.openSen(myline,c105.pats,c105.patts)
                         
                         # k/100
-                        c13.openSen(myline,c13.pats,c13.patts)
-              
-                        ####################################################################
+                        c131.openSen(myline,c131.pats,c131.patts)
+                        c132.openSen(myline,c132.pats,c132.patts)
                         
-                        # >p/k
-                        c11.openSen(myline,c11.pats,c11.patts)
+                        # > p/k
+                        c111.openSen(myline,c111.pats,c111.patts)
+                        c112.openSen(myline,c112.pats,c112.patts)
+                        c113.openSen(myline,c113.pats,c113.patts)
+                        c114.openSen(myline,c114.pats,c114.patts)
                         
-                        ####################################################################
-                        
-                        # <p/k
-                        c12.openSen(myline,c12.pats,c12.patts)
-            
-                        ####################################################################
+                        # < p/k
+                        c121.openSen(myline,c121.pats,c121.patts)
+                        c122.openSen(myline,c122.pats,c122.patts)
+                        c123.openSen(myline,c123.pats,c123.patts)
+                        c124.openSen(myline,c124.pats,c124.patts)
                         
                         # p/k
-                        c14.openSen(myline,c14.pats,c14.patts)
+                        c141.openSen(myline,c141.pats,c141.patts)
+                        c142.openSen(myline,c142.pats,c142.patts)
+                        c143.openSen(myline,c143.pats,c143.patts)
+                        c144.openSen(myline,c144.pats,c144.patts)
+                        c145.openSen(myline,c145.pats,c145.patts)
                 
                         ####################################################################
                     
@@ -740,19 +835,20 @@ class ProporStatsE:
             ####################################################################
                        
             # total cum count
-            tot = (c1.count + 
-                   c2.count + 
-                   c4.count + 
-                   c5.count + 
-                   c6.count + 
-                   c7.count + 
-                   c8.count + 
-                   c9.count + 
-                   c10.count + 
-                   c11.count + 
-                   c12.count + 
-                   c13.count + 
-                   c14.count
+            tot = (
+                   c11.count + c12.count + c13.count + c14.count + c15.count + c16.count + c17.count + c18.count + 
+                   c21.count + c22.count + c23.count + c24.count + c25.count + c26.count + 
+                   c41.count + c42.count + c43.count + 
+                   c51.count + c52.count + c53.count +
+                   c61.count + c62.count + c63.count + c64.count +                 
+                   c71.count + c72.count + c73.count + c74.count + c75.count +                   
+                   c81.count + c82.count + c83.count + c84.count +  
+                   c91.count + c92.count + c93.count + c94.count + 
+                   c101.count + c102.count + c103.count + c104.count + c105.count +
+                   c111.count + c112.count + c113.count + c114.count +
+                   c121.count + c122.count + c123.count + c124.count + 
+                   c131.count + c132.count + 
+                   c141.count + c142.count + c143.count + c144.count + c145.count 
                    ) + 1
     
             print "corpus size : " + `corpus.count` + " sentences"        
@@ -760,47 +856,93 @@ class ProporStatsE:
             print "total matches: " + `tot` + " GQs"
             
             #relative frequencies
-            c1.freq  = round(c1.count/tot,2)
+            c11.freq  = round(c11.count/tot,2)
+            c12.freq  = round(c12.count/tot,2)
+            c13.freq  = round(c13.count/tot,2)            
+            c14.freq  = round(c14.count/tot,2)
+            c15.freq  = round(c15.count/tot,2)
+            c16.freq  = round(c16.count/tot,2)  
+            c17.freq  = round(c17.count/tot,2)
+            c18.freq  = round(c18.count/tot,2)
 
-            c2.freq  = round(c2.count/tot,2)
+            c21.freq  = round(c21.count/tot,2)
+            c22.freq  = round(c22.count/tot,2)
+            c23.freq  = round(c23.count/tot,2)
+            c24.freq  = round(c24.count/tot,2)
+            c25.freq  = round(c25.count/tot,2)
+            c26.freq  = round(c26.count/tot,2)
             
-            c4.freq  = round(c4.count/tot,2)
+            c41.freq  = round(c41.count/tot,2)
+            c42.freq  = round(c42.count/tot,2)
+            c43.freq  = round(c43.count/tot,2)
             
-            c5.freq  = round(c5.count/tot,2)
+            c51.freq  = round(c51.count/tot,2)
+            c52.freq  = round(c52.count/tot,2)
+            c53.freq  = round(c53.count/tot,2)
             
-            c6.freq  = round(c6.count/tot,2)            
+            c61.freq  = round(c61.count/tot,2)            
+            c62.freq  = round(c62.count/tot,2)
+            c63.freq  = round(c63.count/tot,2)
+            c64.freq  = round(c64.count/tot,2)
             
-            c7.freq  = round(c7.count/tot,2)
+            c71.freq  = round(c71.count/tot,2)
+            c72.freq  = round(c72.count/tot,2)
+            c73.freq  = round(c73.count/tot,2)
+            c74.freq  = round(c74.count/tot,2)
+            c75.freq  = round(c75.count/tot,2)
             
-            c8.freq  = round(c8.count/tot,2)
+            c81.freq  = round(c81.count/tot,2)
+            c82.freq  = round(c82.count/tot,2)
+            c83.freq  = round(c83.count/tot,2)
+            c84.freq  = round(c84.count/tot,2)
             
-            c9.freq  = round(c9.count/tot,2)
+            c91.freq  = round(c91.count/tot,2)
+            c92.freq  = round(c92.count/tot,2)
+            c93.freq  = round(c93.count/tot,2)
+            c94.freq  = round(c94.count/tot,2)
             
-            c10.freq = round(c10.count/tot,2)
+            c101.freq = round(c101.count/tot,2)
+            c102.freq = round(c102.count/tot,2)
+            c103.freq = round(c103.count/tot,2)
+            c104.freq = round(c104.count/tot,2)
+            c105.freq = round(c105.count/tot,2)
             
-            c11.freq = round(c11.count/tot,2)
+            c111.freq = round(c111.count/tot,2)
+            c112.freq = round(c112.count/tot,2)
+            c113.freq = round(c113.count/tot,2)
+            c114.freq = round(c114.count/tot,2)
             
-            c12.freq = round(c12.count/tot,2)
+            c121.freq = round(c121.count/tot,2)
+            c122.freq = round(c122.count/tot,2)
+            c123.freq = round(c123.count/tot,2)
+            c124.freq = round(c124.count/tot,2)
             
-            c13.freq = round(c13.count/tot,2)
+            c131.freq = round(c131.count/tot,2)
+            c132.freq = round(c132.count/tot,2)
             
-            c14.freq = round(c14.count/tot,2)
+            c141.freq = round(c141.count/tot,2)
+            c142.freq = round(c142.count/tot,2)
+            c143.freq = round(c143.count/tot,2)
+            c144.freq = round(c144.count/tot,2)
+            c145.freq = round(c145.count/tot,2)
             
             ####################################################################            
             
-            filestats = [c1,
-                         c2,
-                         c4,
-                         c5,
-                         c6,
-                         c7,
-                         c8,
-                         c9,
-                         c10,
-                         c13,
-                         c11,
-                         c12,
-                         c14]
+            filestats = [
+                         c11,c12,c13,c14,c15,c16,c17,c18,
+                         c21,c22,c23,c24,c25,c26,
+                         c41,c42,c43,
+                         c51,c52,c53,
+                         c61,c62,c63,c64,
+                         c71,c72,c73,c74,c75,
+                         c81,c82,c83,c84,
+                         c91,c92,c93,c94,
+                         c101,c102,c103,c104,c105,
+                         c131,c132,
+                         c111,c112,c113,c114,
+                         c121,c122,c123,c124,
+                         c141,c142,c143,c144,c145
+                         ]
             
             ####################################################################  
             
