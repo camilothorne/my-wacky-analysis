@@ -53,9 +53,9 @@ listB          = ('wackypedia','')
 
 
 # by pattern
-ProporStatsP(path, fformat, listA, plotting)
+ProporStatsP(path, fformat, listB, plotting)
 
 print "\n...DISJOINT...\n"
 
 # disjoint
-ProporStatsPD(path, fformat, listA, plotting)
+ProporStatsPD(path, fformat, listB, plotting)
