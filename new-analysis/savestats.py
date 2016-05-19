@@ -135,15 +135,14 @@ class SaveStats:
     def makeCSVB(self,classstats,stats):   
 
         # print class names
-        table = "GQ, Freq\n"
-
-        # print freqs
-        for idf in stats.keys():
-            table = table + idf[:6]
-            for cla1 in classstats:
-                for cla2 in stats[idf]:
-                    if cla1.tag == cla2.tag:
-                        table = table + cla1.tag + "," + `cla2.count` + "\n"
+        table = "Num, GQ, Freq\n"
+        
+        num = 1
+        for cla in classstats:
+            for idf in cla.classes:
+                freq = idf.count              
+            table = table + `num` + " , " + cla.tag + " , " + `freq` + "\n"
+            num = num + 1
 
         # return table
         return table    

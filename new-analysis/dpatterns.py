@@ -987,7 +987,7 @@ class ProporStatsPD:
             print cla.tag
             print "---------------------------------------------------"
             for idf in cla.classes:
-                print `idf.count` + ": freq "+ idf.fileid              
+                print `idf.count` + ": freq " + "(" + idf.fileid + ")"             
             print "###################################################"
 
     #############################################################

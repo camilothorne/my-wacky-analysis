@@ -983,8 +983,10 @@ class ProporStatsP:
         
     # prints the stats
     def printClasses(self,classstats):
+        num = 1
         for cla in classstats:
-            print cla.tag
+            print cla.tag, "(class " + `num` + ")"
+            num = num + 1
             print "---------------------------------------------------"
             for idf in cla.classes:
                 print `idf.count` + ": freq "+ idf.fileid              
