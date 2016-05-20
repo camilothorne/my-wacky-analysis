@@ -35,7 +35,7 @@ path          = "/home/camilo/wacky-corpus/wackypedia/"
 
 
 #fformat        = ".*test"      # test 1
-fformat        = ".*testa"     # test 2
+#fformat        = ".*testa"     # test 2
 fformat        = ".*english"    # wacky corpus
 
 
