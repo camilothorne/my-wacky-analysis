@@ -402,7 +402,7 @@ class ProporStatsP:
         C141 =   MyClassStats2(kper1[0].strip(),[],0,tit)
         C142 =   MyClassStats2(kper2[0].strip(),[],0,tit)
         
-        self.classstats = [C12,C12,C13,C14,C15,C16,C17,C18,
+        self.classstats = [C11,C12,C13,C14,C15,C16,C17,C18,
                            C21,C22,C23,C24,C25,C26,
                            C41,C42,C43,
                            C51,C52,C53,
@@ -954,8 +954,8 @@ class ProporStatsP:
         # updating the distribution 
         #self.classAvg(self.classstats)
         self.classAvg2(self.classstats)
-        sort = self.sortClass(self.classstats)
-        self.classstats = sort
+        #sort = self.sortClass(self.classstats)
+        #self.classstats = sort
         print "###################################################"
         self.printClasses(self.classstats)
     

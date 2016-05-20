@@ -139,8 +139,8 @@ class SaveStats:
         
         num = 1
         for cla in classstats:
-            for idf in cla.classes:
-                freq = idf.count              
+            #for idf in cla.classes:
+            freq = cla.fre              
             table = table + `num` + " , " + cla.tag + " , " + `freq` + "\n"
             num = num + 1
 
