@@ -35,8 +35,8 @@ path          = "/home/camilo/wacky-corpus/wackypedia/"
 
 
 #fformat        = ".*test"      # test 1
-#fformat        = ".*testa"     # test 2
-fformat        = ".*english"    # wacky corpus
+fformat        = ".*testa"     # test 2
+#fformat        = ".*english"    # wacky corpus
 
 
 # listA          = ('mean','cumul','wacky','stut')
@@ -60,4 +60,4 @@ ProporStatsP(path, fformat, listB, plotting)
 
 
 # by disjoint pattern
-#ProporStatsPD(path, fformat, listB, plotting)
+ProporStatsPD(path, fformat, listB, plotting)
