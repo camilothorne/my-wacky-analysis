@@ -849,77 +849,6 @@ class ProporStatsP:
             print "==================================================="
             print "total matches: " + `tot` + " GQs"
             
-#             #relative frequencies
-#             c11.freq  = round(c11.count/tot,2)
-#             c12.freq  = round(c12.count/tot,2)
-#             c13.freq  = round(c13.count/tot,2)            
-#             c14.freq  = round(c14.count/tot,2)
-#             c15.freq  = round(c15.count/tot,2)
-#             c16.freq  = round(c16.count/tot,2)  
-#             c17.freq  = round(c17.count/tot,2)
-#             c18.freq  = round(c18.count/tot,2)
-# 
-#             c21.freq  = round(c21.count/tot,2)
-#             c22.freq  = round(c22.count/tot,2)
-#             c23.freq  = round(c23.count/tot,2)
-#             c24.freq  = round(c24.count/tot,2)
-#             c25.freq  = round(c25.count/tot,2)
-#             c26.freq  = round(c26.count/tot,2)
-#             
-#             c41.freq  = round(c41.count/tot,2)
-#             c42.freq  = round(c42.count/tot,2)
-#             c43.freq  = round(c43.count/tot,2)
-#             
-#             c51.freq  = round(c51.count/tot,2)
-#             c52.freq  = round(c52.count/tot,2)
-#             c53.freq  = round(c53.count/tot,2)
-#             
-#             c61.freq  = round(c61.count/tot,2)            
-#             c62.freq  = round(c62.count/tot,2)
-#             c63.freq  = round(c63.count/tot,2)
-#             c64.freq  = round(c64.count/tot,2)
-#             
-#             c71.freq  = round(c71.count/tot,2)
-#             c72.freq  = round(c72.count/tot,2)
-#             c73.freq  = round(c73.count/tot,2)
-#             c74.freq  = round(c74.count/tot,2)
-#             c75.freq  = round(c75.count/tot,2)
-#             
-#             c81.freq  = round(c81.count/tot,2)
-#             c82.freq  = round(c82.count/tot,2)
-#             c83.freq  = round(c83.count/tot,2)
-#             c84.freq  = round(c84.count/tot,2)
-#             
-#             c91.freq  = round(c91.count/tot,2)
-#             c92.freq  = round(c92.count/tot,2)
-#             c93.freq  = round(c93.count/tot,2)
-#             c94.freq  = round(c94.count/tot,2)
-#             
-#             c101.freq = round(c101.count/tot,2)
-#             c102.freq = round(c102.count/tot,2)
-#             c103.freq = round(c103.count/tot,2)
-#             c104.freq = round(c104.count/tot,2)
-#             c105.freq = round(c105.count/tot,2)
-#             
-#             c111.freq = round(c111.count/tot,2)
-#             c112.freq = round(c112.count/tot,2)
-#             c113.freq = round(c113.count/tot,2)
-#             c114.freq = round(c114.count/tot,2)
-#             
-#             c121.freq = round(c121.count/tot,2)
-#             c122.freq = round(c122.count/tot,2)
-#             c123.freq = round(c123.count/tot,2)
-#             c124.freq = round(c124.count/tot,2)
-#             
-#             c131.freq = round(c131.count/tot,2)
-#             c132.freq = round(c132.count/tot,2)
-#             
-#             c141.freq = round(c141.count/tot,2)
-#             c142.freq = round(c142.count/tot,2)
-#             c143.freq = round(c143.count/tot,2)
-#             c144.freq = round(c144.count/tot,2)
-#             c145.freq = round(c145.count/tot,2)
-            
             ####################################################################            
             
             filestats = [
@@ -957,7 +886,7 @@ class ProporStatsP:
         #sort = self.sortClass(self.classstats)
         #self.classstats = sort
         print "###################################################"
-        self.printClasses(self.classstats)
+        #self.printClasses(self.classstats)
     
 
     ############################################################# 

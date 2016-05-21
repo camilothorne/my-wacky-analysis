@@ -438,7 +438,7 @@ class ProporStatsPD:
             ####################################################################
  
             # patterns
-            rest = []  
+            rest = [".*"]  
             
             # corpus
             corpus = MyClass2([".*"],[],idf,0,0,"corpus")
@@ -727,87 +727,87 @@ class ProporStatsPD:
                         ####################################################################            
                         
                         # all
-                        c11.openSen(myline,c11.pats,c11.patts)  
-                        c12.openSen(myline,c12.pats,c12.patts)
-                        c13.openSen(myline,c13.pats,c13.patts)
-                        c14.openSen(myline,c14.pats,c14.patts)
-                        c15.openSen(myline,c15.pats,c16.patts)
-                        c16.openSen(myline,c16.pats,c16.patts) 
-                        c17.openSen(myline,c17.pats,c17.patts)
-                        c18.openSen(myline,c18.pats,c18.patts)   
+                        c11.openSen2(myline,c11.pats,c11.patts)  
+                        c12.openSen2(myline,c12.pats,c12.patts)
+                        c13.openSen2(myline,c13.pats,c13.patts)
+                        c14.openSen2(myline,c14.pats,c14.patts)
+                        c15.openSen2(myline,c15.pats,c16.patts)
+                        c16.openSen2(myline,c16.pats,c16.patts) 
+                        c17.openSen2(myline,c17.pats,c17.patts)
+                        c18.openSen2(myline,c18.pats,c18.patts)   
                         
                         # some
-                        c21.openSen(myline,c21.pats,c21.patts)
-                        c22.openSen(myline,c22.pats,c22.patts)
-                        c23.openSen(myline,c23.pats,c23.patts)
-                        c24.openSen(myline,c24.pats,c24.patts)
-                        c25.openSen(myline,c25.pats,c25.patts)
-                        c26.openSen(myline,c26.pats,c26.patts)
+                        c21.openSen2(myline,c21.pats,c21.patts)
+                        c22.openSen2(myline,c22.pats,c22.patts)
+                        c23.openSen2(myline,c23.pats,c23.patts)
+                        c24.openSen2(myline,c24.pats,c24.patts)
+                        c25.openSen2(myline,c25.pats,c25.patts)
+                        c26.openSen2(myline,c26.pats,c26.patts)
                         
                         # > k
-                        c41.openSen(myline,c41.pats,c41.patts)
-                        c42.openSen(myline,c42.pats,c42.patts)
-                        c43.openSen(myline,c43.pats,c43.patts)
+                        c41.openSen2(myline,c41.pats,c41.patts)
+                        c42.openSen2(myline,c42.pats,c42.patts)
+                        c43.openSen2(myline,c43.pats,c43.patts)
                         
                         # < k
-                        c51.openSen(myline,c51.pats,c51.patts)
-                        c52.openSen(myline,c52.pats,c52.patts)
-                        c53.openSen(myline,c53.pats,c53.patts)
+                        c51.openSen2(myline,c51.pats,c51.patts)
+                        c52.openSen2(myline,c52.pats,c52.patts)
+                        c53.openSen2(myline,c53.pats,c53.patts)
                         
                         # k
-                        c61.openSen(myline,c61.pats,c61.patts)
-                        c62.openSen(myline,c62.pats,c62.patts)
-                        c63.openSen(myline,c63.pats,c63.patts)
-                        c64.openSen(myline,c64.pats,c64.patts)
+                        c61.openSen2(myline,c61.pats,c61.patts)
+                        c62.openSen2(myline,c62.pats,c62.patts)
+                        c63.openSen2(myline,c63.pats,c63.patts)
+                        c64.openSen2(myline,c64.pats,c64.patts)
                         
                         # most
-                        c71.openSen(myline,c71.pats,c71.patts)
-                        c72.openSen(myline,c72.pats,c72.patts)
-                        c73.openSen(myline,c73.pats,c73.patts)
-                        c74.openSen(myline,c74.pats,c74.patts)
-                        c75.openSen(myline,c75.pats,c75.patts)
+                        c71.openSen2(myline,c71.pats,c71.patts)
+                        c72.openSen2(myline,c72.pats,c72.patts)
+                        c73.openSen2(myline,c73.pats,c73.patts)
+                        c74.openSen2(myline,c74.pats,c74.patts)
+                        c75.openSen2(myline,c75.pats,c75.patts)
                         
                         # few
-                        c81.openSen(myline,c81.pats,c81.patts)
-                        c82.openSen(myline,c82.pats,c82.patts)
-                        c83.openSen(myline,c83.pats,c83.patts)
-                        c84.openSen(myline,c84.pats,c84.patts)
+                        c81.openSen2(myline,c81.pats,c81.patts)
+                        c82.openSen2(myline,c82.pats,c82.patts)
+                        c83.openSen2(myline,c83.pats,c83.patts)
+                        c84.openSen2(myline,c84.pats,c84.patts)
                         
                         # >k/100
-                        c91.openSen(myline,c91.pats,c91.patts)
-                        c92.openSen(myline,c92.pats,c92.patts)
-                        c93.openSen(myline,c93.pats,c93.patts)
-                        c94.openSen(myline,c94.pats,c94.patts)
+                        c91.openSen2(myline,c91.pats,c91.patts)
+                        c92.openSen2(myline,c92.pats,c92.patts)
+                        c93.openSen2(myline,c93.pats,c93.patts)
+                        c94.openSen2(myline,c94.pats,c94.patts)
                         
                         # <k/100
-                        c101.openSen(myline,c101.pats,c101.patts)
-                        c102.openSen(myline,c102.pats,c102.patts)
-                        c103.openSen(myline,c103.pats,c103.patts)
-                        c104.openSen(myline,c104.pats,c104.patts)
-                        c105.openSen(myline,c105.pats,c105.patts)
+                        c101.openSen2(myline,c101.pats,c101.patts)
+                        c102.openSen2(myline,c102.pats,c102.patts)
+                        c103.openSen2(myline,c103.pats,c103.patts)
+                        c104.openSen2(myline,c104.pats,c104.patts)
+                        c105.openSen2(myline,c105.pats,c105.patts)
                         
                         # k/100
-                        c131.openSen(myline,c131.pats,c131.patts)
-                        c132.openSen(myline,c132.pats,c132.patts)
+                        c131.openSen2(myline,c131.pats,c131.patts)
+                        c132.openSen2(myline,c132.pats,c132.patts)
                         
                         # > p/k
-                        c111.openSen(myline,c111.pats,c111.patts)
-                        c112.openSen(myline,c112.pats,c112.patts)
-                        c113.openSen(myline,c113.pats,c113.patts)
-                        c114.openSen(myline,c114.pats,c114.patts)
+                        c111.openSen2(myline,c111.pats,c111.patts)
+                        c112.openSen2(myline,c112.pats,c112.patts)
+                        c113.openSen2(myline,c113.pats,c113.patts)
+                        c114.openSen2(myline,c114.pats,c114.patts)
                         
                         # < p/k
-                        c121.openSen(myline,c121.pats,c121.patts)
-                        c122.openSen(myline,c122.pats,c122.patts)
-                        c123.openSen(myline,c123.pats,c123.patts)
-                        c124.openSen(myline,c124.pats,c124.patts)
+                        c121.openSen2(myline,c121.pats,c121.patts)
+                        c122.openSen2(myline,c122.pats,c122.patts)
+                        c123.openSen2(myline,c123.pats,c123.patts)
+                        c124.openSen2(myline,c124.pats,c124.patts)
                         
                         # p/k
-                        c141.openSen(myline,c141.pats,c141.patts)
-                        c142.openSen(myline,c142.pats,c142.patts)
-                        c143.openSen(myline,c143.pats,c143.patts)
-                        c144.openSen(myline,c144.pats,c144.patts)
-                        c145.openSen(myline,c145.pats,c145.patts)
+                        c141.openSen2(myline,c141.pats,c141.patts)
+                        c142.openSen2(myline,c142.pats,c142.patts)
+                        c143.openSen2(myline,c143.pats,c143.patts)
+                        c144.openSen2(myline,c144.pats,c144.patts)
+                        c145.openSen2(myline,c145.pats,c145.patts)
                 
                         ####################################################################
                     
@@ -849,77 +849,6 @@ class ProporStatsPD:
             print "==================================================="
             print "total matches: " + `tot` + " GQs"
             
-#             #relative frequencies
-#             c11.freq  = round(c11.count/tot,2)
-#             c12.freq  = round(c12.count/tot,2)
-#             c13.freq  = round(c13.count/tot,2)            
-#             c14.freq  = round(c14.count/tot,2)
-#             c15.freq  = round(c15.count/tot,2)
-#             c16.freq  = round(c16.count/tot,2)  
-#             c17.freq  = round(c17.count/tot,2)
-#             c18.freq  = round(c18.count/tot,2)
-# 
-#             c21.freq  = round(c21.count/tot,2)
-#             c22.freq  = round(c22.count/tot,2)
-#             c23.freq  = round(c23.count/tot,2)
-#             c24.freq  = round(c24.count/tot,2)
-#             c25.freq  = round(c25.count/tot,2)
-#             c26.freq  = round(c26.count/tot,2)
-#             
-#             c41.freq  = round(c41.count/tot,2)
-#             c42.freq  = round(c42.count/tot,2)
-#             c43.freq  = round(c43.count/tot,2)
-#             
-#             c51.freq  = round(c51.count/tot,2)
-#             c52.freq  = round(c52.count/tot,2)
-#             c53.freq  = round(c53.count/tot,2)
-#             
-#             c61.freq  = round(c61.count/tot,2)            
-#             c62.freq  = round(c62.count/tot,2)
-#             c63.freq  = round(c63.count/tot,2)
-#             c64.freq  = round(c64.count/tot,2)
-#             
-#             c71.freq  = round(c71.count/tot,2)
-#             c72.freq  = round(c72.count/tot,2)
-#             c73.freq  = round(c73.count/tot,2)
-#             c74.freq  = round(c74.count/tot,2)
-#             c75.freq  = round(c75.count/tot,2)
-#             
-#             c81.freq  = round(c81.count/tot,2)
-#             c82.freq  = round(c82.count/tot,2)
-#             c83.freq  = round(c83.count/tot,2)
-#             c84.freq  = round(c84.count/tot,2)
-#             
-#             c91.freq  = round(c91.count/tot,2)
-#             c92.freq  = round(c92.count/tot,2)
-#             c93.freq  = round(c93.count/tot,2)
-#             c94.freq  = round(c94.count/tot,2)
-#             
-#             c101.freq = round(c101.count/tot,2)
-#             c102.freq = round(c102.count/tot,2)
-#             c103.freq = round(c103.count/tot,2)
-#             c104.freq = round(c104.count/tot,2)
-#             c105.freq = round(c105.count/tot,2)
-#             
-#             c111.freq = round(c111.count/tot,2)
-#             c112.freq = round(c112.count/tot,2)
-#             c113.freq = round(c113.count/tot,2)
-#             c114.freq = round(c114.count/tot,2)
-#             
-#             c121.freq = round(c121.count/tot,2)
-#             c122.freq = round(c122.count/tot,2)
-#             c123.freq = round(c123.count/tot,2)
-#             c124.freq = round(c124.count/tot,2)
-#             
-#             c131.freq = round(c131.count/tot,2)
-#             c132.freq = round(c132.count/tot,2)
-#             
-#             c141.freq = round(c141.count/tot,2)
-#             c142.freq = round(c142.count/tot,2)
-#             c143.freq = round(c143.count/tot,2)
-#             c144.freq = round(c144.count/tot,2)
-#             c145.freq = round(c145.count/tot,2)
-            
             ####################################################################            
             
             filestats = [
@@ -957,7 +886,7 @@ class ProporStatsPD:
         #sort = self.sortClass(self.classstats)
         #self.classstats = sort
         print "###################################################"
-        self.printClasses(self.classstats)
+        #self.printClasses(self.classstats)
     
 
     ############################################################# 
