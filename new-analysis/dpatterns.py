@@ -1,5 +1,5 @@
 '''
-Created on May 17, 2016
+Created on May 23, 2016
 
 @author: camilo
 '''
@@ -76,7 +76,7 @@ s42a    = " all/pdt "
 s46     = " everything/nn "
 s48     = " everyone/nn " 
 s4a     = " everybody/nn " 
-s4c     = " each/dt [a-z]{1,12}/nn"
+s4c     = " each/dt [a-z]{1,12}/nn "
 s4e     = " no/dt "
 
 all1 = [s40]
@@ -94,12 +94,12 @@ all8 = [s4e]
 
 # 6. at most k, less than k (k integer)
 
-s60     = " at/in most/jjs .*/cd "
+s60     = " at/in most/jjs [a-z]{1,12}/cd "
 
-s20b    = " less/rbr than/in .*/cd "
-s20bb   = " less/jjr than/in .*/cd "
+s20b    = " less/rbr than/in [a-z]{1,12}/cd "
+s20bb   = " less/jjr than/in [a-z]{1,12}/cd "
 
-s20c    = " fewer/jjr than/in .*/cd "
+s20c    = " fewer/jjr than/in [a-z]{1,12}/cd "
 
 lessk1 = [s20b]
 lessk2 = [s20c]
@@ -109,10 +109,10 @@ lessk3 = [s60]
 
 # 7. at least k, more than k (k integer)
 
-s60b     = " at/in least/jjs .*/cd "
+s60b     = " at/in least/jjs [a-z]{1,12}/cd "
 
-s20      = " more/rbr than/in .*/cd "
-s20a     = " more/jjr than/in .*/cd "
+s20      = " more/rbr than/in [a-z]{1,12}/cd "
+s20a     = " more/jjr than/in [a-z]{1,12}/cd "
 
 morek1 = [s20]
 morek2 = [s20a]
@@ -122,10 +122,10 @@ morek3 = [s60b]
 
 # 8. exactly k (k integer)
 
-s70    = " [^@]*/cd [a-z]{1,12}/nns "
-s70a   = " [^@]*/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
-s70b   = " [^@]*/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
-s71    = " exactly/rb [^@]*/cd "
+s70    = " [a-z]{1,12}/cd [a-z]{1,12}/nns "
+s70a   = " [a-z]{1,12}/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
+s70b   = " [a-z]{1,12}/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
+s71    = " exactly/rb [a-z]{1,12}/cd "
 
 exactlyk1 = [s70]
 exactlyk2 = [s70a]
@@ -141,8 +141,8 @@ exactlyk4 = [s71]
 s80  = " more/rbr than/in half/nn "
 s80a = " more/jjr than/in half/nn "
 
-s82  = " more/rbr than/in [^@]*/cd .*/nns of/in "
-s82a = " more/jjr than/in [^@]*/cd .*/nns of/in "
+s82  = " more/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82a = " more/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
 
 morethanpro1 = [s80]
 morethanpro2 = [s82]
@@ -156,8 +156,8 @@ morethanpro4 = [s82a]
 s80b    = " less/rbr than/in half/nn "
 s80bb   = " fewer/jjr than/in half/nn "
 
-s82b    = " less/rbr than/in [^@]*/cd .*/nns of/in "
-s82bb   = " fewer/jjr than/in [^@]*/cd .*/nn of/in "
+s82b    = " less/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82bb   = " fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nn of/in "
 
 lessthanpro1 = [s80b]
 lessthanpro2 = [s80bb]
@@ -170,10 +170,10 @@ lessthanpro4 = [s82bb]
 
 s80c    = " half/dt "
 s80d    = " half/pdt "
-s80e    = " half/nn of/in"
+s80e    = " half/nn of/in "
 
-s81c    = " [^@]*/cd [a-z]{1,12}/nns of/in "
-s81d    = " [^@]*/cd [a-z]{1,12}/nn of/in "
+s81c    = " [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s81d    = " [a-z]{1,12}/cd [a-z]{1,12}/nn of/in "
 
 pro1 = [s80c]
 pro2 = [s80d]
@@ -185,11 +185,11 @@ pro5 = [s81d]
 
 # 3. more than k% (k a percentage)
 
-s30     = " more/rbr than/in [^@]*/cd percent/nn "
-s30a    = " more/rbr than/in [^@]*/cd %/nn "
+s30     = " more/rbr than/in [a-z]{1,12}/cd percent/nn "
+s30a    = " more/rbr than/in [a-z]{1,12}/cd %/nn "
 
-s30aa   = " more/jjr than/in [^@]*/cd percent/nn "
-s30aaa  = " more/jjr than/in [^@]*/cd %/nn "
+s30aa   = " more/jjr than/in [a-z]{1,12}/cd percent/nn "
+s30aaa  = " more/jjr than/in [a-z]{1,12}/cd %/nn "
 
 morekper1 = [s30]
 morekper2 = [s30a]
@@ -200,14 +200,14 @@ morekper4 = [s30aaa]
 
 # 3.1 less than k% (k a percentage)
 
-s30b     = " less/rbr than/in [^@]*/cd percent/nn "
-s30bb    = " less/rbr than/in [^@]*/cd %/nn "
+s30b     = " less/rbr than/in [a-z]{1,12}/cd percent/nn "
+s30bb    = " less/rbr than/in [a-z]{1,12}/cd %/nn "
 
-s30bx    = " less/jjr than/in [^@]*/cd percent/nn "
-s30bbx   = " less/jjr than/in [^@]*/cd %/nn "
+s30bx    = " less/jjr than/in [a-z]{1,12}/cd percent/nn "
+s30bbx   = " less/jjr than/in [a-z]{1,12}/cd %/nn "
 
-s30bc    = " fewer/jjr than/in [^@]*/cd percent/nn "
-s30bcx   = " fewer/jjr than/in [^@]*/cd %/nn "
+s30bc    = " fewer/jjr than/in [a-z]{1,12}/cd percent/nn "
+s30bcx   = " fewer/jjr than/in [a-z]{1,12}/cd %/nn "
 
 lesskper1 = [s30b]
 lesskper2 = [s30bb]
@@ -219,8 +219,8 @@ lesskper5 = [s30bcx]
 
 # 3.2 k% (k a percentage)
 
-s30c    = " [^@]*/cd percent/nn "
-s30d    = " [^@]*/cd %/NN"
+s30c    = " [a-z]{1,12}/cd percent/nn "
+s30d    = " [a-z]{1,12}/cd %/nn "
 
 kper1 = [s30c]
 kper2 = [s30d]
@@ -242,7 +242,7 @@ most3 = [s51]
 most4 = [s52]
 most5 = [s53a]
 
-nomost = [" the/dt most/rbs ", "the/dt most/jjs"]
+nomost = [" the/dt most/rbs ", " the/dt most/jjs "]
 
 ####################################################################
 
@@ -259,7 +259,7 @@ few2 = [s53b]
 few3 = [s53bb]
 few4 = [ss51b]
 
-nofew = [" a/dt few/jj ", "the/dt few/jj"]
+nofew = [" a/dt few/jj ", " the/dt few/jj "]
 
 
 ####################################################################
@@ -442,10 +442,13 @@ class ProporStatsPD:
             ####################################################################
  
             # patterns
-            rest = []  
+            rest    = []
+            
+            # digits
+            digit   = [" @card@/cd "]
             
             # corpus
-            corpus = MyClass2([".*"],[],idf,0,0,"corpus")
+            corpus  = MyClass2([".*"],[],idf,0,0,"corpus")
             
             ####################################################################  
             
@@ -511,45 +514,45 @@ class ProporStatsPD:
             
             # >k
             P41 = MyPatts2(morek1).P
-            N41 = MyPatts2(rest).P
+            N41 = MyPatts2(digit).P
             c41 = MyClass2(P41,N41,idf,0,0,morek1[0].strip())                      
 
             P42 = MyPatts2(morek2).P
-            N42 = MyPatts2(rest).P
+            N42 = MyPatts2(digit).P
             c42 = MyClass2(P42,N42,idf,0,0,morek2[0].strip())  
             
             P43 = MyPatts2(morek3).P
-            N43 = MyPatts2(rest).P
+            N43 = MyPatts2(digit).P
             c43 = MyClass2(P43,N43,idf,0,0,morek3[0].strip())                         
             
             # <k
             P51 = MyPatts2(lessk1).P
-            N51 = MyPatts2(rest).P
+            N51 = MyPatts2(digit).P
             c51 = MyClass2(P51,N51,idf,0,0,lessk2[0].strip())
 
             P52 = MyPatts2(lessk2).P
-            N52 = MyPatts2(rest).P
+            N52 = MyPatts2(digit).P
             c52 = MyClass2(P52,N52,idf,0,0,lessk2[0].strip())
 
             P53 = MyPatts2(lessk3).P
-            N53 = MyPatts2(rest).P
+            N53 = MyPatts2(digit).P
             c53 = MyClass2(P53,N53,idf,0,0,lessk3[0].strip())
             
             # k
             P61 = MyPatts2(exactlyk1).P
-            N61 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3).P
+            N61 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
             c61 = MyClass2(P61,N61,idf,0,0,exactlyk1[0].strip())
 
             P62 = MyPatts2(exactlyk2).P
-            N62 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3).P
+            N62 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
             c62 = MyClass2(P62,N62,idf,0,0,exactlyk2[0].strip())
             
             P63 = MyPatts2(exactlyk3).P
-            N63 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3).P
+            N63 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
             c63 = MyClass2(P63,N63,idf,0,0,exactlyk3[0].strip())
             
             P64 = MyPatts2(exactlyk4).P
-            N64 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3).P
+            N64 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
             c64 = MyClass2(P64,N64,idf,0,0,exactlyk4[0].strip())                        
             
             ####################################################################
@@ -594,106 +597,106 @@ class ProporStatsPD:
                 
             # >k/100
             P91 = MyPatts2(morekper1).P
-            N91 = MyPatts2(rest).P
+            N91 = MyPatts2(digit).P
             c91 = MyClass2(P91,N91,idf,0,0,morekper1[0].strip())
             
             P92 = MyPatts2(morekper2).P
-            N92 = MyPatts2(rest).P
+            N92 = MyPatts2(digit).P
             c92 = MyClass2(P92,N92,idf,0,0,morekper2[0].strip())
             
             P93 = MyPatts2(morekper3).P
-            N93 = MyPatts2(rest).P
+            N93 = MyPatts2(digit).P
             c93 = MyClass2(P93,N93,idf,0,0,morekper3[0].strip())
             
             P94 = MyPatts2(morekper4).P
-            N94 = MyPatts2(rest).P
+            N94 = MyPatts2(digit).P
             c94 = MyClass2(P94,N94,idf,0,0,morekper4[0].strip())
     
             # <k/100
             P101 = MyPatts2(lesskper1).P
-            N101 = MyPatts2(rest).P
+            N101 = MyPatts2(digit).P
             c101 = MyClass2(P101,N101,idf,0,0,lesskper1[0].strip())
 
             P102 = MyPatts2(lesskper2).P
-            N102 = MyPatts2(rest).P
+            N102 = MyPatts2(digit).P
             c102 = MyClass2(P102,N102,idf,0,0,lesskper2[0].strip())
 
             P103 = MyPatts2(lesskper3).P
-            N103 = MyPatts2(rest).P
+            N103 = MyPatts2(digit).P
             c103 = MyClass2(P103,N103,idf,0,0,lesskper3[0].strip())
 
             P104 = MyPatts2(lesskper4).P
-            N104 = MyPatts2(rest).P
+            N104 = MyPatts2(digit).P
             c104 = MyClass2(P104,N104,idf,0,0,lesskper4[0].strip())
 
             P105 = MyPatts2(lesskper5).P
-            N105 = MyPatts2(rest).P
+            N105 = MyPatts2(digit).P
             c105 = MyClass2(P105,N105,idf,0,0,lesskper5[0].strip())
                 
             # k/100
             P131 = MyPatts2(kper1).P
-            N131 = MyPatts2(morekper1+morekper2+morekper3+morekper4+lesskper1+lesskper2+lesskper3+lesskper4+lesskper5).P
+            N131 = MyPatts2(morekper1+morekper2+morekper3+morekper4+lesskper1+lesskper2+lesskper3+lesskper4+lesskper5+digit).P
             c131 = MyClass2(P131,N131,idf,0,0,kper1[0].strip())
 
             P132 = MyPatts2(kper2).P
-            N132 = MyPatts2(morekper1+morekper2+morekper3+morekper4+lesskper1+lesskper2+lesskper3+lesskper4+lesskper5).P
+            N132 = MyPatts2(morekper1+morekper2+morekper3+morekper4+lesskper1+lesskper2+lesskper3+lesskper4+lesskper5+digit).P
             c132 = MyClass2(P132,N132,idf,0,0,kper2[0].strip())
                 
             # >p/k
             P111 = MyPatts2(morethanpro1).P
-            N111 = MyPatts2(rest).P
+            N111 = MyPatts2(digit).P
             c111 = MyClass2(P111,N111,idf,0,0,morethanpro1[0].strip())                    
  
             P112 = MyPatts2(morethanpro2).P
-            N112 = MyPatts2(rest).P
+            N112 = MyPatts2(digit).P
             c112 = MyClass2(P112,N112,idf,0,0,morethanpro2[0].strip())   
  
             P113 = MyPatts2(morethanpro3).P
-            N113 = MyPatts2(rest).P
+            N113 = MyPatts2(digit).P
             c113 = MyClass2(P113,N113,idf,0,0,morethanpro3[0].strip())   
  
             P114 = MyPatts2(morethanpro4).P
-            N114 = MyPatts2(rest).P
+            N114 = MyPatts2(digit).P
             c114 = MyClass2(P114,N114,idf,0,0,morethanpro4[0].strip())   
             
             # <p/k
 
             P121 = MyPatts2(lessthanpro1).P
-            N121 = MyPatts2(rest).P
+            N121 = MyPatts2(digit).P
             c121 = MyClass2(P121,N121,idf,0,0,lessthanpro1[0].strip())
 
             P122 = MyPatts2(lessthanpro2).P
-            N122 = MyPatts2(rest).P
+            N122 = MyPatts2(digit).P
             c122 = MyClass2(P122,N122,idf,0,0,lessthanpro2[0].strip())
 
             P123 = MyPatts2(lessthanpro3).P
-            N123 = MyPatts2(rest).P
+            N123 = MyPatts2(digit).P
             c123 = MyClass2(P123,N123,idf,0,0,lessthanpro3[0].strip())
             
             P124 = MyPatts2(lessthanpro4).P
-            N124 = MyPatts2(rest).P
+            N124 = MyPatts2(digit).P
             c124 = MyClass2(P124,N124,idf,0,0,lessthanpro4[0].strip())
             
             # p/k
 
             P141 = MyPatts2(pro1).P
-            N141 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4).P
+            N141 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
             c141 = MyClass2(P141,N141,idf,0,0,pro1[0].strip())   
 
             P142 = MyPatts2(pro2).P
-            N142 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4).P
+            N142 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
             c142 = MyClass2(P142,N142,idf,0,0,pro2[0].strip())   
 
             P143 = MyPatts2(pro3).P
-            N143 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4).P
+            N143 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
             c143 = MyClass2(P143,N143,idf,0,0,pro3[0].strip())   
 
             P144 = MyPatts2(pro4).P
-            N144 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4).P
+            N144 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
             c144 = MyClass2(P144,N144,idf,0,0,pro4[0].strip())   
             
             P145 = MyPatts2(pro5).P
-            N145 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4).P
+            N145 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
             c145 = MyClass2(P145,N145,idf,0,0,pro5[0].strip())                      
             
             ####################################################################  
