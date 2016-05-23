@@ -66,7 +66,7 @@ class MyClass2:
             self.count = self.count + pos
 
 
-    # check sentence method (exclusion)
+    # check sentence method (exclusion, to ensure dijointeness)
     def openSen2(self,sent,pats,patts):
 
             pos = 0
