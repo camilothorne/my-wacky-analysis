@@ -248,7 +248,7 @@ nomost = [" the/dt most/rbs ", " the/dt most/jjs "]
 
 # 5.1 few, less than half, fewer than half
 
-ss51b   = " few/jj *./nns"
+ss51b   = " few/jj [a-z]{1,12}/nns"
 s51bb   = " few/dt "
 
 s53b    = " less/rbr than/in half/nn "
