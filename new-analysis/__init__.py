@@ -56,7 +56,7 @@ listB          = ('wackypedia','')
 
 
 # by pattern
-ProporStatsP(path, fformat, listB, plotting)
+#ProporStatsP(path, fformat, listB, plotting)
 
 
 # by disjoint pattern

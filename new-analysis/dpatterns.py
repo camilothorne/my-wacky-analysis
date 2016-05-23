@@ -76,7 +76,7 @@ s42a    = " all/pdt "
 s46     = " everything/nn "
 s48     = " everyone/nn " 
 s4a     = " everybody/nn " 
-s4c     = " each/dt "
+s4c     = " each/dt [a-z]{1,12}/nn"
 s4e     = " no/dt "
 
 all1 = [s40]
@@ -122,10 +122,10 @@ morek3 = [s60b]
 
 # 8. exactly k (k integer)
 
-s70    = " .*/cd [a-z]{1,12}/nns "
-s70a   = " .*/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
-s70b   = " .*/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
-s71    = " exactly/rb .*/cd "
+s70    = " [^@]*/cd [a-z]{1,12}/nns "
+s70a   = " [^@]*/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
+s70b   = " [^@]*/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
+s71    = " exactly/rb [^@]*/cd "
 
 exactlyk1 = [s70]
 exactlyk2 = [s70a]
@@ -141,8 +141,8 @@ exactlyk4 = [s71]
 s80  = " more/rbr than/in half/nn "
 s80a = " more/jjr than/in half/nn "
 
-s82  = " more/rbr than/in .*/cd .*/nns of/in "
-s82a = " more/jjr than/in .*/cd .*/nns of/in "
+s82  = " more/rbr than/in [^@]*/cd .*/nns of/in "
+s82a = " more/jjr than/in [^@]*/cd .*/nns of/in "
 
 morethanpro1 = [s80]
 morethanpro2 = [s82]
@@ -156,8 +156,8 @@ morethanpro4 = [s82a]
 s80b    = " less/rbr than/in half/nn "
 s80bb   = " fewer/jjr than/in half/nn "
 
-s82b    = " less/rbr than/in .*/cd .*/nns of/in "
-s82bb   = " fewer/jjr than/in .*/cd .*/nn of/in "
+s82b    = " less/rbr than/in [^@]*/cd .*/nns of/in "
+s82bb   = " fewer/jjr than/in [^@]*/cd .*/nn of/in "
 
 lessthanpro1 = [s80b]
 lessthanpro2 = [s80bb]
@@ -172,8 +172,8 @@ s80c    = " half/dt "
 s80d    = " half/pdt "
 s80e    = " half/nn of/in"
 
-s81c    = " .*/cd [a-z]{1,12}/nns of/in "
-s81d    = " .*/cd [a-z]{1,12}/nn of/in "
+s81c    = " [^@]*/cd [a-z]{1,12}/nns of/in "
+s81d    = " [^@]*/cd [a-z]{1,12}/nn of/in "
 
 pro1 = [s80c]
 pro2 = [s80d]
@@ -185,11 +185,11 @@ pro5 = [s81d]
 
 # 3. more than k% (k a percentage)
 
-s30     = " more/rbr than/in .*/cd percent/nn "
-s30a    = " more/rbr than/in .*/cd %/nn "
+s30     = " more/rbr than/in [^@]*/cd percent/nn "
+s30a    = " more/rbr than/in [^@]*/cd %/nn "
 
-s30aa   = " more/jjr than/in .*/cd percent/nn "
-s30aaa  = " more/jjr than/in .*/cd %/nn "
+s30aa   = " more/jjr than/in [^@]*/cd percent/nn "
+s30aaa  = " more/jjr than/in [^@]*/cd %/nn "
 
 morekper1 = [s30]
 morekper2 = [s30a]
@@ -200,14 +200,14 @@ morekper4 = [s30aaa]
 
 # 3.1 less than k% (k a percentage)
 
-s30b     = " less/rbr than/in .*/cd percent/nn "
-s30bb    = " less/rbr than/in .*/cd %/nn "
+s30b     = " less/rbr than/in [^@]*/cd percent/nn "
+s30bb    = " less/rbr than/in [^@]*/cd %/nn "
 
-s30bx    = " less/jjr than/in .*/cd percent/nn "
-s30bbx   = " less/jjr than/in .*/cd %/nn "
+s30bx    = " less/jjr than/in [^@]*/cd percent/nn "
+s30bbx   = " less/jjr than/in [^@]*/cd %/nn "
 
-s30bc    = " fewer/jjr than/in .*/cd percent/nn "
-s30bcx   = " fewer/jjr than/in .*/cd %/nn "
+s30bc    = " fewer/jjr than/in [^@]*/cd percent/nn "
+s30bcx   = " fewer/jjr than/in [^@]*/cd %/nn "
 
 lesskper1 = [s30b]
 lesskper2 = [s30bb]
@@ -219,8 +219,8 @@ lesskper5 = [s30bcx]
 
 # 3.2 k% (k a percentage)
 
-s30c    = " .*/cd percent/nn "
-s30d    = " .*/cd %/NN"
+s30c    = " [^@]*/cd percent/nn "
+s30d    = " [^@]*/cd %/NN"
 
 kper1 = [s30c]
 kper2 = [s30d]
@@ -242,11 +242,13 @@ most3 = [s51]
 most4 = [s52]
 most5 = [s53a]
 
+nomost = [" the/dt most/rbs ", "the/dt most/jjs"]
+
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
-ss51b   = " few/jj "
+ss51b   = " few/jj *./nns"
 s51bb   = " few/dt "
 
 s53b    = " less/rbr than/in half/nn "
@@ -256,6 +258,8 @@ few1 = [s51bb]
 few2 = [s53b]
 few3 = [s53bb]
 few4 = [ss51b]
+
+nofew = [" a/dt few/jj ", "the/dt few/jj"]
 
 
 ####################################################################
@@ -438,7 +442,7 @@ class ProporStatsPD:
             ####################################################################
  
             # patterns
-            rest = [".*"]  
+            rest = []  
             
             # corpus
             corpus = MyClass2([".*"],[],idf,0,0,"corpus")
@@ -552,40 +556,40 @@ class ProporStatsPD:
             
             # most
             P71 = MyPatts2(most1).P
-            N71 = MyPatts2(rest).P
+            N71 = MyPatts2(nomost).P
             c71 = MyClass2(P71,N71,idf,0,0,most1[0].strip())
             
             P72 = MyPatts2(most2).P
-            N72 = MyPatts2(rest).P
+            N72 = MyPatts2(nomost).P
             c72 = MyClass2(P72,N72,idf,0,0,most2[0].strip())
                         
             P73 = MyPatts2(most3).P
-            N73 = MyPatts2(rest).P
+            N73 = MyPatts2(nomost).P
             c73 = MyClass2(P73,N73,idf,0,0,most3[0].strip())
             
             P74 = MyPatts2(most4).P
-            N74 = MyPatts2(rest).P
+            N74 = MyPatts2(nomost).P
             c74 = MyClass2(P74,N74,idf,0,0,most4[0].strip())
             
             P75 = MyPatts2(most5).P
-            N75 = MyPatts2(rest).P
+            N75 = MyPatts2(nomost).P
             c75 = MyClass2(P75,N75,idf,0,0,most5[0].strip())            
                              
             # few
             P81 = MyPatts2(few1).P
-            N81 = MyPatts2(rest).P
+            N81 = MyPatts2(nofew).P
             c81 = MyClass2(P81,N81,idf,0,0,few1[0].strip())
 
             P82 = MyPatts2(few2).P
-            N82 = MyPatts2(rest).P
+            N82 = MyPatts2(nofew).P
             c82 = MyClass2(P82,N82,idf,0,0,few2[0].strip())
 
             P83 = MyPatts2(few3).P
-            N83 = MyPatts2(rest).P
+            N83 = MyPatts2(nofew).P
             c83 = MyClass2(P83,N83,idf,0,0,few3[0].strip())
 
             P84 = MyPatts2(few4).P
-            N84 = MyPatts2(rest).P
+            N84 = MyPatts2(nofew).P
             c84 = MyClass2(P84,N84,idf,0,0,few4[0].strip())
                 
             # >k/100

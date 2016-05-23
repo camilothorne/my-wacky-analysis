@@ -53,7 +53,7 @@ class MyClass2:
             
 
     # check sentence method (co-occurrence)
-    def openSen2(self,sent,pats,patts):
+    def openSen3(self,sent,pats,patts):
 
             pos = 0
             for pa in pats:
@@ -63,6 +63,23 @@ class MyClass2:
                         mm = re.search(paa, sent)
                         if (mm != None):
                             pos = pos + 1
+            self.count = self.count + pos
+
+
+    # check sentence method (exclusion)
+    def openSen2(self,sent,pats,patts):
+
+            pos = 0
+            for pa in pats:
+                m = re.search(pa, sent)
+                if (m != None):
+                    if len(patts)==0:
+                        pos = pos + 1
+                    else:
+                        for paa in patts:
+                            mm = re.search(paa, sent)
+                            if (mm == None):
+                                pos = pos + 1
             self.count = self.count + pos
 
 
