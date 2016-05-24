@@ -41,12 +41,6 @@ from buildsen import *
 s0 = ".*"        # anything!
 
 ####################################################################
-####################################################################
-# A. simple classes
-####################################################################
-####################################################################
-
-####################################################################
 # ARISTOTELIAN
 ####################################################################
 
@@ -89,6 +83,8 @@ s20c    = " fewer/jjr than/in [a-z]{1,12}/cd "
 lessk1 = [s20b]
 lessk2 = [s20c]
 lessk3 = [s60]
+lessk4 = [s20bb]
+lessk5 = [s20c]
 
 ####################################################################
 
@@ -136,8 +132,8 @@ s80c    = " at/in most/jjs half/nn "
 s82b    = " less/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
 s82bb   = " fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
 
-s80d   = " at/in most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s80e   = " at/in most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s80d    = " at/in most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s80e    = " at/in most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
 
 lessthanpro1 = [s80b]
 lessthanpro2 = [s80bb]
@@ -151,8 +147,8 @@ lessthanpro7 = [s80e]
 
 # 5. most, more than half
 
-s52     = " most/rbs "
-s51     = " most/jjs "
+s52     = " most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns "
+s51     = " most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns "
 s51a    = " most/dt "
 
 s53     = " more/rbr than/in half/nn "
@@ -264,6 +260,8 @@ class ProporStatsPD:
         C51 =    MyClassStats2(lessk1[0].strip(),[],0,tit)
         C52 =    MyClassStats2(lessk2[0].strip(),[],0,tit)
         C53 =    MyClassStats2(lessk3[0].strip(),[],0,tit)      
+        C54 =    MyClassStats2(lessk4[0].strip(),[],0,tit)
+        C55 =    MyClassStats2(lessk5[0].strip(),[],0,tit) 
         
         # most
         C71 =    MyClassStats2(most1[0].strip(),[],0,tit)
@@ -295,12 +293,11 @@ class ProporStatsPD:
         C106 =   MyClassStats2(lessthanpro6[0].strip(),[],0,tit)
         C107 =   MyClassStats2(lessthanpro7[0].strip(),[],0,tit) 
         
-        self.classstats = [C11,C12,C13,
-                           C17,C18,
+        self.classstats = [
+                           C11,C12,C13,C17,C18,
                            C25,
                            C41,C42,C43,
-                           C51,C52,C53,
-                           C51,C52,C53,                           
+                           C51,C52,C53,C54,C55,                         
                            C71,C72,C73,C74,C75,
                            C81,C82,C83,C84,
                            C91,C92,C93,C94,C95,C96,
@@ -392,28 +389,36 @@ class ProporStatsPD:
             P53 = MyPatts2(lessk3).P
             N53 = MyPatts2(digit).P
             c53 = MyClass2(P53,N53,idf,0,0,lessk3[0].strip())                      
+
+            P54 = MyPatts2(lessk4).P
+            N54 = MyPatts2(digit).P
+            c54 = MyClass2(P54,N54,idf,0,0,lessk4[0].strip())
+
+            P55 = MyPatts2(lessk5).P
+            N55 = MyPatts2(digit).P
+            c55 = MyClass2(P55,N55,idf,0,0,lessk5[0].strip())  
             
             ####################################################################
             
             # most
             P71 = MyPatts2(most1).P
-            N71 = MyPatts2(nomost).P
+            N71 = MyPatts2(nomost+lessthanpro6+lessthanpro7+lessthanpro3+lessk1+lessk2).P
             c71 = MyClass2(P71,N71,idf,0,0,most1[0].strip())
             
             P72 = MyPatts2(most2).P
-            N72 = MyPatts2(nomost).P
+            N72 = MyPatts2(nomost+lessthanpro6+lessthanpro7+lessthanpro3+lessk1+lessk2).P
             c72 = MyClass2(P72,N72,idf,0,0,most2[0].strip())
                         
             P73 = MyPatts2(most3).P
-            N73 = MyPatts2(nomost).P
+            N73 = MyPatts2(nomost+lessthanpro6+lessthanpro7+lessthanpro3+lessk1+lessk2).P
             c73 = MyClass2(P73,N73,idf,0,0,most3[0].strip())
             
             P74 = MyPatts2(most4).P
-            N74 = MyPatts2(nomost).P
+            N74 = MyPatts2(nomost+lessthanpro6+lessthanpro7+lessthanpro3+lessk1+lessk2).P
             c74 = MyClass2(P74,N74,idf,0,0,most4[0].strip())
             
             P75 = MyPatts2(most5).P
-            N75 = MyPatts2(nomost).P
+            N75 = MyPatts2(nomost+lessthanpro6+lessthanpro7+lessthanpro3+lessk1+lessk2).P
             c75 = MyClass2(P75,N75,idf,0,0,most5[0].strip())            
                              
             # few
@@ -541,6 +546,8 @@ class ProporStatsPD:
                         c51.openSen2(myline,c51.pats,c51.patts)
                         c52.openSen2(myline,c52.pats,c52.patts)
                         c53.openSen2(myline,c53.pats,c53.patts)
+                        c54.openSen2(myline,c54.pats,c54.patts)
+                        c55.openSen2(myline,c55.pats,c55.patts)
                         
                         # most
                         c71.openSen2(myline,c71.pats,c71.patts)
@@ -597,7 +604,7 @@ class ProporStatsPD:
                    c17.count + c18.count + 
                    c25.count + 
                    c41.count + c42.count + c43.count + 
-                   c51.count + c52.count + c53.count +            
+                   c51.count + c52.count + c53.count + c54.count + c55.count +              
                    c71.count + c72.count + c73.count + c74.count + c75.count +                   
                    c81.count + c82.count + c83.count + c84.count +  
                    c91.count + c92.count + c93.count + c94.count + c96.count + c95.count +
@@ -611,11 +618,10 @@ class ProporStatsPD:
             ####################################################################            
             
             filestats = [
-                         c11,c12,c13,
-                         c17,c18,
+                         c11,c12,c13,c17,c18,
                          c25,
                          c41,c42,c43,
-                         c51,c52,c53,
+                         c51,c52,c53,c54,c55,
                          c71,c72,c73,c74,c75,
                          c81,c82,c83,c84,
                          c91,c92,c93,c94,c95,c96,

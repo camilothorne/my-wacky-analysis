@@ -135,13 +135,13 @@ class SaveStats:
     def makeCSVB(self,classstats,stats):   
 
         # print class names
-        table = "Num, GQ, Freq\n"
+        table = "Num ;\t GQ ;\t Freq\n"
         
         num = 1
         for cla in classstats:
             #for idf in cla.classes:
             freq = cla.fre              
-            table = table + `num` + " , " + cla.tag + " , " + `freq` + "\n"
+            table = table + `num` + " ;\t " + cla.tag + " ;\t " + `freq` + "\n"
             num = num + 1
 
         # return table
