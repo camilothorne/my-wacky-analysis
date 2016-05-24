@@ -147,8 +147,8 @@ lessthanpro7 = [s80e]
 
 # 5. most, more than half
 
-s52     = " most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns "
-s51     = " most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns "
+s52     = " most/rbs [a-z]{1,12}/nns "
+s51     = " most/jjs [a-z]{1,12}/nns "
 s51a    = " most/dt "
 
 s53     = " more/rbr than/in half/nn "
