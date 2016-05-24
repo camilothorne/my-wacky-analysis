@@ -52,9 +52,19 @@ s0 = ".*"        # anything!
 
 # 1. exists
 
+# s10     = " someone/nn"
+# s12     = " somebody/nn"
+# s12a    = " anybody/nn"
+# s14     = " something/nn"
 s16     = " some/dt"
+# s20     = " many/jj "
 
+# some1 = [s10]
+# some2 = [s12]
+# some3 = [s12a]
+# some4 = [s14]
 some5 = [s16]
+# some6 = [s20]
 
 ####################################################################
 
@@ -63,12 +73,18 @@ some5 = [s16]
 s40     = " every/dt "
 s42     = " all/dt "
 s42a    = " all/pdt "
+# s46     = " everything/nn "
+# s48     = " everyone/nn " 
+# s4a     = " everybody/nn " 
 s4c     = " each/dt [a-z]{1,12}/nn "
 s4e     = " no/dt "
 
 all1 = [s40]
 all2 = [s42]
 all3 = [s42a]
+# all4 = [s46]
+# all5 = [s48]
+# all6 = [s4a]
 all7 = [s4c]
 all8 = [s4e]
 
@@ -79,7 +95,6 @@ all8 = [s4e]
 # 6. at most k, less than k (k integer)
 
 s60     = " at/in most/jjs [a-z]{1,12}/cd "
-s60a    = " at/in most/rbs [a-z]{1,12}/cd "
 
 s20b    = " less/rbr than/in [a-z]{1,12}/cd "
 s20bb   = " less/jjr than/in [a-z]{1,12}/cd "
@@ -104,26 +119,35 @@ morek2 = [s20a]
 morek3 = [s60b]
 
 ####################################################################
+
+# 8. exactly k (k integer)
+
+s70    = " [a-z]{1,12}/cd [a-z]{1,12}/nns "
+s70a   = " [a-z]{1,12}/cd [a-z]{1,12}/jj [a-z]{1,12}/nns "
+s70b   = " [a-z]{1,12}/cd [a-z]{1,12}/nn [a-z]{1,12}/nns "
+s71    = " exactly/rb [a-z]{1,12}/cd "
+
+exactlyk1 = [s70]
+exactlyk2 = [s70a]
+exactlyk3 = [s70b]
+exactlyk4 = [s71]
+
+####################################################################
 # PROPORTIONAL
 ####################################################################
 
 # 9. more than p/k (p, k integers)
 
-s80aa   = " at/in least/jj half/nn "
-s80     = " more/rbr than/in half/nn "
-s80a    = " more/jjr than/in half/nn "
+s80  = " more/rbr than/in half/nn "
+s80a = " more/jjr than/in half/nn "
 
-s82c    = " at/in least/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82  = " more/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82a = " more/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
 
-s82     = " more/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s82a    = " more/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-
-morethanpro1 = [s80aa]
-morethanpro2 = [s80]
+morethanpro1 = [s80]
+morethanpro2 = [s82]
 morethanpro3 = [s80a]
-morethanpro4 = [s82c]
-morethanpro5 = [s82]
-morethanpro6 = [s82a]
+morethanpro4 = [s82a]
 
 ####################################################################
 
@@ -131,21 +155,78 @@ morethanpro6 = [s82a]
 
 s80b    = " less/rbr than/in half/nn "
 s80bb   = " fewer/jjr than/in half/nn "
-s80c    = " at/in most/jjs half/nn "
 
 s82b    = " less/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s82bb   = " fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-
-s80d   = " at/in most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s80e   = " at/in most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82bb   = " fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nn of/in "
 
 lessthanpro1 = [s80b]
 lessthanpro2 = [s80bb]
-lessthanpro3 = [s80c]
-lessthanpro4 = [s82b]
-lessthanpro5 = [s82bb]
-lessthanpro6 = [s80d]
-lessthanpro7 = [s80e]
+lessthanpro3 = [s82b]
+lessthanpro4 = [s82bb]
+
+####################################################################
+
+# 9.2 p/k (p, k integers)                                       TODO
+
+s80c    = " half/dt "
+s80d    = " half/pdt "
+s80e    = " half/nn of/in "
+
+s81c    = " [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s81d    = " [a-z]{1,12}/cd [a-z]{1,12}/nn of/in "
+
+#s81c    = " [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+#s81d    = " [a-z]{1,12}/cd [a-z]{1,12}/nn of/in "
+
+pro1 = [s80c]
+pro2 = [s80d]
+pro3 = [s80e]
+pro4 = [s81c]
+pro5 = [s81d]
+
+####################################################################
+
+# 3. more than k% (k a percentage)
+
+# s30     = " more/rbr than/in [a-z]{1,12}/cd percent/nn "
+# s30a    = " more/rbr than/in [a-z]{1,12}/cd %/nn "
+# 
+# s30aa   = " more/jjr than/in [a-z]{1,12}/cd percent/nn "
+# s30aaa  = " more/jjr than/in [a-z]{1,12}/cd %/nn "
+# 
+# morekper1 = [s30]
+# morekper2 = [s30a]
+# morekper3 = [s30aa]
+# morekper4 = [s30aaa]
+
+####################################################################
+
+# 3.1 less than k% (k a percentage)
+
+# s30b     = " less/rbr than/in [a-z]{1,12}/cd percent/nn "
+# s30bb    = " less/rbr than/in [a-z]{1,12}/cd %/nn "
+# 
+# s30bx    = " less/jjr than/in [a-z]{1,12}/cd percent/nn "
+# s30bbx   = " less/jjr than/in [a-z]{1,12}/cd %/nn "
+# 
+# s30bc    = " fewer/jjr than/in [a-z]{1,12}/cd percent/nn "
+# s30bcx   = " fewer/jjr than/in [a-z]{1,12}/cd %/nn "
+# 
+# lesskper1 = [s30b]
+# lesskper2 = [s30bb]
+# lesskper3 = [s30bbx]
+# lesskper4 = [s30bc]
+# lesskper5 = [s30bcx]
+
+####################################################################
+
+# 3.2 k% (k a percentage)
+
+# s30c    = " [a-z]{1,12}/cd percent/nn "
+# s30d    = " [a-z]{1,12}/cd %/nn "
+# 
+# kper1 = [s30c]
+# kper2 = [s30d]
 
 ####################################################################
 
@@ -249,11 +330,19 @@ class ProporStatsPD:
         C11  =   MyClassStats2(all1[0].strip(),[],0,tit)
         C12  =   MyClassStats2(all2[0].strip(),[],0,tit)
         C13  =   MyClassStats2(all3[0].strip(),[],0,tit)
+#         C14  =   MyClassStats2(all4[0].strip(),[],0,tit)
+#         C15  =   MyClassStats2(all5[0].strip(),[],0,tit)
+#         C16  =   MyClassStats2(all6[0].strip(),[],0,tit)
         C17  =   MyClassStats2(all7[0].strip(),[],0,tit)
         C18  =   MyClassStats2(all8[0].strip(),[],0,tit)                              
         
         # some
-        C25  =   MyClassStats2(some5[0].strip(),[],0,tit)     
+#         C21  =   MyClassStats2(some1[0].strip(),[],0,tit)
+#         C22  =   MyClassStats2(some2[0].strip(),[],0,tit)        
+#         C23  =   MyClassStats2(some3[0].strip(),[],0,tit)
+#         C24  =   MyClassStats2(some4[0].strip(),[],0,tit)
+        C25  =   MyClassStats2(some5[0].strip(),[],0,tit)
+#         C26  =   MyClassStats2(some6[0].strip(),[],0,tit)        
         
         # > k
         C41 =    MyClassStats2(morek1[0].strip(),[],0,tit)
@@ -263,7 +352,13 @@ class ProporStatsPD:
         # < k
         C51 =    MyClassStats2(lessk1[0].strip(),[],0,tit)
         C52 =    MyClassStats2(lessk2[0].strip(),[],0,tit)
-        C53 =    MyClassStats2(lessk3[0].strip(),[],0,tit)      
+        C53 =    MyClassStats2(lessk3[0].strip(),[],0,tit)
+        
+        # k
+#         C61 =    MyClassStats2(exactlyk1[0].strip(),[],0,tit)
+#         C62 =    MyClassStats2(exactlyk2[0].strip(),[],0,tit)
+#         C63 =    MyClassStats2(exactlyk3[0].strip(),[],0,tit)
+#         C64 =    MyClassStats2(exactlyk4[0].strip(),[],0,tit)        
         
         # most
         C71 =    MyClassStats2(most1[0].strip(),[],0,tit)
@@ -283,28 +378,54 @@ class ProporStatsPD:
         C92 =    MyClassStats2(morethanpro2[0].strip(),[],0,tit)    
         C93 =    MyClassStats2(morethanpro3[0].strip(),[],0,tit)    
         C94 =    MyClassStats2(morethanpro4[0].strip(),[],0,tit)                 
-        C95 =    MyClassStats2(morethanpro5[0].strip(),[],0,tit)  
-        C96 =    MyClassStats2(morethanpro6[0].strip(),[],0,tit)          
         
         # < p/k
         C101 =   MyClassStats2(lessthanpro1[0].strip(),[],0,tit)
         C102 =   MyClassStats2(lessthanpro2[0].strip(),[],0,tit)
         C103 =   MyClassStats2(lessthanpro3[0].strip(),[],0,tit)
-        C104 =   MyClassStats2(lessthanpro4[0].strip(),[],0,tit)      
-        C105 =   MyClassStats2(lessthanpro5[0].strip(),[],0,tit)
-        C106 =   MyClassStats2(lessthanpro6[0].strip(),[],0,tit)
-        C107 =   MyClassStats2(lessthanpro7[0].strip(),[],0,tit) 
+        C104 =   MyClassStats2(lessthanpro4[0].strip(),[],0,tit)
+        
+        # p/k
+        C131 =   MyClassStats2(pro1[0].strip(),[],0,tit)
+        C132 =   MyClassStats2(pro2[0].strip(),[],0,tit)
+        C133 =   MyClassStats2(pro3[0].strip(),[],0,tit)
+        C134 =   MyClassStats2(pro4[0].strip(),[],0,tit)
+        C135 =   MyClassStats2(pro5[0].strip(),[],0,tit)        
+        
+        # > p%
+#         C111 =   MyClassStats2(morekper1[0].strip(),[],0,tit)
+#         C112 =   MyClassStats2(morekper2[0].strip(),[],0,tit)
+#         C113 =   MyClassStats2(morekper3[0].strip(),[],0,tit)
+#         C114 =   MyClassStats2(morekper4[0].strip(),[],0,tit)
+#         
+#         # < p%
+#         C121 =   MyClassStats2(lesskper1[0].strip(),[],0,tit)
+#         C122 =   MyClassStats2(lesskper2[0].strip(),[],0,tit)
+#         C123 =   MyClassStats2(lesskper3[0].strip(),[],0,tit)
+#         C124 =   MyClassStats2(lesskper4[0].strip(),[],0,tit)
+#         C125 =   MyClassStats2(lesskper5[0].strip(),[],0,tit)
+#         
+#         # p%
+#         C141 =   MyClassStats2(kper1[0].strip(),[],0,tit)
+#         C142 =   MyClassStats2(kper2[0].strip(),[],0,tit)
         
         self.classstats = [C11,C12,C13,
+                           #C14,C15,C16,
                            C17,C18,
+                           #C21,C22,C23,C24,
                            C25,
+                           #C26,
                            C41,C42,C43,
                            C51,C52,C53,
-                           C51,C52,C53,                           
+                           #C61,C62,C63,C64,
                            C71,C72,C73,C74,C75,
                            C81,C82,C83,C84,
-                           C91,C92,C93,C94,C95,C96,
-                           C101,C102,C103,C104,C105,C106,C107
+                           C91,C92,C93,C94,
+                           C101,C102,C103,C104,
+                           C131,C132,C133,C134,C135,
+#                            C111,C112,C113,C114,
+#                            C121,C122,C123,C124,C125,
+#                            C141,C142
                            ]        
         
         print "###################################################"
@@ -352,6 +473,18 @@ class ProporStatsPD:
             N13 = MyPatts2(rest).P
             c13 = MyClass2(P13,N13,idf,0,0,all3[0].strip())
             
+#             P14 = MyPatts2(all4).P
+#             N14 = MyPatts2(rest).P
+#             c14 = MyClass2(P14,N14,idf,0,0,all4[0].strip())
+#             
+#             P15 = MyPatts2(all5).P
+#             N15 = MyPatts2(rest).P
+#             c15 = MyClass2(P15,N15,idf,0,0,all5[0].strip())       
+#             
+#             P16 = MyPatts2(all6).P
+#             N16 = MyPatts2(rest).P
+#             c16 = MyClass2(P16,N16,idf,0,0,all6[0].strip()) 
+            
             P17 = MyPatts2(all7).P
             N17 = MyPatts2(rest).P
             c17 = MyClass2(P17,N17,idf,0,0,all7[0].strip()) 
@@ -360,10 +493,30 @@ class ProporStatsPD:
             N18 = MyPatts2(rest).P
             c18 = MyClass2(P18,N18,idf,0,0,all8[0].strip())                                                                  
             
-            # some         
+            # some
+#             P21 = MyPatts2(some1).P
+#             N21 = MyPatts2(rest).P           
+#             c21 = MyClass2(P21,N21,idf,0,0,some1[0].strip())   
+#                     
+#             P22 = MyPatts2(some2).P
+#             N22 = MyPatts2(rest).P           
+#             c22 = MyClass2(P22,N22,idf,0,0,some2[0].strip())  
+#             
+#             P23 = MyPatts2(some3).P
+#             N23 = MyPatts2(rest).P           
+#             c23 = MyClass2(P23,N23,idf,0,0,some3[0].strip())   
+#                     
+#             P24 = MyPatts2(some4).P
+#             N24 = MyPatts2(rest).P           
+#             c24 = MyClass2(P24,N24,idf,0,0,some4[0].strip())
+            
             P25 = MyPatts2(some5).P
             N25 = MyPatts2(rest).P           
-            c25 = MyClass2(P25,N25,idf,0,0,some5[0].strip())                            
+            c25 = MyClass2(P25,N25,idf,0,0,some5[0].strip())    
+            
+#             P26 = MyPatts2(some6).P
+#             N26 = MyPatts2(rest).P           
+#             c26 = MyClass2(P26,N26,idf,0,0,some6[0].strip())                           
             
             ####################################################################                
             
@@ -391,7 +544,24 @@ class ProporStatsPD:
 
             P53 = MyPatts2(lessk3).P
             N53 = MyPatts2(digit).P
-            c53 = MyClass2(P53,N53,idf,0,0,lessk3[0].strip())                      
+            c53 = MyClass2(P53,N53,idf,0,0,lessk3[0].strip())
+            
+            # k
+            P61 = MyPatts2(exactlyk1).P
+            N61 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
+            c61 = MyClass2(P61,N61,idf,0,0,exactlyk1[0].strip())
+
+            P62 = MyPatts2(exactlyk2).P
+            N62 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
+            c62 = MyClass2(P62,N62,idf,0,0,exactlyk2[0].strip())
+            
+            P63 = MyPatts2(exactlyk3).P
+            N63 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
+            c63 = MyClass2(P63,N63,idf,0,0,exactlyk3[0].strip())
+            
+            P64 = MyPatts2(exactlyk4).P
+            N64 = MyPatts2(lessk1+lessk2+lessk3+morek1+morek2+morek3+digit).P
+            c64 = MyClass2(P64,N64,idf,0,0,exactlyk4[0].strip())                        
             
             ####################################################################
             
@@ -433,30 +603,69 @@ class ProporStatsPD:
             N84 = MyPatts2(nofew).P
             c84 = MyClass2(P84,N84,idf,0,0,few4[0].strip())
                 
+#             # >k/100
+#             P91 = MyPatts2(morekper1).P
+#             N91 = MyPatts2(digit).P
+#             c91 = MyClass2(P91,N91,idf,0,0,morekper1[0].strip())
+#             
+#             P92 = MyPatts2(morekper2).P
+#             N92 = MyPatts2(digit).P
+#             c92 = MyClass2(P92,N92,idf,0,0,morekper2[0].strip())
+#             
+#             P93 = MyPatts2(morekper3).P
+#             N93 = MyPatts2(digit).P
+#             c93 = MyClass2(P93,N93,idf,0,0,morekper3[0].strip())
+#             
+#             P94 = MyPatts2(morekper4).P
+#             N94 = MyPatts2(digit).P
+#             c94 = MyClass2(P94,N94,idf,0,0,morekper4[0].strip())
+#     
+#             # <k/100
+#             P101 = MyPatts2(lesskper1).P
+#             N101 = MyPatts2(digit).P
+#             c101 = MyClass2(P101,N101,idf,0,0,lesskper1[0].strip())
+# 
+#             P102 = MyPatts2(lesskper2).P
+#             N102 = MyPatts2(digit).P
+#             c102 = MyClass2(P102,N102,idf,0,0,lesskper2[0].strip())
+# 
+#             P103 = MyPatts2(lesskper3).P
+#             N103 = MyPatts2(digit).P
+#             c103 = MyClass2(P103,N103,idf,0,0,lesskper3[0].strip())
+# 
+#             P104 = MyPatts2(lesskper4).P
+#             N104 = MyPatts2(digit).P
+#             c104 = MyClass2(P104,N104,idf,0,0,lesskper4[0].strip())
+# 
+#             P105 = MyPatts2(lesskper5).P
+#             N105 = MyPatts2(digit).P
+#             c105 = MyClass2(P105,N105,idf,0,0,lesskper5[0].strip())
+#                 
+#             # k/100
+#             P131 = MyPatts2(kper1).P
+#             N131 = MyPatts2(morekper1+morekper2+morekper3+morekper4+lesskper1+lesskper2+lesskper3+lesskper4+lesskper5+digit).P
+#             c131 = MyClass2(P131,N131,idf,0,0,kper1[0].strip())
+# 
+#             P132 = MyPatts2(kper2).P
+#             N132 = MyPatts2(morekper1+morekper2+morekper3+morekper4+lesskper1+lesskper2+lesskper3+lesskper4+lesskper5+digit).P
+#             c132 = MyClass2(P132,N132,idf,0,0,kper2[0].strip())
+                
             # >p/k
-            P91 = MyPatts2(morethanpro1).P
-            N91 = MyPatts2(digit).P
-            c91 = MyClass2(P91,N91,idf,0,0,morethanpro1[0].strip())                    
+            P111 = MyPatts2(morethanpro1).P
+            N111 = MyPatts2(digit).P
+            c111 = MyClass2(P111,N111,idf,0,0,morethanpro1[0].strip())                    
  
-            P92 = MyPatts2(morethanpro2).P
-            N92 = MyPatts2(digit).P
-            c92 = MyClass2(P92,N92,idf,0,0,morethanpro2[0].strip())   
+            P112 = MyPatts2(morethanpro2).P
+            N112 = MyPatts2(digit).P
+            c112 = MyClass2(P112,N112,idf,0,0,morethanpro2[0].strip())   
  
-            P93 = MyPatts2(morethanpro3).P
-            N93 = MyPatts2(digit).P
-            c93 = MyClass2(P93,N93,idf,0,0,morethanpro3[0].strip())   
+            P113 = MyPatts2(morethanpro3).P
+            N113 = MyPatts2(digit).P
+            c113 = MyClass2(P113,N113,idf,0,0,morethanpro3[0].strip())   
  
-            P94 = MyPatts2(morethanpro4).P
-            N94 = MyPatts2(digit).P
-            c94 = MyClass2(P94,N94,idf,0,0,morethanpro4[0].strip())   
-
-            P95 = MyPatts2(morethanpro5).P
-            N95 = MyPatts2(digit).P
-            c95 = MyClass2(P95,N95,idf,0,0,morethanpro5[0].strip())   
- 
-            P96 = MyPatts2(morethanpro6).P
-            N96 = MyPatts2(digit).P
-            c96 = MyClass2(P96,N96,idf,0,0,morethanpro6[0].strip())   
+            P114 = MyPatts2(morethanpro4).P
+            N114 = MyPatts2(digit).P
+            c114 = MyClass2(P114,N114,idf,0,0,morethanpro4[0].strip())   
             
             # <p/k
 
@@ -474,19 +683,29 @@ class ProporStatsPD:
             
             P124 = MyPatts2(lessthanpro4).P
             N124 = MyPatts2(digit).P
-            c124 = MyClass2(P124,N124,idf,0,0,lessthanpro4[0].strip())    
+            c124 = MyClass2(P124,N124,idf,0,0,lessthanpro4[0].strip())
             
-            P125 = MyPatts2(lessthanpro5).P
-            N125 = MyPatts2(digit).P
-            c125 = MyClass2(P125,N125,idf,0,0,lessthanpro5[0].strip())
+            # p/k
 
-            P126 = MyPatts2(lessthanpro6).P
-            N126 = MyPatts2(digit).P
-            c126 = MyClass2(P126,N126,idf,0,0,lessthanpro6[0].strip())
+            P141 = MyPatts2(pro1).P
+            N141 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
+            c141 = MyClass2(P141,N141,idf,0,0,pro1[0].strip())   
+
+            P142 = MyPatts2(pro2).P
+            N142 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
+            c142 = MyClass2(P142,N142,idf,0,0,pro2[0].strip())   
+
+            P143 = MyPatts2(pro3).P
+            N143 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
+            c143 = MyClass2(P143,N143,idf,0,0,pro3[0].strip())   
+
+            P144 = MyPatts2(pro4).P
+            N144 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
+            c144 = MyClass2(P144,N144,idf,0,0,pro4[0].strip())   
             
-            P127 = MyPatts2(lessthanpro7).P
-            N127 = MyPatts2(digit).P
-            c127 = MyClass2(P127,N127,idf,0,0,lessthanpro7[0].strip())                                
+            P145 = MyPatts2(pro5).P
+            N145 = MyPatts2(morethanpro1+morethanpro2+morethanpro3+morethanpro4+lessthanpro1+lessthanpro2+lessthanpro3+lessthanpro4+digit).P
+            c145 = MyClass2(P145,N145,idf,0,0,pro5[0].strip())                      
             
             ####################################################################  
             ####################################################################            
@@ -526,11 +745,19 @@ class ProporStatsPD:
                         c11.openSen2(myline,c11.pats,c11.patts)  
                         c12.openSen2(myline,c12.pats,c12.patts)
                         c13.openSen2(myline,c13.pats,c13.patts)
+#                         c14.openSen2(myline,c14.pats,c14.patts)
+#                         c15.openSen2(myline,c15.pats,c16.patts)
+#                         c16.openSen2(myline,c16.pats,c16.patts) 
                         c17.openSen2(myline,c17.pats,c17.patts)
                         c18.openSen2(myline,c18.pats,c18.patts)   
                         
                         # some
+#                         c21.openSen2(myline,c21.pats,c21.patts)
+#                         c22.openSen2(myline,c22.pats,c22.patts)
+#                         c23.openSen2(myline,c23.pats,c23.patts)
+#                         c24.openSen2(myline,c24.pats,c24.patts)
                         c25.openSen2(myline,c25.pats,c25.patts)
+#                         c26.openSen2(myline,c26.pats,c26.patts)
                         
                         # > k
                         c41.openSen2(myline,c41.pats,c41.patts)
@@ -541,6 +768,12 @@ class ProporStatsPD:
                         c51.openSen2(myline,c51.pats,c51.patts)
                         c52.openSen2(myline,c52.pats,c52.patts)
                         c53.openSen2(myline,c53.pats,c53.patts)
+                        
+                        # k
+                        c61.openSen2(myline,c61.pats,c61.patts)
+                        c62.openSen2(myline,c62.pats,c62.patts)
+                        c63.openSen2(myline,c63.pats,c63.patts)
+                        c64.openSen2(myline,c64.pats,c64.patts)
                         
                         # most
                         c71.openSen2(myline,c71.pats,c71.patts)
@@ -555,22 +788,41 @@ class ProporStatsPD:
                         c83.openSen2(myline,c83.pats,c83.patts)
                         c84.openSen2(myline,c84.pats,c84.patts)
                         
+#                         # >k/100
+#                         c91.openSen2(myline,c91.pats,c91.patts)
+#                         c92.openSen2(myline,c92.pats,c92.patts)
+#                         c93.openSen2(myline,c93.pats,c93.patts)
+#                         c94.openSen2(myline,c94.pats,c94.patts)
+#                         
+#                         # <k/100
+#                         c101.openSen2(myline,c101.pats,c101.patts)
+#                         c102.openSen2(myline,c102.pats,c102.patts)
+#                         c103.openSen2(myline,c103.pats,c103.patts)
+#                         c104.openSen2(myline,c104.pats,c104.patts)
+#                         c105.openSen2(myline,c105.pats,c105.patts)
+#                         
+#                         # k/100
+#                         c131.openSen2(myline,c131.pats,c131.patts)
+#                         c132.openSen2(myline,c132.pats,c132.patts)
+                        
                         # > p/k
-                        c91.openSen2(myline,c91.pats,c91.patts)
-                        c92.openSen2(myline,c92.pats,c92.patts)
-                        c93.openSen2(myline,c93.pats,c93.patts)
-                        c94.openSen2(myline,c94.pats,c94.patts)
-                        c95.openSen2(myline,c95.pats,c95.patts)
-                        c96.openSen2(myline,c96.pats,c96.patts)
+                        c111.openSen2(myline,c111.pats,c111.patts)
+                        c112.openSen2(myline,c112.pats,c112.patts)
+                        c113.openSen2(myline,c113.pats,c113.patts)
+                        c114.openSen2(myline,c114.pats,c114.patts)
                         
                         # < p/k
                         c121.openSen2(myline,c121.pats,c121.patts)
                         c122.openSen2(myline,c122.pats,c122.patts)
                         c123.openSen2(myline,c123.pats,c123.patts)
                         c124.openSen2(myline,c124.pats,c124.patts)
-                        c125.openSen2(myline,c125.pats,c125.patts)
-                        c126.openSen2(myline,c126.pats,c126.patts)
-                        c127.openSen2(myline,c127.pats,c127.patts)
+                        
+                        # p/k
+                        c141.openSen2(myline,c141.pats,c141.patts)
+                        c142.openSen2(myline,c142.pats,c142.patts)
+                        c143.openSen2(myline,c143.pats,c143.patts)
+                        c144.openSen2(myline,c144.pats,c144.patts)
+                        c145.openSen2(myline,c145.pats,c145.patts)
                 
                         ####################################################################
                     
@@ -594,14 +846,22 @@ class ProporStatsPD:
             # total cum count
             tot = (
                    c11.count + c12.count + c13.count + 
+                   #c14.count + c15.count + c16.count + 
                    c17.count + c18.count + 
+                   #c21.count + c22.count + c23.count + c24.count + 
                    c25.count + 
+                   #c26.count + 
                    c41.count + c42.count + c43.count + 
-                   c51.count + c52.count + c53.count +            
+                   c51.count + c52.count + c53.count +
+                   c61.count + c62.count + c63.count + c64.count +                 
                    c71.count + c72.count + c73.count + c74.count + c75.count +                   
                    c81.count + c82.count + c83.count + c84.count +  
-                   c91.count + c92.count + c93.count + c94.count + c96.count + c95.count +
-                   c121.count + c122.count + c123.count + c124.count + c125.count + c126.count + c127.count
+                   #c91.count + c92.count + c93.count + c94.count + 
+                   #c101.count + c102.count + c103.count + c104.count + c105.count +
+                   c111.count + c112.count + c113.count + c114.count +
+                   c121.count + c122.count + c123.count + c124.count + 
+                   #c131.count + c132.count + 
+                   c141.count + c142.count + c143.count + c144.count + c145.count 
                    ) + 1
     
             print "corpus size : " + `corpus.count` + " sentences"        
@@ -612,14 +872,22 @@ class ProporStatsPD:
             
             filestats = [
                          c11,c12,c13,
+                         #c14,c15,c16,
                          c17,c18,
+                         #c21,c22,c23,c24,
                          c25,
+                         #c26,
                          c41,c42,c43,
                          c51,c52,c53,
+                         c61,c62,c63,c64,
                          c71,c72,c73,c74,c75,
                          c81,c82,c83,c84,
-                         c91,c92,c93,c94,c95,c96,
-                         c121,c122,c123,c124,c125,c126,c127
+                         #c91,c92,c93,c94,
+                         #c101,c102,c103,c104,c105,
+                         #c131,c132,
+                         c111,c112,c113,c114,
+                         c121,c122,c123,c124,
+                         c141,c142,c143,c144,c145
                          ]
             
             ####################################################################  
