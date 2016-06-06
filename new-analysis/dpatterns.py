@@ -46,7 +46,7 @@ s0 = ".*"        # anything!
 
 # 1. exists
 
-s16     = " some/dt"
+s16     = "( some/dt|some/dt )"
 
 some5 = [s16]
 
@@ -54,11 +54,11 @@ some5 = [s16]
 
 # 4. all
 
-s40     = " every/dt "
-s42     = " all/dt "
-s42a    = " all/pdt "
-s4c     = " each/dt [a-z]{1,12}/nn "
-s4e     = " no/dt "
+s40     = "( every/dt |every/dt )"
+s42     = "( all/dt |all/dt)"
+s42a    = "( all/pdt |all/pdt )"
+s4c     = "( each/dt [a-z]{1,12}/nn |each/dt [a-z]{1,12}/nn )"
+s4e     = "( no/dt |no\dt )"
 
 all1 = [s40]
 all2 = [s42]
@@ -72,13 +72,13 @@ all8 = [s4e]
 
 # 6. at most k, less than k (k integer)
 
-s60     = " at/in most/jjs [a-z]{1,12}/cd "
-s60a    = " at/in most/rbs [a-z]{1,12}/cd "
+s60     = "( at/in most/jjs [a-z]{1,12}/cd |at/in most/jjs [a-z]{1,12}/cd )"
+s60a    = "( at/in most/rbs [a-z]{1,12}/cd |at/in most/rbs [a-z]{1,12}/cd )"
 
-s20b    = " less/rbr than/in [a-z]{1,12}/cd "
-s20bb   = " less/jjr than/in [a-z]{1,12}/cd "
+s20b    = "( less/rbr than/in [a-z]{1,12}/cd |less/rbr than/in [a-z]{1,12}/cd )"
+s20bb   = "( less/jjr than/in [a-z]{1,12}/cd |less/jjr than/in [a-z]{1,12}/cd )"
 
-s20c    = " fewer/jjr than/in [a-z]{1,12}/cd "
+s20c    = "( fewer/jjr than/in [a-z]{1,12}/cd |fewer/jjr than/in [a-z]{1,12}/cd )"
 
 lessk1 = [s20b]
 lessk2 = [s20c]
@@ -90,10 +90,10 @@ lessk5 = [s20c]
 
 # 7. at least k, more than k (k integer)
 
-s60b     = " at/in least/jjs [a-z]{1,12}/cd "
+s60b     = "( at/in least/jjs [a-z]{1,12}/cd |at/in least/jjs [a-z]{1,12}/cd )"
 
-s20      = " more/rbr than/in [a-z]{1,12}/cd "
-s20a     = " more/jjr than/in [a-z]{1,12}/cd "
+s20      = "( more/rbr than/in [a-z]{1,12}/cd | more/rbr than/in [a-z]{1,12}/cd )"
+s20a     = "( more/jjr than/in [a-z]{1,12}/cd |more/jjr than/in [a-z]{1,12}/cd )"
 
 morek1 = [s20]
 morek2 = [s20a]
@@ -105,14 +105,14 @@ morek3 = [s60b]
 
 # 9. more than p/k (p, k integers)
 
-s80aa   = " at/in least/jj half/nn "
-s80     = " more/rbr than/in half/nn "
-s80a    = " more/jjr than/in half/nn "
+s80aa   = "( at/in least/jj half/nn |at/in least/jj half/nn )"
+s80     = "( more/rbr than/in half/nn |more/rbr than/in half/nn )"
+s80a    = "( more/jjr than/in half/nn |more/jjr than/in half/nn )"
 
-s82c    = " at/in least/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82c    = "( at/in least/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |at/in least/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
 
-s82     = " more/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s82a    = " more/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82     = "( more/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |more/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
+s82a    = "( more/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |more/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
 
 morethanpro1 = [s80aa]
 morethanpro2 = [s80]
@@ -125,15 +125,15 @@ morethanpro6 = [s82a]
 
 # 9.1 less than p/k (p, k integers)
 
-s80b    = " less/rbr than/in half/nn "
-s80bb   = " fewer/jjr than/in half/nn "
-s80c    = " at/in most/jjs half/nn "
+s80b    = "( less/rbr than/in half/nn |less/rbr than/in half/nn )"
+s80bb   = "( fewer/jjr than/in half/nn |fewer/jjr than/in half/nn )"
+s80c    = "( at/in most/jjs half/nn |at/in most/jjs half/nn )"
 
-s82b    = " less/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s82bb   = " fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s82b    = "( less/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |less/rbr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
+s82bb   = "( fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |fewer/jjr than/in [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
 
-s80d    = " at/in most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
-s80e    = " at/in most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in "
+s80d    = "( at/in most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |at/in most/jjs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
+s80e    = "( at/in most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in |at/in most/rbs [a-z]{1,12}/cd [a-z]{1,12}/nns of/in )"
 
 lessthanpro1 = [s80b]
 lessthanpro2 = [s80bb]
@@ -147,12 +147,12 @@ lessthanpro7 = [s80e]
 
 # 5. most, more than half
 
-s52     = " most/rbs [a-z]{1,12}/nns "
-s51     = " most/jjs [a-z]{1,12}/nns "
-s51a    = " most/dt "
+s52     = "( most/rbs [a-z]{1,12}/nns |most/rbs [a-z]{1,12}/nns )"
+s51     = "( most/jjs [a-z]{1,12}/nns |most/jjs [a-z]{1,12}/nns )"
+s51a    = "( most/dt |most/dt )"
 
-s53     = " more/rbr than/in half/nn "
-s53a    = " more/jjr than/in half/nn "
+s53     = "( more/rbr than/in half/nn |more/rbr than/in half/nn )"
+s53a    = "( more/jjr than/in half/nn |more/jjr than/in half/nn )"
 
 most1 = [s51a]
 most2 = [s53]
@@ -160,24 +160,28 @@ most3 = [s51]
 most4 = [s52]
 most5 = [s53a]
 
-nomost = [" the/dt most/rbs ", " the/dt most/jjs ", " at/in most/jjs ", "at/in most/rbs "]
+nomost = ["( the/dt most/rbs |the/dt most/rbs )", 
+          "( the/dt most/jjs |the/dt most/jjs )", 
+          "( at/in most/jjs |at/in most/jjs )", 
+          "( at/in most/rbs |at/in most/rbs )"]
 
 ####################################################################
 
 # 5.1 few, less than half, fewer than half
 
-ss51b   = " few/jj [a-z]{1,12}/nns"
-s51bb   = " few/dt "
+ss51b   = "( few/jj [a-z]{1,12}/nns |few/jj [a-z]{1,12}/nns )"
+s51bb   = "( few/dt |few/dt )"
 
-s53b    = " less/rbr than/in half/nn "
-s53bb   = " fewer/jjr than/in half/nn "
+s53b    = "( less/rbr than/in half/nn |less/rbr than/in half/nn )"
+s53bb   = "( fewer/jjr than/in half/nn |fewer/jjr than/in half/nn )"
 
 few1 = [s51bb]
 few2 = [s53b]
 few3 = [s53bb]
 few4 = [ss51b]
 
-nofew = [" a/dt few/jj ", " the/dt few/jj "]
+nofew = ["( a/dt few/jj |a/dt few/jj )", 
+         "( the/dt few/jj |the/dt few/jj )"]
 
 
 ####################################################################
